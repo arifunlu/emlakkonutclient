@@ -36,9 +36,15 @@
             }
             .search {
                 width: 12rem;
+                border-color: #fff;
                 border-radius: 1.25rem;
                 margin: 0 auto;
                 margin-bottom: 4rem;
+                background-color: transparent;
+            }
+            .search:focus {
+                border-color: #fff;
+                background-color: transparent;
             }
             .card-space {
                 border-bottom: 0;
@@ -184,7 +190,7 @@ li .section-content {
                     </div>
                     <div class="section-content">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio illo, delectus deleniti animi accusamus. Laboriosam maiores totam provident aliquam. Unde, incidunt amet officia a obcaecati, ducimus at molestiae nemo.</p>
-                    </div>    
+                    </div>
                 </li>
             </ul>
             {{--  <div id="accordion" role="tablist" aria-multiselectable="false">
@@ -327,11 +333,16 @@ li .section-content {
             var section = $('li');
 
             function toggleAccordion() {
-            section.removeClass('active');
-            $(this).addClass('active');
+                section.removeClass('active');
+                $(this).addClass('active');
             }
 
             section.on('click', toggleAccordion);
+
+            function scrollNext() {
+                var elmnt = document.getElementById("content");
+                elmnt.scrollIntoView();
+            }
         </script>
     </body>
 </html>
