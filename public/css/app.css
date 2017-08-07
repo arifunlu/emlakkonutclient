@@ -10203,8 +10203,8 @@ a.text-gray-dark:hover {
 
 @font-face {
   font-family: 'emlakkonut';
-  src: url(/fonts/emlakkonut.eot?01dff2156b464059c8d702b0f95f1861);
-  src: url(/fonts/emlakkonut.eot?01dff2156b464059c8d702b0f95f1861) format("embedded-opentype"), url(/fonts/emlakkonut.ttf?1eb456647d424a13300c0a5624104a98) format("truetype"), url(/fonts/emlakkonut.woff?cb7e4c92e6b3105b2d46b317ffc4aa89) format("woff"), url(/fonts/emlakkonut.svg?46a8bd3bc3fd08e8c3177cea17160b4f) format("svg");
+  src: url(/fonts/emlakkonut.eot?1f1143b18e328451ba28f5e389962c0f);
+  src: url(/fonts/emlakkonut.eot?1f1143b18e328451ba28f5e389962c0f) format("embedded-opentype"), url(/fonts/emlakkonut.ttf?f1f18f2f1b5c0b5922d024713c952144) format("truetype"), url(/fonts/emlakkonut.woff?11d801b26b6de37d89c3f009e74cd9f0) format("woff"), url(/fonts/emlakkonut.svg?c7c9b0d3d41f7075b52e31566ae8c150) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -10218,204 +10218,74 @@ a.text-gray-dark:hover {
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1.5;
+  line-height: 1;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-menu:before {
+.icon-Backward:before {
   content: "\E900";
-}
-
-.icon-lock:before {
-  content: "\E901";
-}
-
-.icon-user:before {
-  content: "\E902";
-}
-
-.icon-plus:before {
-  content: "\E903";
-  color: #fff;
-}
-
-.icon-Accept:before {
-  content: "\E904";
-  color: #00a65e;
-}
-
-.icon-Asset-2:before {
-  content: "\E905";
-  color: #fff;
-}
-
-.icon-Cancel:before {
-  content: "\E906";
-  color: #d20000;
-}
-
-.icon-Cancell:before {
-  content: "\E907";
-  color: #005aab;
-}
-
-.icon-Clean:before {
-  content: "\E908";
-  color: #005aab;
-}
-
-.icon-Closex:before {
-  content: "\E909";
-  color: #fff;
-}
-
-.icon-delete:before {
-  content: "\E90A";
-  color: #fff;
-}
-
-.icon-designer:before {
-  content: "\E90B";
-  color: #fff;
-}
-
-.icon-General:before {
-  content: "\E90C";
-  color: #00a65e;
-}
-
-.icon-Header:before {
-  content: "\E90D";
-}
-
-.icon-Houses:before {
-  content: "\E90E";
-  color: #00a65e;
-}
-
-.icon-Image_photo:before {
-  content: "\E90F";
-}
-
-.icon-Kat_Plani:before {
-  content: "\E910";
-  color: #00a65e;
-}
-
-.icon-kroki:before {
-  content: "\E911";
-  color: #fff;
-}
-
-.icon-Link:before {
-  content: "\E912";
-}
-
-.icon-Map:before {
-  content: "\E913";
-  color: #00a65e;
-}
-
-.icon-Paragraph:before {
-  content: "\E914";
-}
-
-.icon-Plots:before {
-  content: "\E915";
-  color: #00a65e;
-}
-
-.icon-Pointer:before {
-  content: "\E916";
   color: #f2f2f2;
 }
 
-.icon-Polygon-1-kopia:before {
-  content: "\E917";
+.icon-Checkmark:before {
+  content: "\E901";
+  color: #f2f2f2;
 }
 
-.icon-proje_gorseli_ekle:before {
-  content: "\E918";
-  color: #fff;
+.icon-Down_Arrow:before {
+  content: "\E902";
+  color: #f2f2f2;
 }
 
-.icon-Projects_Icon:before {
-  content: "\E919";
-  color: #00a65e;
-}
-
-.icon-Quantity:before {
-  content: "\E91A";
+.icon-Eye:before {
+  content: "\E903";
   color: #005aab;
 }
 
-.icon-Questionmark-copy:before {
-  content: "\E91B";
+.icon-Fit:before {
+  content: "\E904";
+  color: #f2f2f2;
+}
+
+.icon-Forma-1:before {
+  content: "\E905";
+  color: #f2f2f2;
+}
+
+.icon-Forward:before {
+  content: "\E906";
+  color: #f2f2f2;
+}
+
+.icon-Pin_Icon:before {
+  content: "\E907";
+  color: #f2f2f2;
+}
+
+.icon-Pointer:before {
+  content: "\E908";
+  color: #f2f2f2;
+}
+
+.icon-Print:before {
+  content: "\E909";
   color: #005aab;
 }
 
-.icon-redoAsset-3:before {
-  content: "\E91C";
-  color: #fff;
+.icon-search:before {
+  content: "\E90A";
+  color: #f2f2f2;
 }
 
-.icon-Save:before {
-  content: "\E91D";
-  color: #005aab;
+.icon-Zoom_In:before {
+  content: "\E90B";
+  color: #f2f2f2;
 }
 
-.icon-Search:before {
-  content: "\E91E";
-  color: #fff;
-}
-
-.icon-Select_Icon:before {
-  content: "\E91F";
-  color: #f6f7fa;
-}
-
-.icon-settings:before {
-  content: "\E920";
-  color: #fff;
-}
-
-.icon-tools_cricle:before {
-  content: "\E921";
-  color: #000;
-}
-
-.icon-tools_map:before {
-  content: "\E922";
-  color: #005aab;
-}
-
-.icon-tools_rectangels:before {
-  content: "\E923";
-  color: #005aab;
-}
-
-.icon-tools_shape:before {
-  content: "\E924";
-  color: #005aab;
-}
-
-.icon-undoAsset-2:before {
-  content: "\E925";
-  color: #fff;
-}
-
-.icon-update:before {
-  content: "\E926";
-  color: #fff;
-}
-
-.icon-Video:before {
-  content: "\E927";
-}
-
-.icon-Youtube:before {
-  content: "\E928";
+.icon-Zoom_Out:before {
+  content: "\E90C";
+  color: #f2f2f2;
 }
 

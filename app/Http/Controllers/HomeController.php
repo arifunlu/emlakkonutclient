@@ -20,4 +20,9 @@ class HomeController extends Controller
     {
         return view('detail');
     }
+
+    public function map()
+    {
+        return view('map');
+    }
 }

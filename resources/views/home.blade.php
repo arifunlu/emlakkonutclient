@@ -45,12 +45,149 @@
                 border-radius: 0;
                 margin-bottom: .5rem;
             }
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  display: flex;
+  height: 450px;
+  padding: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  list-style-type: none;
+}
+
+li {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  background: #EFEDED;
+  cursor: pointer;
+  transition: all .5s ease;
+  margin-right: 10px;
+  width: 45px;
+}
+
+li.active {
+  flex: 5;
+  background: #fff;
+  cursor: default;
+  width: 400px;
+}
+li.active .section-content {
+  flex: 4;
+  opacity: 1;
+  transform: scaleX(1);
+}
+li .section-title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #EFEDED;
+}
+li .section-title h5 {
+  margin: 0;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+li .section-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: all .25s .1s ease-out;
+}
         </style>
     </head>
     <body>
         <div class="container">
             <input type="text" class="form-control search" placeholder="Ara..." />
-            <div id="accordion" role="tablist" aria-multiselectable="false">
+            <ul>
+                <li>
+                    <div class="section-title">
+                    <h5>Section 1</h5>
+                    </div>
+                    <div class="section-content">
+                    <img src="img/9.png" />
+                    </div>
+                </li>
+                <li class="active">
+                    <div class="section-title">
+                    <h5>Section 2</h5>
+                    </div>
+                    <div class="section-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam delectus, eius nostrum aspernatur voluptas enim fugit ipsa magni voluptatem, odio sit accusamus vel id, commodi consequuntur possimus repellat necessitatibus!</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="section-title">
+                    <h5>Section 3</h5>
+                    </div>
+                    <div class="section-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur saepe vel facilis quae nihil ad aspernatur ex delectus. Tenetur nulla voluptates similique quos, quia possimus, magnam esse natus quis ipsa.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="section-title">
+                    <h5>Section 4</h5>
+                    </div>
+                    <div class="section-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio illo, delectus deleniti animi accusamus. Laboriosam maiores totam provident aliquam. Unde, incidunt amet officia a obcaecati, ducimus at molestiae nemo.</p>
+                    </div>    
+                </li>
+                <li>
+                    <div class="section-title">
+                    <h5>Section 5</h5>
+                    </div>
+                    <div class="section-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio illo, delectus deleniti animi accusamus. Laboriosam maiores totam provident aliquam. Unde, incidunt amet officia a obcaecati, ducimus at molestiae nemo.</p>
+                    </div>    
+                </li>
+                <li>
+                    <div class="section-title">
+                    <h5>Section 6</h5>
+                    </div>
+                    <div class="section-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio illo, delectus deleniti animi accusamus. Laboriosam maiores totam provident aliquam. Unde, incidunt amet officia a obcaecati, ducimus at molestiae nemo.</p>
+                    </div>    
+                </li>
+                <li>
+                    <div class="section-title">
+                    <h5>Section 7</h5>
+                    </div>
+                    <div class="section-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio illo, delectus deleniti animi accusamus. Laboriosam maiores totam provident aliquam. Unde, incidunt amet officia a obcaecati, ducimus at molestiae nemo.</p>
+                    </div>    
+                </li>
+                <li>
+                    <div class="section-title">
+                    <h5>Section 8</h5>
+                    </div>
+                    <div class="section-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio illo, delectus deleniti animi accusamus. Laboriosam maiores totam provident aliquam. Unde, incidunt amet officia a obcaecati, ducimus at molestiae nemo.</p>
+                    </div>    
+                </li>
+                <li>
+                    <div class="section-title">
+                    <h5>Section 9</h5>
+                    </div>
+                    <div class="section-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio illo, delectus deleniti animi accusamus. Laboriosam maiores totam provident aliquam. Unde, incidunt amet officia a obcaecati, ducimus at molestiae nemo.</p>
+                    </div>    
+                </li>
+                <li>
+                    <div class="section-title">
+                    <h5>Section 10</h5>
+                    </div>
+                    <div class="section-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio illo, delectus deleniti animi accusamus. Laboriosam maiores totam provident aliquam. Unde, incidunt amet officia a obcaecati, ducimus at molestiae nemo.</p>
+                    </div>    
+                </li>
+            </ul>
+            {{--  <div id="accordion" role="tablist" aria-multiselectable="false">
                 <div class="card card-space">
                     <div class="card-header" role="tab" id="headingOne">
                         <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -181,10 +318,20 @@
                         <img src="img/9.png" />
                     </div>
                 </div>
-            </div>
+            </div>  --}}
         </div>
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
+        <script>
+            var section = $('li');
+
+            function toggleAccordion() {
+            section.removeClass('active');
+            $(this).addClass('active');
+            }
+
+            section.on('click', toggleAccordion);
+        </script>
     </body>
 </html>
