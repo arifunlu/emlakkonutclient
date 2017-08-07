@@ -271,43 +271,46 @@
             position: relative;
             margin: 20px auto;
             background: #fcfff4;
-            background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+            background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+            background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
             border-radius: 50px;
-            box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
-            label {
-              width: 20px;
-              height: 20px;
-              position: absolute;
-              top: 4px;
-              left: 4px;
-              cursor: pointer;
-              background: linear-gradient(top, #222 0%, #45484d 100%);
-              border-radius: 50px;
-              box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
-              &:after {
-                content: '';
-                width: 9px;
-                height: 5px;
-                position: absolute;
-                top: 5px;
-                left: 4px;
-                border: 3px solid #fcfff4;
-                border-top: none;
-                border-right: none;
-                background: transparent;
-                opacity: 0;
-                transform: rotate(-45deg);
-              }
-              &:hover::after {
-                opacity: 0.3;
-              }
-            }
-            input[type=checkbox] {
-              visibility: hidden;
-              &:checked + label:after {
-                opacity: 1;
-              } 
-            }   
+            box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+          }
+          .roundedTwo label {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            cursor: pointer;
+            background: -webkit-linear-gradient(top, #222222 0%, #45484d 100%);
+            background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+            border-radius: 50px;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+          }
+          .roundedTwo label:after {
+            content: '';
+            width: 9px;
+            height: 5px;
+            position: absolute;
+            top: 5px;
+            left: 4px;
+            border: 3px solid #fcfff4;
+            border-top: none;
+            border-right: none;
+            background: transparent;
+            opacity: 0;
+            -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+          }
+          .roundedTwo label:hover::after {
+            opacity: 0.3;
+          }
+          .checkbox input[type=checkbox] {
+            visibility: hidden;
+          }
+          .checkbox input[type=checkbox]:checked {
+            
           }
 
           .table {
@@ -330,9 +333,6 @@
             right: 20px;
             font-size: 2rem;
             cursor: pointer;
-          }
-          .label-check {
-            margin-left: .5rem;
           }
           .pt-3 {
             padding-left: 0;
@@ -361,27 +361,31 @@
               </li>
               <ul class="sub-menu collapse show" id="yon">
                 <li class="nav-item">
-                  <div class="nav-link checkbox checkbox-primary">
-                    <input id="checkbox1" type="checkbox">
-                    <label for="checkbox1" class="label-check">Kuzey</label>
+                  <div class="nav-link checkbox">
+                    <i class="icon-Checkmark"></i>
+                    <input id="checkbox1" name="checkbox1" type="checkbox">
+                    <label for="checkbox1">Kuzey</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox checkbox-primary">
+                  <div class="nav-link checkbox">
+                    <i class="icon-Checkmark"></i>
                     <input id="checkbox2" type="checkbox">
-                    <label for="checkbox2" class="label-check">Güney</label>
+                    <label for="checkbox2">Güney</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox checkbox-primary">
+                  <div class="nav-link checkbox">
+                    <i class="icon-Checkmark"></i>
                     <input id="checkbox3" type="checkbox">
-                    <label for="checkbox3" class="label-check">Doğu</label>
+                    <label for="checkbox3">Doğu</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox checkbox-primary">
+                  <div class="nav-link checkbox">
+                    <i class="icon-Checkmark"></i>
                     <input id="checkbox4" type="checkbox">
-                    <label for="checkbox4" class="label-check">Batı</label>
+                    <label for="checkbox4">Batı</label>
                   </div>
                 </li>
               </ul>
@@ -392,63 +396,73 @@
               </li>
               <ul class="sub-menu collapse show" id="kat">
                 <li class="nav-item">
-                  <div class="nav-link checkbox checkbox-primary">
+                  <div class="nav-link checkbox">
+                    <i class="icon-Checkmark"></i>
                     <input id="checkbox5" type="checkbox">
-                    <label for="checkbox5" class="label-check">Zemin</label>
+                    <label for="checkbox5">Zemin</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox checkbox-primary">
+                  <div class="nav-link checkbox">
+                    <i class="icon-Checkmark"></i>
                     <input id="checkbox6" type="checkbox">
-                    <label for="checkbox6" class="label-check">Yüksek Giriş</label>
+                    <label for="checkbox6">Yüksek Giriş</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox checkbox-primary">
+                  <div class="nav-link checkbox">
+                    <i class="icon-Checkmark"></i>
                     <input id="checkbox7" type="checkbox">
-                    <label for="checkbox7" class="label-check">1</label>
+                    <label for="checkbox7">1</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox checkbox-primary">
+                  <div class="nav-link checkbox">
+                    <i class="icon-Checkmark"></i>
                     <input id="checkbox8" type="checkbox">
-                    <label for="checkbox8" class="label-check">2</label>
+                    <label for="checkbox8">2</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox checkbox-primary">
+                  <div class="nav-link checkbox">
+                    <i class="icon-Checkmark"></i>
                     <input id="checkbox9" type="checkbox">
-                    <label for="checkbox9" class="label-check">3</label>
+                    <label for="checkbox9">3</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox checkbox-primary">
+                  <div class="nav-link checkbox">
+                    <i class="icon-Checkmark"></i>
                     <input id="checkbox10" type="checkbox">
-                    <label for="checkbox10" class="label-check">4</label>
+                    <label for="checkbox10">4</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox checkbox-primary">
+                  <div class="nav-link checkbox">
+                    <i class="icon-Checkmark"></i>
                     <input id="checkbox11" type="checkbox">
-                    <label for="checkbox11" class="label-check">5</label>
+                    <label for="checkbox11">5</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox checkbox-primary">
+                  <div class="nav-link checkbox">
+                    <i class="icon-Checkmark"></i>
                     <input id="checkbox12" type="checkbox">
-                    <label for="checkbox12" class="label-check">6</label>
+                    <label for="checkbox12">6</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox checkbox-primary">
+                  <div class="nav-link checkbox">
+                    <i class="icon-Checkmark"></i>
                     <input id="checkbox13" type="checkbox">
-                    <label for="checkbox13" class="label-check">7</label>
+                    <label for="checkbox13">7</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox checkbox-primary">
+                  <div class="nav-link checkbox">
+                    <i class="icon-Checkmark"></i>
                     <input id="checkbox14" type="checkbox">
-                    <label for="checkbox14" class="label-check">8</label>
+                    <label for="checkbox14">8</label>
                   </div>
                 </li>
               </ul>
