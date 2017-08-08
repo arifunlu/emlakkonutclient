@@ -34,13 +34,17 @@
                 width: 25rem;
                 height: 25rem;
             }
-            .search {
+            .search-group {
                 width: 12rem;
-                border-color: #fff;
-                border-radius: 1.25rem;
+                height: 3rem;
                 margin: 0 auto;
                 margin-bottom: 4rem;
+            }
+            .search {
+                border-color: #fff;
+                border-radius: 1.5rem;
                 background-color: transparent;
+                border-right: 0;
             }
             .search:focus {
                 border-color: #fff;
@@ -50,6 +54,20 @@
                 border-bottom: 0;
                 border-radius: 0;
                 margin-bottom: .5rem;
+            }
+            .arrow {
+            }
+            .btn-arrow {
+                font-size: 2rem;
+                margin-right: 3rem;
+            }
+            .input-group-addon {
+                background-color: transparent;
+                border-color: #fff;
+                border-radius: 1.5rem;
+            }
+            input[placeholder] {
+                color: #fff !important;
             }
 * {
   box-sizing: border-box;
@@ -110,7 +128,11 @@ li .section-content {
     </head>
     <body>
         <div class="container">
-            <input type="text" class="form-control search" placeholder="Ara..." />
+            <div class="input-group search-group">
+                <input type="text" class="form-control search" placeholder="Ara..."  aria-describedby="basic-addon1" />
+                <i class="icon-search input-group-addon"></i>
+            </div>
+            
             <ul>
                 <li>
                     <div class="section-title">
@@ -325,6 +347,10 @@ li .section-content {
                     </div>
                 </div>
             </div>  --}}
+            <span class="arrow">
+                <i class="icon-Backward btn-arrow" role="button"></i>
+                <i class="icon-Forward btn-arrow" role="button"></i>
+            </span>
         </div>
 
         <!-- Scripts -->
