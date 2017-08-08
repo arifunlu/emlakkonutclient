@@ -265,52 +265,64 @@
             border-top-right-radius: 0;
           }
 
-          .roundedTwo {
-            width: 28px;
-            height: 28px;
+          /* Base for label styling */
+          [type="checkbox"]:not(:checked),
+          [type="checkbox"]:checked {
+            display: none;
+          }
+          [type="checkbox"]:not(:checked) + label,
+          [type="checkbox"]:checked + label {
             position: relative;
-            margin: 20px auto;
-            background: #fcfff4;
-            background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-            background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-            border-radius: 50px;
-            box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
-          }
-          .roundedTwo label {
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            top: 4px;
-            left: 4px;
+            padding-left: 1.95em;
             cursor: pointer;
-            background: -webkit-linear-gradient(top, #222222 0%, #45484d 100%);
-            background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
-            border-radius: 50px;
-            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
           }
-          .roundedTwo label:after {
+
+          /* checkbox aspect */
+          [type="checkbox"]:not(:checked) + label:before,
+          [type="checkbox"]:checked + label:before {
             content: '';
-            width: 9px;
-            height: 5px;
             position: absolute;
-            top: 5px;
-            left: 4px;
-            border: 3px solid #fcfff4;
-            border-top: none;
-            border-right: none;
+            left: 0;
+            top: 3px;
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid #fff;
             background: transparent;
+            border-radius: 50%;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+          }
+          /* checked mark aspect */
+          [type="checkbox"]:not(:checked) + label:after,
+          [type="checkbox"]:checked + label:after {
+            content: '✔';
+            position: absolute;
+            top: .45rem;
+            left: .28rem;
+            font-size: .7rem;
+            line-height: 0.8;
+            color: #fff;
+            transition: all .2s;
+          }
+          /* checked mark aspect changes */
+          [type="checkbox"]:not(:checked) + label:after {
             opacity: 0;
-            -webkit-transform: rotate(-45deg);
-                    transform: rotate(-45deg);
+            transform: scale(0);
           }
-          .roundedTwo label:hover::after {
-            opacity: 0.3;
+          [type="checkbox"]:checked + label:after {
+            opacity: 1;
+            transform: scale(1);
           }
-          .checkbox input[type=checkbox] {
-            visibility: hidden;
+          /* disabled checkbox */
+          [type="checkbox"]:disabled:not(:checked) + label:before,
+          [type="checkbox"]:disabled:checked + label:before {
+            box-shadow: none;
+            background-color: #ddd;
           }
-          .checkbox input[type=checkbox]:checked {
-            
+          [type="checkbox"]:disabled:checked + label:after {
+            color: #999;
+          }
+          [type="checkbox"]:disabled + label {
+            color: #aaa;
           }
 
           .table {
@@ -341,10 +353,6 @@
     </head>
     <body>
       <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-custom">
-        <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-          aria-controls="navbarsExampleDefault" aria-expanded="false">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <a class="navbar-brand" href="#">
           <img src="img/logo.png"/>
         </a>
@@ -362,28 +370,24 @@
               <ul class="sub-menu collapse show" id="yon">
                 <li class="nav-item">
                   <div class="nav-link checkbox">
-                    <i class="icon-Checkmark"></i>
-                    <input id="checkbox1" name="checkbox1" type="checkbox">
+                    <input id="checkbox1" name="checkbox1" type="checkbox" onchange="test(this)">
                     <label for="checkbox1">Kuzey</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox">
-                    <i class="icon-Checkmark"></i>
+                  <div class="nav-link">
                     <input id="checkbox2" type="checkbox">
                     <label for="checkbox2">Güney</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox">
-                    <i class="icon-Checkmark"></i>
+                  <div class="nav-link">
                     <input id="checkbox3" type="checkbox">
                     <label for="checkbox3">Doğu</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox">
-                    <i class="icon-Checkmark"></i>
+                  <div class="nav-link">
                     <input id="checkbox4" type="checkbox">
                     <label for="checkbox4">Batı</label>
                   </div>
@@ -396,71 +400,61 @@
               </li>
               <ul class="sub-menu collapse show" id="kat">
                 <li class="nav-item">
-                  <div class="nav-link checkbox">
-                    <i class="icon-Checkmark"></i>
+                  <div class="nav-link">
                     <input id="checkbox5" type="checkbox">
                     <label for="checkbox5">Zemin</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox">
-                    <i class="icon-Checkmark"></i>
+                  <div class="nav-link">
                     <input id="checkbox6" type="checkbox">
                     <label for="checkbox6">Yüksek Giriş</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox">
-                    <i class="icon-Checkmark"></i>
+                  <div class="nav-link">
                     <input id="checkbox7" type="checkbox">
                     <label for="checkbox7">1</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox">
-                    <i class="icon-Checkmark"></i>
+                  <div class="nav-link">
                     <input id="checkbox8" type="checkbox">
                     <label for="checkbox8">2</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox">
-                    <i class="icon-Checkmark"></i>
+                  <div class="nav-link">
                     <input id="checkbox9" type="checkbox">
                     <label for="checkbox9">3</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox">
-                    <i class="icon-Checkmark"></i>
+                  <div class="nav-link">
                     <input id="checkbox10" type="checkbox">
                     <label for="checkbox10">4</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox">
-                    <i class="icon-Checkmark"></i>
+                  <div class="nav-link">
                     <input id="checkbox11" type="checkbox">
                     <label for="checkbox11">5</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox">
-                    <i class="icon-Checkmark"></i>
+                  <div class="nav-link">
                     <input id="checkbox12" type="checkbox">
                     <label for="checkbox12">6</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox">
-                    <i class="icon-Checkmark"></i>
+                  <div class="nav-link">
                     <input id="checkbox13" type="checkbox">
                     <label for="checkbox13">7</label>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <div class="nav-link checkbox">
-                    <i class="icon-Checkmark"></i>
+                  <div class="nav-link">
                     <input id="checkbox14" type="checkbox">
                     <label for="checkbox14">8</label>
                   </div>
@@ -585,6 +579,13 @@
           var id = p.getAttribute('id');
           $('.btn-grp-fix button.active').removeClass('active');
           $('#' + id).addClass('active');
+        }
+
+        function test(i) {
+          var id = i.getAttribute("id"),
+            check = i.checked;
+
+
         }
 
         var zoomLevel = 1;

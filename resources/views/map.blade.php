@@ -334,10 +334,6 @@
     </head>
     <body>
       <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-custom">
-        <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-          aria-controls="navbarsExampleDefault" aria-expanded="false">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <a class="navbar-brand" href="#">
           <img src="img/logo.png"/>
         </a>
