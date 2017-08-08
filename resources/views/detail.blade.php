@@ -344,7 +344,6 @@
             z-index: 999;
             right: 20px;
             font-size: 2rem;
-            cursor: pointer;
           }
           .pt-3 {
             padding-left: 0;
@@ -356,7 +355,7 @@
         <a class="navbar-brand" href="#">
           <img src="img/logo.png"/>
         </a>
-        <i class="icon-Print btn-print" onclick="window.print();"></i>
+        <i class="icon-Print btn-print" onclick="window.print();" role="button"></i>
       </nav>
 
       <div class="container-fluid">
@@ -475,7 +474,7 @@
                 <div class="d-flex flex-column align-items-center" style="width: 2rem">
                   <div class="ws trans bg-red" style="margin-top: 4rem;" data-toggle="collapse" data-target="#rightIcerik">
                     <div class="ws_left bg-red"></div>
-                    <div class="d-flex flex-row retrans180">
+                    <div class="d-flex flex-row retrans180" role="button">
                       <span style="width: 60px;">₺ Satış</span>
                     </div>
                     <div class="ws_right bg-red"></div>
@@ -483,23 +482,23 @@
                   <div class="ws trans" style="margin-top: 16rem;">
                     <div class="ws_left"></div>
                     <div class="d-flex flex-row">
-                      <i class="icon-Pointer retrans" style="width: 36px;"></i>
+                      <i class="icon-Pointer retrans" style="width: 36px;" role="button"></i>
                     </div>
                     <div class="ws_right"></div>
                   </div>
                   <div class="ws trans" style="margin-top: 4rem;">
                     <div class="ws_left"></div>
                     <div class="d-flex flex-row">
-                      <i class="icon-Zoom_In retrans" onclick="updateZoom(0.2)"></i>
-                      <i class="icon-Fit retrans" onclick="updateZoom(0)"></i>
-                      <i class="icon-Zoom_Out retrans" onclick="updateZoom(-0.2)"></i>
+                      <i class="icon-Zoom_In retrans" onclick="updateZoom(0.2)" role="button"></i>
+                      <i class="icon-Fit retrans" onclick="updateZoom(0)" role="button"></i>
+                      <i class="icon-Zoom_Out retrans" onclick="updateZoom(-0.2)" role="button"></i>
                     </div>
                     <div class="ws_right"></div>
                   </div>
                   <div class="ws trans bg-green" style="margin-top: 4rem;">
                     <div class="ws_left bg-green"></div>
                     <div class="d-flex flex-row">
-                      <i class="icon-Pin_Icon retrans" style="width: 36px;" onclick="window.location='{{ URL::route('map') }}'"></i>
+                      <i class="icon-Pin_Icon retrans" style="width: 36px;" onclick="window.location='{{ URL::route('map') }}'" role="button"></i>
                     </div>
                     <div class="ws_right bg-green"></div>
                   </div>
