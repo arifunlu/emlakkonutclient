@@ -71,6 +71,7 @@
                 margin-right: 10px;
                 font-size: 1.2rem;
                 white-space: nowrap;
+                cursor:pointer;
             }
             .panelContent {
                 padding: 0 0 0 50px;
@@ -82,7 +83,6 @@
                 height:350px;
                 float:left;
                 background-color: #EFEDED;
-                cursor:pointer;
             }
             .rotate {
                 color: #0059ab;
@@ -107,7 +107,7 @@
                     <div class="pink">
                         <div class="rotate">BATI ŞEHİR</div>
                     </div>
-                    <div class="panelContent">
+                    <div class="panelContent" onclick="window.location='{{ URL::route('detail') }}'">
                         <img src="img/9.png" />
                     </div>
                     </div>
