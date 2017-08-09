@@ -22,17 +22,8 @@
                 -o-background-size: cover;
                 background-size: cover;
             }
-            #accordion {
-                transform: translateX(-70%) rotate(-90deg);
-                max-width: 25rem;
-                transform-origin: right top;
-            }
-            #accordion .card .collapse {
-                transform: rotate(90deg);
-            }
-            #accordion .card .collapse>img {
-                width: 25rem;
-                height: 25rem;
+            .container {
+                text-align: center;
             }
             .search-group {
                 width: 12rem;
@@ -56,74 +47,48 @@
                 margin-bottom: .5rem;
             }
             .arrow {
+                width: 6rem;
+                margin: 4rem auto;
             }
             .btn-arrow {
                 font-size: 2rem;
-                margin-right: 3rem;
             }
             .input-group-addon {
                 background-color: transparent;
                 border-color: #fff;
                 border-radius: 1.5rem;
             }
-            input[placeholder] {
-                color: #fff !important;
+            #accordion {
+                max-height:350px;
+                overflow-y:hidden;
             }
-* {
-  box-sizing: border-box;
-}
-
-ul {
-  display: flex;
-  height: 450px;
-  padding: 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-  list-style-type: none;
-}
-
-li {
-  flex: 1;
-  display: flex;
-  align-items: stretch;
-  background: #EFEDED;
-  cursor: pointer;
-  transition: all .5s ease;
-  margin-right: 10px;
-  width: 45px;
-}
-
-li.active {
-  flex: 5;
-  background: #fff;
-  cursor: default;
-  width: 400px;
-}
-li.active .section-content {
-  flex: 4;
-  opacity: 1;
-  transform: scaleX(1);
-}
-li .section-title {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background-color: #EFEDED;
-}
-li .section-title h5 {
-  margin: 0;
-  transform: rotate(-90deg);
-  white-space: nowrap;
-}
-li .section-content {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  opacity: 0;
-  transition: all .25s .1s ease-out;
-}
+            .panel {
+                float:left;
+                display:block;
+                height:350px;
+                width:50px;
+                overflow:hidden;
+                margin-right: 10px;
+                font-size: 1.2rem;
+                white-space: nowrap;
+            }
+            .panelContent {
+                padding: 0 0 0 50px;
+                height:350px;
+                width:350px;
+            }
+            .pink {
+                width:50px;
+                height:350px;
+                float:left;
+                background-color: #EFEDED;
+                cursor:pointer;
+            }
+            .rotate {
+                color: #0059ab;
+                font-weight: bold;
+                transform: translateY(975%) rotate(-90deg);
+            }
         </style>
     </head>
     <body>
@@ -132,243 +97,205 @@ li .section-content {
                 <input type="text" class="form-control search" placeholder="Ara..."  aria-describedby="basic-addon1" />
                 <i class="icon-search input-group-addon"></i>
             </div>
-            
-            <ul>
-                <li>
-                    <div class="section-title">
-                    <h5>Section 1</h5>
-                    </div>
-                    <div class="section-content">
+
+            <div id="accordion">
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">BATI ŞEHİR</div>
+                </div>
+                <div class="panelContent">
                     <img src="img/9.png" />
-                    </div>
-                </li>
-                <li class="active">
-                    <div class="section-title">
-                    <h5>Section 2</h5>
-                    </div>
-                    <div class="section-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam delectus, eius nostrum aspernatur voluptas enim fugit ipsa magni voluptatem, odio sit accusamus vel id, commodi consequuntur possimus repellat necessitatibus!</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="section-title">
-                    <h5>Section 3</h5>
-                    </div>
-                    <div class="section-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur saepe vel facilis quae nihil ad aspernatur ex delectus. Tenetur nulla voluptates similique quos, quia possimus, magnam esse natus quis ipsa.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="section-title">
-                    <h5>Section 4</h5>
-                    </div>
-                    <div class="section-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio illo, delectus deleniti animi accusamus. Laboriosam maiores totam provident aliquam. Unde, incidunt amet officia a obcaecati, ducimus at molestiae nemo.</p>
-                    </div>    
-                </li>
-                <li>
-                    <div class="section-title">
-                    <h5>Section 5</h5>
-                    </div>
-                    <div class="section-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio illo, delectus deleniti animi accusamus. Laboriosam maiores totam provident aliquam. Unde, incidunt amet officia a obcaecati, ducimus at molestiae nemo.</p>
-                    </div>    
-                </li>
-                <li>
-                    <div class="section-title">
-                    <h5>Section 6</h5>
-                    </div>
-                    <div class="section-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio illo, delectus deleniti animi accusamus. Laboriosam maiores totam provident aliquam. Unde, incidunt amet officia a obcaecati, ducimus at molestiae nemo.</p>
-                    </div>    
-                </li>
-                <li>
-                    <div class="section-title">
-                    <h5>Section 7</h5>
-                    </div>
-                    <div class="section-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio illo, delectus deleniti animi accusamus. Laboriosam maiores totam provident aliquam. Unde, incidunt amet officia a obcaecati, ducimus at molestiae nemo.</p>
-                    </div>    
-                </li>
-                <li>
-                    <div class="section-title">
-                    <h5>Section 8</h5>
-                    </div>
-                    <div class="section-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio illo, delectus deleniti animi accusamus. Laboriosam maiores totam provident aliquam. Unde, incidunt amet officia a obcaecati, ducimus at molestiae nemo.</p>
-                    </div>    
-                </li>
-                <li>
-                    <div class="section-title">
-                    <h5>Section 9</h5>
-                    </div>
-                    <div class="section-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio illo, delectus deleniti animi accusamus. Laboriosam maiores totam provident aliquam. Unde, incidunt amet officia a obcaecati, ducimus at molestiae nemo.</p>
-                    </div>    
-                </li>
-                <li>
-                    <div class="section-title">
-                    <h5>Section 10</h5>
-                    </div>
-                    <div class="section-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio illo, delectus deleniti animi accusamus. Laboriosam maiores totam provident aliquam. Unde, incidunt amet officia a obcaecati, ducimus at molestiae nemo.</p>
-                    </div>
-                </li>
-            </ul>
-            {{--  <div id="accordion" role="tablist" aria-multiselectable="false">
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingOne">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            BATI ŞEHİR
-                        </h5>
-                    </div>
-                    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <img src="img/9.png" />
-                    </div>
                 </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingTwo">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            VARYAP MERIDIAN
-                        </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <img src="img/9.png" />
-                    </div>
                 </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingThree">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            MY WORLD ATAŞEHİR
-                        </h5>
-                    </div>
-                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-                        <img src="img/9.png" />
-                    </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">VARYAP MERIDIAN</div>
                 </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingOne">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            BATI ŞEHİR
-                        </h5>
-                    </div>
-                    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <img src="img/9.png" />
-                    </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
                 </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingTwo">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            VARYAP MERIDIAN
-                        </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <img src="img/9.png" />
-                    </div>
                 </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingThree">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            MY WORLD ATAŞEHİR
-                        </h5>
-                    </div>
-                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-                        <img src="img/9.png" />
-                    </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">MY WORLD ATAŞEHİR</div>
                 </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingOne">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            BATI ŞEHİR
-                        </h5>
-                    </div>
-                    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <img src="img/9.png" />
-                    </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
                 </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingTwo">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            VARYAP MERIDIAN
-                        </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <img src="img/9.png" />
-                    </div>
                 </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingThree">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            MY WORLD ATAŞEHİR
-                        </h5>
-                    </div>
-                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-                        <img src="img/9.png" />
-                    </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">MY WORLD EUROPE</div>
                 </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingOne">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            BATI ŞEHİR
-                        </h5>
-                    </div>
-                    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <img src="img/9.png" />
-                    </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
                 </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingTwo">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            VARYAP MERIDIAN
-                        </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <img src="img/9.png" />
-                    </div>
                 </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingThree">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            MY WORLD ATAŞEHİR
-                        </h5>
-                    </div>
-                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-                        <img src="img/9.png" />
-                    </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">1STANBUL</div>
                 </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingThree">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            MY WORLD ATAŞEHİR
-                        </h5>
-                    </div>
-                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-                        <img src="img/9.png" />
-                    </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
                 </div>
-            </div>  --}}
-            <span class="arrow">
-                <i class="icon-Backward btn-arrow" role="button"></i>
+                </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">UNIKONUT ISPARTAKULE</div>
+                </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
+                </div>
+                </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">AVRUPA KONUTLARI - TEM</div>
+                </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
+                </div>
+                </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">AVRUPA KONUTLARI - TEM 2</div>
+                </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
+                </div>
+                </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">BAHÇETEPE İSTANBUL</div>
+                </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
+                </div>
+                </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">MY TOWN ISPARTAKULE</div>
+                </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
+                </div>
+                </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">BULVAR 216</div>
+                </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
+                </div>
+                </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">BULGAZKENT</div>
+                </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
+                </div>
+                </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">ŞEHRİZAR KONAKLARI</div>
+                </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
+                </div>
+                </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">Test Action</div>
+                </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
+                </div>
+                </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">Test Action</div>
+                </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
+                </div>
+                </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">Test Action</div>
+                </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
+                </div>
+                </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">Test Action</div>
+                </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
+                </div>
+                </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">Test Action</div>
+                </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
+                </div>
+                </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">Test Action</div>
+                </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
+                </div>
+                </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">Test Action</div>
+                </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
+                </div>
+                </div>
+                <div class="panel" style="width: 50px;">
+                <div class="pink">
+                    <div class="rotate">Test Action</div>
+                </div>
+                <div class="panelContent">
+                    <img src="img/9.png" />
+                </div>
+                </div>
+            </div>
+            
+            <div class="arrow">
+                <i class="icon-Backward btn-arrow" style="margin-right: 3rem;" role="button"></i>
                 <i class="icon-Forward btn-arrow" role="button"></i>
-            </span>
+            </div>
         </div>
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
         <script>
-            var section = $('li');
-
-            function toggleAccordion() {
-                section.removeClass('active');
-                $(this).addClass('active');
-            }
-
-            section.on('click', toggleAccordion);
-
             function scrollNext() {
                 var elmnt = document.getElementById("content");
                 elmnt.scrollIntoView();
             }
+
+            $(document).ready(function(){
+                activePanel = $("#accordion div.panel:first");
+            
+                $("#accordion").delegate('.panel', 'click', function(e){
+                    if( ! $(this).is('.active') ){
+                        $(activePanel).animate({width: "50px"}, 300);
+                        $(this).animate({width: "350px"}, 300);
+                        $('#accordion .panel').removeClass('active');
+                        $(this).addClass('active');
+                        activePanel = this;
+                    };
+                });
+            });
         </script>
     </body>
 </html>
