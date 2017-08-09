@@ -10,13 +10,24 @@
 
         <title>{{ config('app.name') }}</title>
 
+        @section('css')
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        @show
     </head>
     <body>
+        <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-custom">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png"/>
+            </a>
+            <i class="icon-Print btn-print" onclick="window.print();" role="button"></i>
+        </nav>
+
         @yield('content')
 
+        @section('javascript')
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
+        @show
     </body>
 </html>

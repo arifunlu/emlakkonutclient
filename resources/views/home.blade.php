@@ -25,72 +25,10 @@
             .container {
                 text-align: center;
             }
-            .search-group {
-                width: 12rem;
-                height: 3rem;
-                margin: auto;
-                margin-bottom: 4rem;
-            }
-            .search {
-                border-color: #fff;
-                border-radius: 1.5rem;
-                background-color: transparent;
-                border-right: 0;
-            }
-            .search:focus {
-                border-color: #fff;
-                background-color: transparent;
-            }
-            .card-space {
-                border-bottom: 0;
-                border-radius: 0;
-                margin-bottom: .5rem;
-            }
-            .arrow {
-                width: 6rem;
-                margin: 4rem auto;
-            }
-            .btn-arrow {
-                font-size: 2rem;
-            }
             .input-group-addon {
                 background-color: transparent;
                 border-color: #fff;
                 border-radius: 1.5rem;
-            }
-            #accordion {
-                max-height:350px;
-                overflow:hidden;
-            }
-            .panel {
-                float:left;
-                display:block;
-                height:350px;
-                width:50px;
-                overflow:hidden;
-                margin-right: 10px;
-                font-size: 1.2rem;
-                white-space: nowrap;
-                cursor:pointer;
-            }
-            .panelContent {
-                padding: 0 0 0 50px;
-                height:350px;
-                width:350px;
-            }
-            .pink {
-                width:50px;
-                height:350px;
-                float:left;
-                background-color: #EFEDED;
-            }
-            .rotate {
-                color: #0059ab;
-                font-weight: bold;
-                transform: translateY(975%) rotate(-90deg);
-            }
-            .scroll-container {
-                display: inline-flex;
             }
         </style>
     </head>
