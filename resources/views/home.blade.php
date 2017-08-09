@@ -28,7 +28,7 @@
             .search-group {
                 width: 12rem;
                 height: 3rem;
-                margin: 0 auto;
+                margin: auto;
                 margin-bottom: 4rem;
             }
             .search {
@@ -60,7 +60,7 @@
             }
             #accordion {
                 max-height:350px;
-                overflow-y:hidden;
+                overflow:hidden;
             }
             .panel {
                 float:left;
@@ -89,6 +89,9 @@
                 font-weight: bold;
                 transform: translateY(975%) rotate(-90deg);
             }
+            .scroll-container {
+                display: inline-flex;
+            }
         </style>
     </head>
     <body>
@@ -99,188 +102,194 @@
             </div>
 
             <div id="accordion">
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">BATI ŞEHİR</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">VARYAP MERIDIAN</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">MY WORLD ATAŞEHİR</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">MY WORLD EUROPE</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">1STANBUL</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">UNIKONUT ISPARTAKULE</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">AVRUPA KONUTLARI - TEM</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">AVRUPA KONUTLARI - TEM 2</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">BAHÇETEPE İSTANBUL</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">MY TOWN ISPARTAKULE</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">BULVAR 216</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">BULGAZKENT</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">ŞEHRİZAR KONAKLARI</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">Test Action</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">Test Action</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">Test Action</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">Test Action</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">Test Action</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">Test Action</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">Test Action</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
-                </div>
-                <div class="panel" style="width: 50px;">
-                <div class="pink">
-                    <div class="rotate">Test Action</div>
-                </div>
-                <div class="panelContent">
-                    <img src="img/9.png" />
-                </div>
+                <div class="scroll-container">
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">BATI ŞEHİR</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">VARYAP MERIDIAN</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">MY WORLD ATAŞEHİR</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">MY WORLD EUROPE</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">1STANBUL</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">UNIKONUT ISPARTAKULE</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">AVRUPA KONUTLARI - TEM</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">AVRUPA KONUTLARI - TEM 2</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">BAHÇETEPE İSTANBUL</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">MY TOWN ISPARTAKULE</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">BULVAR 216</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">BULGAZKENT</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">ŞEHRİZAR KONAKLARI</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">Test Action</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">Test Action</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">Test Action</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">Test Action</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">Test Action</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">Test Action</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">Test Action</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">Test Action</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
                 </div>
             </div>
             
             <div class="arrow">
-                <i class="icon-Backward btn-arrow" style="margin-right: 3rem;" role="button"></i>
-                <i class="icon-Forward btn-arrow" role="button"></i>
+                <i class="icon-Backward btn-arrow" style="margin-right: 3rem;" role="button" onclick="scrollBack();"></i>
+                <i class="icon-Forward btn-arrow" role="button" onclick="scrollNext();"></i>
             </div>
         </div>
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
         <script>
+            function scrollBack() {
+                var element = document.getElementById("accordion");
+                element.scrollBy(-100, 0);
+            }
             function scrollNext() {
-                var elmnt = document.getElementById("content");
-                elmnt.scrollIntoView();
+                var element = document.getElementById("accordion");
+                element.scrollBy(100, 0);
             }
 
             $(document).ready(function(){
