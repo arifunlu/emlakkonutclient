@@ -270,9 +270,9 @@
         $('#image-map-pro-container').css({ zoom: zoomLevel, '-moz-transform': 'scale(' + zoomLevel + ')' });
       }
       function upIconChange() {
-        if ($(".icon-Forma-1")) {
+        if ($(".icon-Forma-1").length > 0) {
           $(".icon-Forma-1").removeClass("icon-Forma-1").addClass("icon-Backward");
-        } else if ($(".icon-Backward")) {
+        } else if ($(".icon-Backward").length > 0) {
           $(".icon-Backward").removeClass("icon-Backward").addClass("icon-Forma-1");
         }
       }
