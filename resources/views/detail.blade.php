@@ -191,7 +191,7 @@
         <div id="plan-table" class="col-sm-9 col-md-10 p-0 m-0" role="tablist" aria-multiselectable="true">
           <div class="card">
             <div class="card-header" role="tab" id="headingOne">
-              <div class="ws up trans180 bg-green" data-toggle="collapse" data-parent="#plan-table" data-target="#collapseOne">
+              <div class="ws up trans180 bg-green" role="button" onclick="upIconChange()" data-toggle="collapse" data-parent="#plan-table" data-target="#collapseOne">
                 <div class="ws_left bg-gray bg-green"></div>
                 <div class="d-flex flex-row retrans180">
                   <i class="icon-Forma-1"></i>
@@ -268,6 +268,13 @@
           zoomLevel += zoom;
         }
         $('#image-map-pro-container').css({ zoom: zoomLevel, '-moz-transform': 'scale(' + zoomLevel + ')' });
+      }
+      function upIconChange() {
+        if ($(".icon-Forma-1")) {
+          $(".icon-Forma-1").removeClass("icon-Forma-1").addClass("icon-Backward");
+        } else if ($(".icon-Backward")) {
+          $(".icon-Backward").removeClass("icon-Backward").addClass("icon-Forma-1");
+        }
       }
     </script>
     <!-- Submodules -->
