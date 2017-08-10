@@ -10454,6 +10454,11 @@ h1 {
   border-left: 1px solid #efeded;
 }
 
+.table-striped td:first-child,
+.table-striped th:first-child {
+  border: none;
+}
+
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: #bdbaba;
 }
@@ -10477,7 +10482,6 @@ h1 {
 .table-responsive {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
-  width: 100.95%;
 }
 
 .sub-menu {
@@ -10587,8 +10591,11 @@ h1 {
   background-color: #00a65e;
 }
 
-#sectionIcerik {
-  margin-top: -1rem;
+.up {
+  float: right;
+  margin-right: 3rem;
+  margin-top: -2rem;
+  width: 2rem;
 }
 
 #rightIcerik {
@@ -10599,14 +10606,6 @@ h1 {
 
 .bg-gray:before {
   background-color: #F2F2F2;
-}
-
-.up {
-  float: right;
-  position: relative;
-  top: -2rem;
-  margin-right: 2rem;
-  margin-bottom: -2rem;
 }
 
 .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
@@ -10718,14 +10717,10 @@ button {
 }
 
 .btn-print {
-  position: relative;
+  position: absolute;
   z-index: 999;
-  right: 20px;
+  right: 2rem;
   font-size: 2rem;
-}
-
-.pt-3 {
-  padding-left: 0;
 }
 
 #map {
@@ -10737,5 +10732,38 @@ button {
   z-index: 999;
   top: 110px;
   right: 25px;
+}
+
+#wcp-editor {
+  background: transparent !important;
+  height: auto !important;
+}
+
+#wcp-editor-left,
+#wcp-editor-right,
+#wcp-editor-extra-main-buttons {
+  display: none !important;
+}
+
+#plan-table {
+  position: fixed;
+  bottom: 0;
+  z-index: 9;
+}
+
+#plan-table .card {
+  border: 0;
+}
+
+#plan-table .card-block {
+  padding: 0;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+#plan-table .card-header {
+  padding: 0;
+  background-color: transparent;
+  border: none;
 }
 

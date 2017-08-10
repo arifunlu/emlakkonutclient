@@ -16,8 +16,8 @@
               </li>
               <ul class="sub-menu collapse show" id="yon">
                 <li class="nav-item">
-                  <div class="nav-link checkbox">
-                    <input id="checkbox1" name="checkbox1" type="checkbox" onchange="test(this)">
+                  <div class="nav-link">
+                    <input id="checkbox1" type="checkbox">
                     <label for="checkbox1">Kuzey</label>
                   </div>
                 </li>
@@ -110,20 +110,20 @@
             </ul>
           </nav>
 
-          <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-            <section id="sectionIcerik" class="row text-center collapse show">
+          <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 p-0">
+            <section id="sectionIcerik" class="p-0 m-0">
               <div class="btn-group btn-grp-fix" role="group">
                 <button id="btnGenelVaziyet" type="button" class="btn btn-success active tableheader" onclick="onClickActiveNav(this)">GENEL VAZİYET PLANI</button>
                 <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader" onclick="onClickActiveNav(this)">PARSEL VAZİYET PLANI</button>
                 <button id="btnDaire" type="button" class="btn btn-success tableheader" onclick="onClickActiveNav(this)">DAİRE PLANI</button>
               </div>
-              <div class="d-flex flex-row">
+              <div class="d-flex flex-row justify-content-between">
                 <div id="image-map-pro-container"></div>
-                <div class="d-flex flex-column align-items-center" style="width: 2rem">
+                <div class="d-flex flex-column align-items-center" style="width: 2rem;">
                   <div class="ws trans bg-red" style="margin-top: 4rem;" data-toggle="collapse" data-target="#rightIcerik">
                     <div class="ws_left bg-red"></div>
                     <div class="d-flex flex-row retrans180" role="button">
-                      <span style="width: 60px;">₺ Satış</span>
+                      <span style="width: 50px;">₺ Satış</span>
                     </div>
                     <div class="ws_right bg-red"></div>
                   </div>
@@ -151,7 +151,7 @@
                     <div class="ws_right bg-green"></div>
                   </div>
                 </div>
-                <div id="rightIcerik" class="d-flex flex-column text-left collapse show">
+                <div id="rightIcerik" class="collapse">
                   <h5>B TİP BLOK - 3+1 DAİRE</h5>
                   <span>Giriş Holü:</span>
                   <span>Koridor:</span>
@@ -173,40 +173,98 @@
               </div>
             </section>
 
-            <div class="ws trans180 up bg-green">
-              <div class="ws_left bg-gray bg-green"></div>
-              <div class="d-flex flex-row retrans180">
-                <i class="icon-Forma-1" data-toggle="collapse" data-target="#sectionIcerik"></i>
+            <div id="plan-table" class="col-sm-9 col-md-10 p-0 m-0" role="tablist" aria-multiselectable="true">
+              <div class="card">
+                <div class="card-header" role="tab" id="headingOne">
+                  <div class="ws up trans180 bg-green" data-toggle="collapse" data-parent="#plan-table" data-target="#collapseOne">
+                    <div class="ws_left bg-gray bg-green"></div>
+                    <div class="d-flex flex-row retrans180">
+                      <i class="icon-Forma-1"></i>
+                    </div>
+                    <div class="ws_right bg-gray bg-green"></div>
+                  </div>
+                </div>
+                <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="card-block">
+                    <table class="table table-striped">
+                      <thead class="tableheader">
+                        <tr>
+                          <th>BLOK</th>
+                          <th>KAPI NO</th>
+                          <th>KAT</th>
+                          <th>YÖN</th>
+                          <th>ODA</th>
+                          <th>METREKARE</th>
+                          <th>BRÜT FİYAT</th>
+                          <th>NET FİYAT</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1,001</td>
+                          <td>Lorem</td>
+                          <td>ipsum</td>
+                          <td>dolor</td>
+                          <td>sit</td>
+                          <td>ipsum</td>
+                          <td>dolor</td>
+                          <td>sit</td>
+                        </tr>
+                        <tr>
+                          <td>1,001</td>
+                          <td>Lorem</td>
+                          <td>ipsum</td>
+                          <td>dolor</td>
+                          <td>sit</td>
+                          <td>ipsum</td>
+                          <td>dolor</td>
+                          <td>sit</td>
+                        </tr>
+                        <tr>
+                          <td>1,001</td>
+                          <td>Lorem</td>
+                          <td>ipsum</td>
+                          <td>dolor</td>
+                          <td>sit</td>
+                          <td>ipsum</td>
+                          <td>dolor</td>
+                          <td>sit</td>
+                        </tr>
+                        <tr>
+                          <td>1,001</td>
+                          <td>Lorem</td>
+                          <td>ipsum</td>
+                          <td>dolor</td>
+                          <td>sit</td>
+                          <td>ipsum</td>
+                          <td>dolor</td>
+                          <td>sit</td>
+                        </tr>
+                        <tr>
+                          <td>1,001</td>
+                          <td>Lorem</td>
+                          <td>ipsum</td>
+                          <td>dolor</td>
+                          <td>sit</td>
+                          <td>ipsum</td>
+                          <td>dolor</td>
+                          <td>sit</td>
+                        </tr>
+                        <tr>
+                          <td>1,001</td>
+                          <td>Lorem</td>
+                          <td>ipsum</td>
+                          <td>dolor</td>
+                          <td>sit</td>
+                          <td>ipsum</td>
+                          <td>dolor</td>
+                          <td>sit</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
-              <div class="ws_right bg-gray bg-green"></div>
-            </div>
-            <div class="table-responsive">
-              <table class="table table-striped">
-                <thead class="tableheader">
-                  <tr>
-                    <th>BLOK</th>
-                    <th>KAPI NO</th>
-                    <th>KAT</th>
-                    <th>YÖN</th>
-                    <th>ODA</th>
-                    <th>METREKARE</th>
-                    <th>BRÜT FİYAT</th>
-                    <th>NET FİYAT</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1,001</td>
-                    <td>Lorem</td>
-                    <td>ipsum</td>
-                    <td>dolor</td>
-                    <td>sit</td>
-                    <td>ipsum</td>
-                    <td>dolor</td>
-                    <td>sit</td>
-                  </tr>
-                </tbody>
-              </table>
             </div>
           </main>
         </div>
@@ -233,7 +291,7 @@
         function updateZoom(zoom) {
           if (zoom === 0) {
             zoomLevel = 1;
-          } else {
+          } else if (zoomLevel < 2) {
             zoomLevel += zoom;
           }
           $('#image-map-pro-container').css({ zoom: zoomLevel, '-moz-transform': 'scale(' + zoomLevel + ')' });
