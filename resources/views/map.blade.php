@@ -30,7 +30,7 @@
                   mapTypeControl: false
               });
               var drawingManager = new google.maps.drawing.DrawingManager({
-                  drawingMode: google.maps.drawing.OverlayType.MARKER,
+                  drawingMode: google.maps.drawing.OverlayType.POLYGON,
                   drawingControl: true,
                   drawingControlOptions: {
                       style: google.maps.MapTypeControlStyle.VERTICAL_BAR,

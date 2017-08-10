@@ -529,7 +529,8 @@ button {
 
 #wcp-editor-left,
 #wcp-editor-right,
-#wcp-editor-extra-main-buttons {
+#wcp-editor-extra-main-buttons,
+#wcp-editor-toolbar-wrap {
   display: none !important;
 }
 
@@ -553,4 +554,8 @@ button {
   padding: 0;
   background-color: transparent;
   border: none;
+}
+
+#sectionIcerik {
+  margin-top: 5.5rem;
 }
