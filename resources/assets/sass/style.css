@@ -260,7 +260,7 @@ h1 {
 }
 
 .navbar-light .navbar-brand {
-  margin: 0 auto;
+  margin: auto;
 }
 
 .navbar-light .navbar-brand>img {
