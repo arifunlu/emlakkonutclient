@@ -507,6 +507,7 @@ button {
 .btn-print {
   position: absolute;
   z-index: 999;
+  top: 1.8rem;
   right: 2rem;
   font-size: 2rem;
 }
