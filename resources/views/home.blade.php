@@ -35,7 +35,7 @@
     <body>
         <div class="container">
             <div class="input-group search-group">
-                <input type="text" class="form-control search" placeholder="Ara..."  aria-describedby="basic-addon1" />
+                <input id="inputSearch" type="text" class="form-control search" placeholder="Ara..."  aria-describedby="basic-addon1" onkeyup="filter(this);" />
                 <i class="icon-search input-group-addon"></i>
             </div>
 
@@ -243,6 +243,24 @@
                     };
                 });
             });
+
+            function filter(p) {
+                var input, filter, div, id = p.getAttribute("id");
+                input = document.getElementById(id);
+                filter = input.value.toLocaleUpperCase();
+
+                div = document.getElementsByClassName("panel");
+
+                for (var i in div) {
+                    if (div[i].innerHTML) {
+                        if (div[i].innerHTML.toLocaleUpperCase().indexOf(filter) > -1) {
+                            div[i].style.display = "";
+                        } else {
+                            div[i].style.display = "none";
+                        }
+                    }
+                }
+            }
         </script>
     </body>
 </html>
