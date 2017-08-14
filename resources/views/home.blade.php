@@ -16,7 +16,7 @@
         <style>
             body {
                 padding-top: 150px;
-                background: url('img/bg.png') no-repeat center center fixed;
+                background: url('img/bg.jpg') no-repeat center center fixed;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
