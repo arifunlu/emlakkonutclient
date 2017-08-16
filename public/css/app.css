@@ -9485,104 +9485,18 @@ h1 {
   background-color: #00a65e;
 }
 
-.ws {
-  height: 2rem;
-  background: #005AAB;
-  border-radius: 0 0 .8rem .8rem;
-}
-
-.ws_left {
-  position: absolute;
-  top: 0;
-  right: 100%;
-  border-radius: 1rem 0 0 1rem;
-}
-
-.ws_right {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  border-radius: 0 1rem 1rem 0;
-}
-
-.ws_left:before {
-  border-top-right-radius: 1rem;
-  background: white;
-  z-index: 2;
-}
-
-.ws_left:after {
-  background: #005AAB;
-}
-
-.ws_right:before {
-  border-top-left-radius: 1rem;
-  background: white;
-  z-index: 2;
-}
-
-.ws_right:after {
-  background: #005AAB;
-}
-
-.ws_right:before,
-.ws_right:after {
-  left: 0;
-}
-
-.ws_left:before,
-.ws_left:after,
-.ws_right:before,
-.ws_right:after {
-  content: '';
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  right: 0;
-}
-
-.trans {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.trans180 {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.retrans {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  padding: .3rem .5rem;
-}
-
-.retrans180 {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  padding: .3rem .5rem;
-  color: white;
-}
-
-.bg-red,
-.bg-red:after {
-  background-color: #EE131D;
-}
-
-.bg-green,
-.bg-green:after {
-  background-color: #00a65e;
-}
-
 .up {
   float: right;
   margin-right: 3rem;
+  margin-top: -2.2rem;
 }
 
 #rightIcerik {
   background-color: #F2F2F2;
   padding: 1rem;
   width: 20rem;
+  height: 91vh;
+  z-index: 99;
 }
 
 .bg-gray:before {
@@ -9706,7 +9620,7 @@ button {
 }
 
 #map {
-  height: 100%;
+  height: 91vh;
 }
 
 .btn-close {
@@ -9716,22 +9630,10 @@ button {
   right: 25px;
 }
 
-#wcp-editor {
-  background: transparent !important;
-  height: auto !important;
-}
-
-#wcp-editor-left,
-#wcp-editor-right,
-#wcp-editor-extra-main-buttons,
-#wcp-editor-toolbar-wrap {
-  display: none !important;
-}
-
 #plan-table {
   position: fixed;
   bottom: 0;
-  z-index: 9;
+  z-index: 100;
 }
 
 #plan-table .card {
