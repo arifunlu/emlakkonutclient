@@ -182,8 +182,6 @@ h1 {
   padding: 20px;
   overflow-x: hidden;
   overflow-y: auto;
-  /* Scrollable contents if viewport is shorter than content. */
-  /* border-right: 1px solid #eee; */
   background-color: #005aab;
 }
 
@@ -382,8 +380,6 @@ h1 {
 .up {
   float: right;
   margin-right: 3rem;
-  margin-top: -2rem;
-  width: 2rem;
 }
 
 #rightIcerik {
@@ -566,8 +562,4 @@ button {
   padding: 0;
   background-color: transparent;
   border: none;
-}
-
-#sectionIcerik {
-  margin-top: 5.5rem;
 }

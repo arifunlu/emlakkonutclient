@@ -30,12 +30,10 @@
                   mapTypeControl: false
               });
               var drawingManager = new google.maps.drawing.DrawingManager({
-                  drawingMode: google.maps.drawing.OverlayType.POLYGON,
-                  drawingControl: true,
+                  drawingControl: false,
                   drawingControlOptions: {
                       style: google.maps.MapTypeControlStyle.VERTICAL_BAR,
                       position: google.maps.ControlPosition.RIGHT_CENTER,
-                      drawingModes: ["polygon"]
                   },
                   markerOptions: {icon: marker},
                   circleOptions: {
