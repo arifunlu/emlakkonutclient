@@ -9495,7 +9495,7 @@ h1 {
   background-color: #F2F2F2;
   padding: 1rem;
   width: 20rem;
-  height: 91vh;
+  height: 90.5vh;
   z-index: 99;
 }
 
@@ -9620,7 +9620,7 @@ button {
 }
 
 #map {
-  height: 91vh;
+  height: 90.5vh;
 }
 
 .btn-close {
@@ -9661,5 +9661,11 @@ button {
   padding: 0;
   background-color: transparent;
   border: none;
+}
+
+#jPolygon {
+  position: absolute;
+  z-index: 99;
+  visibility: hidden;
 }
 
