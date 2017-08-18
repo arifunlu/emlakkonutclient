@@ -95,6 +95,7 @@
 }
 
 .search {
+  font-family: 'Catamaran', sans-serif !important;
   color: #fff !important;
   border-color: #fff;
   border-radius: 1.5rem;
@@ -477,8 +478,23 @@ button {
   visibility: hidden;
 }
 
-input#inputSearch::-webkit-input-placeholder {color:#fff;}
-input#inputSearch::-moz-placeholder          {color:#fff;}
-input#inputSearch:-moz-placeholder           {color:#fff;}
-input#inputSearch:-ms-input-placeholder      {color:#fff;}
-input#inputSearch::-ms-input-placeholder     {color:#fff;}
+input#inputSearch::-webkit-input-placeholder {
+  color:#fff;
+  font-family: 'Catamaran', sans-serif;
+}
+input#inputSearch::-moz-placeholder {
+  color:#fff;
+  font-family: 'Catamaran', sans-serif;
+}
+input#inputSearch:-moz-placeholder {
+  color:#fff;
+  font-family: 'Catamaran', sans-serif;
+}
+input#inputSearch:-ms-input-placeholder {
+  color:#fff;
+  font-family: 'Catamaran', sans-serif;
+}
+input#inputSearch::-ms-input-placeholder {
+  color:#fff;
+  font-family: 'Catamaran', sans-serif;
+}

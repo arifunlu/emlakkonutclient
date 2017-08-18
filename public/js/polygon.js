@@ -65,7 +65,8 @@ function draw(end){
         ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
         ctx.fill();
         ctx.strokeStyle = 'blue';
-        complete = true;
+        complete = false;
+        perimeter = [];
     }
     ctx.stroke();
 
@@ -124,7 +125,7 @@ function point_it(event) {
             return false;
         }
         draw(true);
-        alert('Polygon closed');
+        alert('Poligon oluşturuldu.');
 	event.preventDefault();
         return false;
     } else {

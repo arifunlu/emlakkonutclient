@@ -119,7 +119,7 @@
           </div>
           <div class="d-flex flex-row justify-content-between">
             <canvas id="jPolygon" onmousedown="point_it(event)" data-imgsrc="http://avrupark.com/images/kat-planlari/2+1-A-BLOK-2.jpg" width="960" height="540"></canvas>
-            <textarea id="coordinates" disabled="disabled" style="display: none"></textarea>
+            <textarea id="coordinates" disabled="disabled" style="display: none;"></textarea>
             <div id="image-map-pro-container"></div>
             <div class="d-flex flex-column align-items-center" style="z-index: 99;">
               <img src="/img/pay.png" style="margin-top: 3rem;" data-toggle="collapse" data-target="#rightIcerik" />
