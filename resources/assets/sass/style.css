@@ -360,9 +360,9 @@ h1 {
 [type="checkbox"]:checked+label:after {
   content: '\2022';
   position: absolute;
-  top: -1.31rem;
-  left: .175rem;
-  font-size: 2.7rem;
+  top: -22px;
+  left: 2.7px;
+  font-size: 2.8rem;
   color: #fff;
   transition: all .2s;
 }
