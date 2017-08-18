@@ -41,6 +41,7 @@
 
             <div id="accordion">
                 <div class="scroll-container">
+                    <h3 id="search-not-found" style="color: #fff; display: none;">Proje bulunamadı.</h3>
                     <div class="panel" style="width: 50px;">
                     <div class="pink">
                         <div class="rotate">BATI ŞEHİR</div>
@@ -245,9 +246,8 @@
             });
 
             function filter(p) {
-                var input, filter, div, id = p.getAttribute("id");
-                input = document.getElementById(id);
-                filter = input.value.toLocaleUpperCase();
+                var filter, div;
+                filter = p.value.toLocaleUpperCase();
 
                 div = document.getElementsByClassName("panel");
 
@@ -259,6 +259,20 @@
                             div[i].style.display = "none";
                         }
                     }
+                }
+
+                var control = true;
+                for (var i in div) {
+                    if (div[i].style && div[i].style.display !== "none") {
+                        control = false;
+                        break;
+                    }
+                }
+
+                if (control) {
+                    $("#search-not-found")[0].style.display = "";
+                } else {
+                    $("#search-not-found")[0].style.display = "none";
                 }
             }
         </script>

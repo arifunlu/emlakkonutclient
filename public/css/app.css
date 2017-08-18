@@ -9284,6 +9284,7 @@ a.text-dark:hover {
 }
 
 .search {
+  color: #fff !important;
   border-color: #fff;
   border-radius: 1.5rem;
   background-color: transparent;
@@ -9667,5 +9668,25 @@ button {
   position: absolute;
   z-index: 99;
   visibility: hidden;
+}
+
+input#inputSearch::-webkit-input-placeholder {
+  color: #fff;
+}
+
+input#inputSearch::-moz-placeholder {
+  color: #fff;
+}
+
+input#inputSearch:-moz-placeholder {
+  color: #fff;
+}
+
+input#inputSearch:-ms-input-placeholder {
+  color: #fff;
+}
+
+input#inputSearch::-ms-input-placeholder {
+  color: #fff;
 }
 
