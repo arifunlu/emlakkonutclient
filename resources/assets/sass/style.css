@@ -358,12 +358,11 @@ h1 {
 
 [type="checkbox"]:not(:checked)+label:after,
 [type="checkbox"]:checked+label:after {
-  content: '✔';
+  content: '\2022';
   position: absolute;
-  top: .45rem;
-  left: .28rem;
-  font-size: .7rem;
-  line-height: 0.8;
+  top: -1.31rem;
+  left: .17rem;
+  font-size: 2.7rem;
   color: #fff;
   transition: all .2s;
 }
