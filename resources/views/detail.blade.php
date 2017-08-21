@@ -124,6 +124,7 @@
             <div class="d-flex flex-column align-items-center" style="z-index: 99;">
               <img src="/img/pay.png" style="margin-top: 3rem;" data-toggle="collapse" data-target="#rightIcerik" />
               <img src="/img/point.png" style="margin-top: 3rem;" onclick="toggleDraw();" />
+              <img src="/img/clear.png" onclick="clear_canvas();" />
               <img src="/img/zoom_in.png" onclick="updateZoom(0.2);" />
               <img src="/img/zoom.png" onclick="updateZoom(0);" />
               <img src="/img/zoom_out.png" onclick="updateZoom(-0.2);" />
@@ -257,56 +258,12 @@
 
         if (toggle) {
           $("#jPolygon").panzoom({panOnlyWhenZoomed: true, minScale: 1});
-          //$("#jPolygon").mousedown(function(e){handleMouseDown(e);});
           toggle = false;
         } else {
           $("#jPolygon").panzoom();
           toggle = true;
         }
       }
-
-      /*var canvas=document.getElementById("jPolygon");
-      var context=canvas.getContext("2d");
-      var cw=canvas.width;
-      var ch=canvas.height;
-      function reOffset(){
-        var BB=canvas.getBoundingClientRect();
-        offsetX=BB.left;
-        offsetY=BB.top;        
-      }
-      var offsetX,offsetY;
-      reOffset();
-      window.onscroll=function(e){ reOffset(); }
-
-      context.lineWidth=2;
-      context.strokeStyle='blue';
-
-      var coordinates = [];
-      var isDone=false;
-
-      function handleMouseDown(e){
-        if(isDone || coordinates.length>10){return;}
-
-        // tell the browser we're handling this event
-        e.preventDefault();
-        e.stopPropagation();
-
-        mouseX=parseInt(e.clientX-offsetX);
-        mouseY=parseInt(e.clientY-offsetY);
-        coordinates.push({x:mouseX,y:mouseY});
-        drawPolygon();
-      }
-
-      function drawPolygon(){
-        context.clearRect(0,0,cw,ch);
-        context.beginPath();
-        context.moveTo(coordinates[0].x, coordinates[0].y);
-        for(index=1; index<coordinates.length;index++) {
-          context.lineTo(coordinates[index].x, coordinates[index].y);
-        }
-        context.closePath();
-        context.stroke();
-      }*/
 
     </script>
 @endsection

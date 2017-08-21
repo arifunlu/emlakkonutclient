@@ -125,8 +125,7 @@ function point_it(event) {
             return false;
         }
         draw(true);
-        alert('Poligon oluşturuldu.');
-	event.preventDefault();
+	    event.preventDefault();
         return false;
     } else {
         rect = canvas.getBoundingClientRect();
