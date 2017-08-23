@@ -122,13 +122,13 @@
             <textarea id="coordinates" disabled="disabled" style="display: none;"></textarea>
             <div id="image-map-pro-container"></div>
             <div class="d-flex flex-column align-items-center" style="z-index: 99;">
-              <img src="/img/pay.png" style="margin-top: 3rem;" data-toggle="collapse" data-target="#rightIcerik" />
-              <img src="/img/point.png" style="margin-top: 3rem;" onclick="toggleDraw();" />
-              <img src="/img/clear.png" onclick="clear_canvas();" />
-              <img src="/img/zoom_in.png" onclick="updateZoom(0.2);" />
-              <img src="/img/zoom.png" onclick="updateZoom(0);" />
-              <img src="/img/zoom_out.png" onclick="updateZoom(-0.2);" />
-              <img src="/img/map.png" onclick="window.location='{{ URL::route('map') }}'" role="button" />
+              <img src="/img/pay.png" style="margin-top: 3rem;" role="button" data-toggle="collapse" data-target="#rightIcerik" onmouseover="this.src='/img/pay2.png';" onmouseout="this.src='/img/pay.png';" />
+              <img src="/img/point.png" style="margin-top: 3rem;" onclick="toggleDraw(this);" role="button" />
+              <img src="/img/clear.png" onclick="clear_canvas();" role="button" onmouseover="this.src='/img/clear2.png';" onmouseout="this.src='/img/clear.png';" />
+              <img src="/img/zoom_in.png" onclick="updateZoom(0.2);" role="button" onmouseover="this.src='/img/zoom_in2.png';" onmouseout="this.src='/img/zoom_in.png';" />
+              <img src="/img/zoom.png" onclick="updateZoom(0);" role="button" onmouseover="this.src='/img/zoom2.png';" onmouseout="this.src='/img/zoom.png';" />
+              <img src="/img/zoom_out.png" onclick="updateZoom(-0.2);" role="button" onmouseover="this.src='/img/zoom_out2.png';" onmouseout="this.src='/img/zoom_out.png';" />
+              <img src="/img/map.png" onclick="window.location='{{ URL::route('map') }}'" role="button" onmouseover="this.src='/img/map2.png';" onmouseout="this.src='/img/map.png';" />
             </div>
             <div id="rightIcerik" class="collapse">
               <h5>B TİP BLOK - 3+1 DAİRE</h5>
@@ -253,14 +253,16 @@
       }
 
       var toggle = true;
-      function toggleDraw() {
+      function toggleDraw(p) {
         $("#jPolygon").panzoom("destroy");
 
         if (toggle) {
           $("#jPolygon").panzoom({panOnlyWhenZoomed: true, minScale: 1});
+          p.src = "/img/point2.png";
           toggle = false;
         } else {
           $("#jPolygon").panzoom();
+          p.src = "/img/point.png";
           toggle = true;
         }
       }

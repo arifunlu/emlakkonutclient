@@ -15,7 +15,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @show
     </head>
-    <body>
+    <body oncontextmenu="return false;">
         <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-custom">
             <a class="navbar-brand" href="#">
                 <img src="img/logo.png"/>
