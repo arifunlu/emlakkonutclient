@@ -118,7 +118,7 @@
             <button id="btnDaire" type="button" class="btn btn-success tableheader" onclick="onClickActiveNav(this)">DAİRE PLANI</button>
           </div>
           <div class="d-flex flex-row justify-content-between">
-            <div/>
+            <div></div>
             <canvas id="jPolygon" onmousedown="point_it(event)" data-imgsrc="http://avrupark.com/images/kat-planlari/2+1-A-BLOK-2.jpg" width="960" height="540"></canvas>
             <div id="image-map-pro-container"></div>
             <div class="d-flex flex-row justify-content-end">
