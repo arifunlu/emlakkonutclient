@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Catamaran);/*!
+@import url(https://fonts.googleapis.com/css?family=Asap);/*!
  * Bootstrap v4.0.0-beta (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
@@ -9282,7 +9282,7 @@ a.text-dark:hover {
 }
 
 .search {
-  font-family: 'Catamaran', sans-serif !important;
+  font-family: 'Asap', sans-serif !important;
   color: #fff !important;
   border-color: #fff;
   border-radius: 1.5rem;
@@ -9355,7 +9355,7 @@ a.text-dark:hover {
 
 body {
   padding-top: 5.5rem;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Asap', sans-serif;
   background-color: #fff;
 }
 
@@ -9597,7 +9597,7 @@ h1 {
 }
 
 button {
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Asap', sans-serif;
 }
 
 .btn {
@@ -9670,26 +9670,26 @@ button {
 
 input#inputSearch::-webkit-input-placeholder {
   color: #fff;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Asap', sans-serif;
 }
 
 input#inputSearch::-moz-placeholder {
   color: #fff;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Asap', sans-serif;
 }
 
 input#inputSearch:-moz-placeholder {
   color: #fff;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Asap', sans-serif;
 }
 
 input#inputSearch:-ms-input-placeholder {
   color: #fff;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Asap', sans-serif;
 }
 
 input#inputSearch::-ms-input-placeholder {
   color: #fff;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Asap', sans-serif;
 }
 

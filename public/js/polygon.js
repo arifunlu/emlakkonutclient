@@ -1,146 +1,134 @@
-var perimeter = new Array();
-var complete = false;
+var perimeter = new Array(new Array());
 var canvas = document.getElementById("jPolygon");
 var ctx;
+var complete;
+var polygonIndex;
+var displayMode = true;
 
-function line_intersects(p0, p1, p2, p3) {
-    var s1_x, s1_y, s2_x, s2_y;
-    s1_x = p1['x'] - p0['x'];
-    s1_y = p1['y'] - p0['y'];
-    s2_x = p3['x'] - p2['x'];
-    s2_y = p3['y'] - p2['y'];
-
-    var s, t;
-    s = (-s1_y * (p0['x'] - p2['x']) + s1_x * (p0['y'] - p2['y'])) / (-s2_x * s1_y + s1_x * s2_y);
-    t = ( s2_x * (p0['y'] - p2['y']) - s2_y * (p0['x'] - p2['x'])) / (-s2_x * s1_y + s1_x * s2_y);
-
-    if (s >= 0 && s <= 1 && t >= 0 && t <= 1)
-    {
-        // Collision detected
-        return true;
-    }
-    return false; // No collision
-}
-
-function point(x, y){
-    ctx.fillStyle="white";
+function point(x, y) {
+    ctx.fillStyle = "white";
     ctx.strokeStyle = "white";
-    ctx.fillRect(x-2,y-2,4,4);
-    ctx.moveTo(x,y);
+    ctx.fillRect(x - 2, y - 2, 4, 4);
+    ctx.moveTo(x, y);
 }
 
-function undo(){
-    ctx = undefined;
-    perimeter.pop();
-    complete = false;
-    start(true);
+function undo() {
+    if (!displayMode) {
+        if (polygonIndex === 0 && perimeter[polygonIndex].length === 0) {
+            perimeter = new Array(new Array());
+            return;
+        }
+        else if (perimeter[polygonIndex].length === 0) {
+            polygonIndex--;
+        }
+        ctx = undefined;
+        perimeter[polygonIndex].pop();
+        complete = false;
+        start(true);
+    }
 }
 
-function clear_canvas(){
+function clear_canvas() {
     ctx = undefined;
-    perimeter = new Array();
+    perimeter = new Array(new Array());
     complete = false;
-    document.getElementById('coordinates').value = '';
+    polygonIndex = 0;
     start();
 }
 
-function draw(end){
+function draw(end, restart) {
     ctx.lineWidth = 1;
     ctx.strokeStyle = "white";
     ctx.lineCap = "square";
     ctx.beginPath();
 
-    for(var i=0; i<perimeter.length; i++){
-        if(i==0){
-            ctx.moveTo(perimeter[i]['x'],perimeter[i]['y']);
-            end || point(perimeter[i]['x'],perimeter[i]['y']);
-        } else {
-            ctx.lineTo(perimeter[i]['x'],perimeter[i]['y']);
-            end || point(perimeter[i]['x'],perimeter[i]['y']);
+    for (var i = restart ? 0 : polygonIndex; i < perimeter.length; i++) {
+        for (var j = 0; j < perimeter[i].length; j++) {
+            if (j == 0) {
+                ctx.moveTo(perimeter[i][j]['x'], perimeter[i][j]['y']);
+                end || point(perimeter[i][j]['x'], perimeter[i][j]['y']);
+            } else {
+                ctx.lineTo(perimeter[i][j]['x'], perimeter[i][j]['y']);
+                end || point(perimeter[i][j]['x'], perimeter[i][j]['y']);
+
+                if (restart && (i !== polygonIndex)) {
+                    ctx.closePath();
+                    ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+                    ctx.fill();
+                    ctx.strokeStyle = 'blue';
+                }
+            }
         }
     }
-    if(end){
-        ctx.lineTo(perimeter[0]['x'],perimeter[0]['y']);
+
+    /*if (restart) {
+        for (var key in perimeter) {
+            var i = perimeter[key].length - 1;
+
+            if (perimeter[key][i]['complete']) {
+                ctx.lineTo(perimeter[key][0]['x'], perimeter[key][0]['y']);
+                point(perimeter[key][0]['x'], perimeter[key][0]['y']);
+                ctx.closePath();
+                ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+                ctx.fill();
+                ctx.strokeStyle = 'blue';
+            }
+        }
+    }*/
+
+    if (end) {
+        ctx.lineTo(perimeter[polygonIndex][0]['x'], perimeter[polygonIndex][0]['y']);
+        point(perimeter[polygonIndex][0]['x'], perimeter[polygonIndex][0]['y']);
         ctx.closePath();
         ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
         ctx.fill();
         ctx.strokeStyle = 'blue';
-        complete = false;
-        perimeter = [];
+        complete = true;
     }
     ctx.stroke();
-
-    // print coordinates
-    if(perimeter.length == 0){
-        document.getElementById('coordinates').value = '';
-    } else {
-        document.getElementById('coordinates').value = JSON.stringify(perimeter);
-    }
 }
 
-function check_intersect(x,y){
-    if(perimeter.length < 4){
-        return false;
-    }
-    var p0 = new Array();
-    var p1 = new Array();
-    var p2 = new Array();
-    var p3 = new Array();
-
-    p2['x'] = perimeter[perimeter.length-1]['x'];
-    p2['y'] = perimeter[perimeter.length-1]['y'];
-    p3['x'] = x;
-    p3['y'] = y;
-
-    for(var i=0; i<perimeter.length-1; i++){
-        p0['x'] = perimeter[i]['x'];
-        p0['y'] = perimeter[i]['y'];
-        p1['x'] = perimeter[i+1]['x'];
-        p1['y'] = perimeter[i+1]['y'];
-        if(p1['x'] == p2['x'] && p1['y'] == p2['y']){ continue; }
-        if(p0['x'] == p3['x'] && p0['y'] == p3['y']){ continue; }
-        if(line_intersects(p0,p1,p2,p3)==true){
-            return true;
-        }
-    }
-    return false;
+function setComplete(x, y) {
+    ctx.lineTo(perimeter[polygonIndex][0]['x'], perimeter[polygonIndex][0]['y']);
+    point(perimeter[polygonIndex][0]['x'], perimeter[polygonIndex][0]['y']);
+    ctx.closePath();
+    ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+    ctx.fill();
+    ctx.strokeStyle = 'blue';
+    complete = true;
 }
 
 function point_it(event) {
-    if(complete){
-        alert('Poligon zaten oluşturuldu.');
-        return false;
-    }
     var rect, x, y;
 
-    if(event.ctrlKey || event.which === 3 || event.button === 2){
-        if(perimeter.length==2){
-            alert('Bir poligon için en az üç noktaya ihtiyacınız var.');
+    if (event.ctrlKey) {
+        var currentPolygon = perimeter[polygonIndex];
+
+        if (!currentPolygon[currentPolygon.length - 1]["complete"]) {
+            if (perimeter[polygonIndex].length == 2) {
+                alert('Bir poligon için en az üç noktaya ihtiyacınız var.');
+                return false;
+            }
+            x = perimeter[polygonIndex][0]['x'];
+            y = perimeter[polygonIndex][0]['y'];
+            perimeter[polygonIndex].push({ 'x': x, 'y': y, complete: true });
+            draw(true);
+            event.preventDefault();
             return false;
         }
-        x = perimeter[0]['x'];
-        y = perimeter[0]['y'];
-        if(check_intersect(x,y)){
-            alert('Çizdiğiniz çizgi başka bir çizgiyle kesişiyor.');
-            return false;
-        }
-        draw(true);
-	    event.preventDefault();
-        return false;
+    } else if (event.which === 3 || event.button === 2) {
+        undo();
     } else {
         rect = canvas.getBoundingClientRect();
         x = event.clientX - rect.left;
         y = event.clientY - rect.top;
-        if (perimeter.length>0 && x == perimeter[perimeter.length-1]['x'] && y == perimeter[perimeter.length-1]['y']){
-            // same point - double click
-            return false;
+        if (complete) {
+            polygonIndex++;
+            perimeter[polygonIndex] = new Array();
+            complete = false;
         }
-        if(check_intersect(x,y)){
-            alert('Çizdiğiniz çizgi başka bir çizgiyle kesişiyor.');
-            return false;
-        }
-        perimeter.push({'x':x,'y':y});
-        draw(false);
+        perimeter[polygonIndex].push({ 'x': x, 'y': y });
+        draw();
         return false;
     }
 }
@@ -149,11 +137,11 @@ function start(with_draw) {
     var img = new Image();
     img.src = canvas.getAttribute('data-imgsrc');
 
-    img.onload = function(){
+    img.onload = function () {
         ctx = canvas.getContext("2d");
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        if(with_draw == true){
-            draw(false);
+        if (with_draw === true) {
+            draw(false, true);
         }
     }
 }

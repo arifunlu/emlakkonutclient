@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Catamaran');
+@import url('https://fonts.googleapis.com/css?family=Asap');
 @font-face {
   font-family: 'emlakkonut';
   src: url('../fonts/emlakkonut.eot?vjvo24');
@@ -95,7 +95,7 @@
 }
 
 .search {
-  font-family: 'Catamaran', sans-serif !important;
+  font-family: 'Asap', sans-serif !important;
   color: #fff !important;
   border-color: #fff;
   border-radius: 1.5rem;
@@ -165,7 +165,7 @@
 
 body {
   padding-top: 5.5rem;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Asap', sans-serif;
   background-color: #fff;
 }
 
@@ -406,7 +406,7 @@ h1 {
 }
 
 button {
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Asap', sans-serif;
 }
 
 .btn {
@@ -479,21 +479,21 @@ button {
 
 input#inputSearch::-webkit-input-placeholder {
   color:#fff;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Asap', sans-serif;
 }
 input#inputSearch::-moz-placeholder {
   color:#fff;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Asap', sans-serif;
 }
 input#inputSearch:-moz-placeholder {
   color:#fff;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Asap', sans-serif;
 }
 input#inputSearch:-ms-input-placeholder {
   color:#fff;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Asap', sans-serif;
 }
 input#inputSearch::-ms-input-placeholder {
   color:#fff;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Asap', sans-serif;
 }
