@@ -101,7 +101,7 @@ function setComplete(x, y) {
 function point_it(event) {
     var rect, x, y;
 
-    if (event.ctrlKey) {
+    if (event.ctrlKey || event.metaKey) {
         var currentPolygon = perimeter[polygonIndex];
 
         if (!currentPolygon[currentPolygon.length - 1]["complete"]) {
