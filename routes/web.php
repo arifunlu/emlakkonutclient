@@ -14,3 +14,6 @@
 Route::get('/', 'HomeController@home')->name('home');
 Route::get('/detail', 'HomeController@detail')->name('detail');
 Route::get('/map', 'HomeController@map')->name('map');
+Auth::routes();
+
+Route::get('/home', 'HomeController@home')->name('home');
