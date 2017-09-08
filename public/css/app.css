@@ -9549,9 +9549,9 @@ h1 {
 [type="checkbox"]:checked + label:after {
   content: '\2022';
   position: absolute;
-  top: -23px;
-  left: 2.6px;
-  font-size: 46px;
+  top: -17px;
+  left: 2.2px;
+  font-size: 34px;
   color: #fff;
   -webkit-transition: all .2s;
   transition: all .2s;
