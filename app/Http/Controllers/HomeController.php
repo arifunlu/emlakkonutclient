@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+
     /**
      * Create a new controller instance.
      *
@@ -21,17 +22,18 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-(??)    public function home()
+    public function home()
     {
         $this->middleware('auth');
-(??)    }
-(??)
-(??)    public function detail()
-(??)    {
-(??)        return view('detail');
-(??)    }
-     public function map()
-     {
-         return view('map');
-     }
-(??)}
+    }
+
+    public function detail()
+    {
+        return view('detail');
+    }
+
+    public function map()
+    {
+        return view('map');
+    }
+}
