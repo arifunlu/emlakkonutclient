@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function home()
     {
-        $this->middleware('auth');
+        return view('home');
     }
 
     public function detail()
