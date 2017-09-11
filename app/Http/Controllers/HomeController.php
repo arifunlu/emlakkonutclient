@@ -21,8 +21,17 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+(??)    public function home()
     {
-        return view('home');
-    }
-}
+        $this->middleware('auth');
+(??)    }
+(??)
+(??)    public function detail()
+(??)    {
+(??)        return view('detail');
+(??)    }
+     public function map()
+     {
+         return view('map');
+     }
+(??)}

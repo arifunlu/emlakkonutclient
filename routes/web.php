@@ -15,4 +15,4 @@ Auth::routes();
 
 Route::get('/', 'HomeController@home')->name('home');
 Route::get('/detail', 'HomeController@detail')->name('detail');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/map', 'HomeController@map')->name('map');

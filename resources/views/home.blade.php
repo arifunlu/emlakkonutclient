@@ -16,175 +16,265 @@
         <style>
             body {
                 padding-top: 150px;
-                background: url('img/bg.png') no-repeat center center fixed;
+                background: url('img/bg.jpg') no-repeat center center fixed;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
                 background-size: cover;
             }
-            #accordion {
-                transform: translateX(-70%) rotate(-90deg);
-                max-width: 25rem;
-                transform-origin: right top;
+            .container {
+                text-align: center;
             }
-            #accordion .card .collapse {
-                transform: rotate(90deg);
-            }
-            #accordion .card .collapse>img {
-                width: 25rem;
-                height: 25rem;
-            }
-            .search {
-                width: 12rem;
-                border-radius: 1.25rem;
-                margin: 0 auto;
-                margin-bottom: 4rem;
-            }
-            .card-space {
-                border-bottom: 0;
-                border-radius: 0;
-                margin-bottom: .5rem;
+            .input-group-addon {
+                background-color: transparent;
+                border-color: #fff;
+                border-radius: 1.5rem;
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <input type="text" class="form-control search" placeholder="Ara..." />
-            <div id="accordion" role="tablist" aria-multiselectable="false">
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingOne">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            BATI ŞEHİR
-                        </h5>
+            <div class="input-group search-group">
+                <input id="inputSearch" type="text" class="form-control search" placeholder="Ara..."  aria-describedby="basic-addon1" onkeyup="filter(this);" />
+                <i class="icon-search input-group-addon"></i>
+            </div>
+
+            <div id="accordion">
+                <div class="scroll-container">
+                    <h3 id="search-not-found" style="color: #fff; display: none;">Proje bulunamadı.</h3>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">BATI ŞEHİR</div>
                     </div>
-                    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panelContent" onclick="window.location='{{ URL::route('detail') }}'">
                         <img src="img/9.png" />
                     </div>
-                </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingTwo">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            VARYAP MERIDIAN
-                        </h5>
                     </div>
-                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">VARYAP MERIDIAN</div>
+                    </div>
+                    <div class="panelContent">
                         <img src="img/9.png" />
                     </div>
-                </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingThree">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            MY WORLD ATAŞEHİR
-                        </h5>
                     </div>
-                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">MY WORLD ATAŞEHİR</div>
+                    </div>
+                    <div class="panelContent">
                         <img src="img/9.png" />
                     </div>
-                </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingOne">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            BATI ŞEHİR
-                        </h5>
                     </div>
-                    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">MY WORLD EUROPE</div>
+                    </div>
+                    <div class="panelContent">
                         <img src="img/9.png" />
                     </div>
-                </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingTwo">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            VARYAP MERIDIAN
-                        </h5>
                     </div>
-                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">1STANBUL</div>
+                    </div>
+                    <div class="panelContent">
                         <img src="img/9.png" />
                     </div>
-                </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingThree">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            MY WORLD ATAŞEHİR
-                        </h5>
                     </div>
-                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">UNIKONUT ISPARTAKULE</div>
+                    </div>
+                    <div class="panelContent">
                         <img src="img/9.png" />
                     </div>
-                </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingOne">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            BATI ŞEHİR
-                        </h5>
                     </div>
-                    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">AVRUPA KONUTLARI - TEM</div>
+                    </div>
+                    <div class="panelContent">
                         <img src="img/9.png" />
                     </div>
-                </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingTwo">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            VARYAP MERIDIAN
-                        </h5>
                     </div>
-                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">AVRUPA KONUTLARI - TEM 2</div>
+                    </div>
+                    <div class="panelContent">
                         <img src="img/9.png" />
                     </div>
-                </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingThree">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            MY WORLD ATAŞEHİR
-                        </h5>
                     </div>
-                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">BAHÇETEPE İSTANBUL</div>
+                    </div>
+                    <div class="panelContent">
                         <img src="img/9.png" />
                     </div>
-                </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingOne">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            BATI ŞEHİR
-                        </h5>
                     </div>
-                    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">MY TOWN ISPARTAKULE</div>
+                    </div>
+                    <div class="panelContent">
                         <img src="img/9.png" />
                     </div>
-                </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingTwo">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            VARYAP MERIDIAN
-                        </h5>
                     </div>
-                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">BULVAR 216</div>
+                    </div>
+                    <div class="panelContent">
                         <img src="img/9.png" />
                     </div>
-                </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingThree">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            MY WORLD ATAŞEHİR
-                        </h5>
                     </div>
-                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">BULGAZKENT</div>
+                    </div>
+                    <div class="panelContent">
                         <img src="img/9.png" />
                     </div>
-                </div>
-                <div class="card card-space">
-                    <div class="card-header" role="tab" id="headingThree">
-                        <h5 class="mb-0 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            MY WORLD ATAŞEHİR
-                        </h5>
                     </div>
-                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">ŞEHRİZAR KONAKLARI</div>
+                    </div>
+                    <div class="panelContent">
                         <img src="img/9.png" />
                     </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">Test Action</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">Test Action</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">Test Action</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">Test Action</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">Test Action</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">Test Action</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">Test Action</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
+                    <div class="panel" style="width: 50px;">
+                    <div class="pink">
+                        <div class="rotate">Test Action</div>
+                    </div>
+                    <div class="panelContent">
+                        <img src="img/9.png" />
+                    </div>
+                    </div>
                 </div>
+            </div>
+            
+            <div class="arrow">
+                <i class="icon-Backward btn-arrow" style="margin-right: 3rem;" role="button" onclick="scrollBack();"></i>
+                <i class="icon-Forward btn-arrow" role="button" onclick="scrollNext();"></i>
             </div>
         </div>
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
+        <script>
+            function scrollBack() {
+                var element = document.getElementById("accordion");
+                element.scrollBy(-100, 0);
+            }
+            function scrollNext() {
+                var element = document.getElementById("accordion");
+                element.scrollBy(100, 0);
+            }
+
+            $(document).ready(function(){
+                activePanel = $("#accordion div.panel:first");
+            
+                $("#accordion").delegate('.panel', 'click', function(e){
+                    if( ! $(this).is('.active') ){
+                        $(activePanel).animate({width: "50px"}, 300);
+                        $(this).animate({width: "350px"}, 300);
+                        $('#accordion .panel').removeClass('active');
+                        $(this).addClass('active');
+                        activePanel = this;
+                    };
+                });
+            });
+
+            function filter(p) {
+                var filter, div;
+                filter = p.value.toLocaleUpperCase();
+
+                div = document.getElementsByClassName("panel");
+
+                for (var i in div) {
+                    if (div[i].innerHTML) {
+                        if (div[i].innerHTML.toLocaleUpperCase().indexOf(filter) > -1) {
+                            div[i].style.display = "";
+                        } else {
+                            div[i].style.display = "none";
+                        }
+                    }
+                }
+
+                var control = true;
+                for (var i in div) {
+                    if (div[i].style && div[i].style.display !== "none") {
+                        control = false;
+                        break;
+                    }
+                }
+
+                if (control) {
+                    $("#search-not-found")[0].style.display = "";
+                } else {
+                    $("#search-not-found")[0].style.display = "none";
+                }
+            }
+        </script>
     </body>
 </html>
