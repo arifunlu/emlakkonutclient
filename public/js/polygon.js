@@ -39,7 +39,6 @@ function clear_canvas() {
     ctx = undefined;
     perimeter = new Array();
     complete = false;
-    document.getElementById('coordinates').value = '';
     start();
 }
 
@@ -68,13 +67,6 @@ function draw(end) {
         perimeter = [];
     }
     ctx.stroke();
-
-    // print coordinates
-    if (perimeter.length == 0) {
-        document.getElementById('coordinates').value = '';
-    } else {
-        document.getElementById('coordinates').value = JSON.stringify(perimeter);
-    }
 }
 
 function check_intersect(x, y) {

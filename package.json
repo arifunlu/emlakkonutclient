@@ -15,7 +15,7 @@
     "cross-env": "^5.0.5",
     "jquery": "^3.1.1",
     "jquery.panzoom": "^3.2.2",
-    "laravel-mix": "^1.0",
+    "laravel-mix": "^1.4.3",
     "lodash": "^4.17.4",
     "vue": "^2.1.10"
   }

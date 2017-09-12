@@ -5,7 +5,7 @@
         <div class="row">
           <button type="button" title="Kapat" class="btn btn-primary btn-sm rounded-circle btn-close" onclick="window.location='{{ URL::route('detail') }}'"><img src="/img/cancel.svg" style="width: 14px; height: 21px;"/></button>
           <div class="col-7 p-0" style="margin: auto;">
-            <img src="http://www.timeturk.com/resim/detay/69/695941.jpg" style="width: 100%;"/>
+            <img src="http://www.timeturk.com/resim/detay/69/695941.jpg" style="width: 100%;" onclick="window.open('http://www.timeturk.com/resim/detay/69/695941.jpg')"/>
           </div>
 
           <div class="col-5 p-0">
