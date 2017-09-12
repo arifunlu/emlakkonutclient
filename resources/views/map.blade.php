@@ -5,7 +5,7 @@
         <div class="row">
           <button type="button" title="Kapat" class="btn btn-primary btn-sm rounded-circle btn-close" onclick="window.location='{{ URL::route('detail') }}'"><img src="/img/cancel.svg" style="width: 14px; height: 21px;"/></button>
           <div class="col-7 p-0" style="margin: auto;">
-            <img src="http://www.timeturk.com/resim/detay/69/695941.jpg" style="width: 100%;" onclick="window.open('http://www.timeturk.com/resim/detay/69/695941.jpg')"/>
+            <img @if($projectLocation->photo) src="{{$projectLocation->photo->getImageUrl()}}" onclick="window.open({{$projectLocation->photo->getImageUrl()}}', 'Kroki İmajı', 'width=1280,height=720')" @endif style="width: 100%;"/>
           </div>
 
           <div class="col-5 p-0">
@@ -19,33 +19,38 @@
   @parent
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI8qNnWc7vcryJwCLs3Q5DWymgNyO3UTM&libraries=drawing&callback=initMap" async defer></script>
       <script>
-          var marker = "http://basaksehirbahcesehir.com/wp-content/uploads/2015/11/kroki2-150x150.jpg";
-
           function initMap() {
-              var map = new google.maps.Map(document.getElementById("map"), {
-                  center: {lat: 41.0082, lng: 28.9784},
-                  zoom: 14,
-                  scaleControl: false,
-                  streetViewControl: false,
-                  mapTypeControl: false
-              });
-              var drawingManager = new google.maps.drawing.DrawingManager({
-                  drawingControl: false,
-                  drawingControlOptions: {
-                      style: google.maps.MapTypeControlStyle.VERTICAL_BAR,
-                      position: google.maps.ControlPosition.RIGHT_CENTER,
-                  },
-                  markerOptions: {icon: marker},
-                  circleOptions: {
-                      fillColor: '#ffff00',
-                      fillOpacity: 1,
-                      strokeWeight: 5,
-                      clickable: false,
-                      editable: true,
-                      zIndex: 1
-                  }
-              });
-              drawingManager.setMap(map);
-          }
+            var polygonArray = [];
+            var map = new google.maps.Map(document.getElementById("map"), {
+                center: {lat: 41.0082, lng: 28.9784},
+                zoom: 14,
+                scaleControl: false,
+                streetViewControl: false,
+                mapTypeControl: false
+            });
+
+            @if($projectLocation)
+                var triangleCoords = {!!$projectLocation->map_data ? $projectLocation->map_data : json_encode(null); !!};
+
+                if (triangleCoords) {
+                    for (var i in triangleCoords) {
+                        triangleCoords[i] = $.map(triangleCoords[i], function(obj) {
+                        var items = obj.split(",");
+                        return {lat: parseFloat(items[0]), lng: parseFloat(items[1])}
+                        });
+                    }
+
+                    var polygonMap = new google.maps.Polygon({
+                        paths: triangleCoords,
+                        strokeColor: '#FF0000',
+                        strokeOpacity: 0.8,
+                        strokeWeight: 3,
+                        fillColor: '#FF0000',
+                        fillOpacity: 0.35
+                    });
+                    polygonMap.setMap(map);
+                }
+            @endif
+        }
       </script>
 @endsection
