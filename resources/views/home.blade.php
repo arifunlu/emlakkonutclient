@@ -46,7 +46,7 @@
                     <div class="pink">
                         <div class="rotate">BATI ŞEHİR</div>
                     </div>
-                    <div class="panelContent" onclick="window.location='{{ URL::route('detail') }}'">
+                    <div class="panelContent" onclick="window.location='{{ URL::route('project.detail', 571571) }}'">
                         <img src="img/9.png" />
                     </div>
                     </div>
