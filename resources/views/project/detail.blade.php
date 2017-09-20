@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<?php /** @var App\Model\EstateProject $project */?>
 @section('css')
     @parent
     <link rel="stylesheet" href="/css/image-map-pro.min.css">
@@ -9,10 +9,10 @@
     <div class="container-fluid">
         <div class="row">
             <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
-                <h5 class="navbar-brand">EMLAK KONUT BAŞAKŞEHİR EVLERİ 1-2</h5>
+                <h5 class="navbar-brand">{{$project->ProjeAdi}}</h5>
                 <ul class="nav nav-pills flex-column">
                     <li class="nav-item" data-toggle="collapse" data-target="#yon">
-                        <a class="nav-link" href="#">Yön <span class="arrow"></span></a>
+                        <a class="nav-link" href="#">Kullanış Şekli <span class="arrow"></span></a>
                     </li>
                     <ul class="sub-menu collapse show" id="yon">
                         <li class="nav-item">

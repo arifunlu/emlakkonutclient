@@ -1,3 +1,4 @@
+<?php /** @var App\Model\EstateProject [] $projects */?>
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -42,7 +43,6 @@
             <div id="accordion">
                 <div class="scroll-container">
                     <h3 id="search-not-found" style="color: #fff; display: none;">Proje bulunamadı.</h3>
-                    <?php /** @var App\Model\EstateProject [] $projects */?>
                     @foreach($projects as $project):
                     <div class="panel" style="width: 50px;">
                         <div class="pink">
