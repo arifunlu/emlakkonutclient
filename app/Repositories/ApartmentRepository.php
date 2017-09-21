@@ -8,52 +8,39 @@ use DB;
 
 class ApartmentRepository extends EstateProjectApartment
 {
-    private function KullanilisSekli() {
-        return DB::table($this->table)
-            ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
-            ->distinct('KullanilisSekli')
-            ->get(['KullanilisSekli']);
-    }
-
-    private function BulunduguKat() {
+    public function KullanilisSekli() {
         return DB::table($this->table)
             ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
             ->distinct()
-            ->get(['BulunduguKat']);
+            ->get(['KullanilisSekli'])->pluck('KullanilisSekli');
     }
 
-    private function OdaSayisi() {
+    public function BulunduguKat() {
         return DB::table($this->table)
             ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
             ->distinct()
-            ->get(['OdaSayisi']);
+            ->get(['BulunduguKat'])->pluck('BulunduguKat');
     }
 
-    private function Yon() {
+    public function OdaSayisi() {
         return DB::table($this->table)
             ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
             ->distinct()
-            ->get(['Yon']);
+            ->get(['OdaSayisi'])->pluck('OdaSayisi');
     }
 
-    private function BrutM2()
+    public function Yon() {
+        return DB::table($this->table)
+            ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
+            ->distinct()
+            ->get(['Yon'])->pluck('Yon');
+    }
+
+    public function BrutM2()
     {
         return DB::table($this->table)
             ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
             ->distinct()
-            ->get(['BrutM2']);
+            ->get(['BrutM2'])->pluck('BrutM2');
     }
-
-    public function getSearchColumns()
-    {
-        return [
-            'Kullanılış Şekli' => $this->KullanilisSekli(),
-            'Bulunduğu Kat' => $this->BulunduguKat(),
-            'Oda Sayısı' => $this->OdaSayisi(),
-            'Yön' => $this->Yon(),
-            'Brüt Metrekare' => $this->BrutM2()
-
-        ];
-    }
-
 }

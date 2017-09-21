@@ -9,101 +9,10 @@
         <div class="row">
             <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
                 <h5 class="navbar-brand">{{$project->ProjeAdi}}</h5>
-                @foreach($searchColumns as $showName => $searchColumn)
-                    @foreach($searchColumn as $value)
-                        <?php $valueArray = get_object_vars($value); ?>
-                        @if($loop->parent->first)
-                            <ul class="nav nav-pills flex-column">
-                                <li class="nav-item" data-toggle="collapse"
-                                    data-target="#{{key(get_object_vars($value))}}">
-                                    <a class="nav-link" href="#">{{$showName}}<span class="arrow"></span></a>
-                                </li>
-                                <ul class="sub-menu collapse show" id="{{key($valueArray)}}">
-                                    @endif
-
-                                    <li class="nav-item">
-                                        <div class="nav-link">
-                                            <input id="checkbox1" type="checkbox">
-                                            <label for="checkbox1">{{$valueArray[key($valueArray)] }}</label>
-                                        </div>
-                                    </li>
-                                    @if($loop->parent->first)
-                                </ul>
-                            </ul>
-                        @endif
-
-
-                    @endforeach
-                @endforeach
-
-
-                <ul class="nav nav-pills flex-column">
-                    <li class="nav-item" data-toggle="collapse" data-target="#kat">
-                        <a class="nav-link" href="#">Kat <span class="arrow"></span></a>
-                    </li>
-                    <ul class="sub-menu collapse show" id="kat">
-                        <li class="nav-item">
-                            <div class="nav-link">
-                                <input id="checkbox5" type="checkbox">
-                                <label for="checkbox5">Zemin</label>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="nav-link">
-                                <input id="checkbox6" type="checkbox">
-                                <label for="checkbox6">Yüksek Giriş</label>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="nav-link">
-                                <input id="checkbox7" type="checkbox">
-                                <label for="checkbox7">1</label>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="nav-link">
-                                <input id="checkbox8" type="checkbox">
-                                <label for="checkbox8">2</label>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="nav-link">
-                                <input id="checkbox9" type="checkbox">
-                                <label for="checkbox9">3</label>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="nav-link">
-                                <input id="checkbox10" type="checkbox">
-                                <label for="checkbox10">4</label>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="nav-link">
-                                <input id="checkbox11" type="checkbox">
-                                <label for="checkbox11">5</label>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="nav-link">
-                                <input id="checkbox12" type="checkbox">
-                                <label for="checkbox12">6</label>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="nav-link">
-                                <input id="checkbox13" type="checkbox">
-                                <label for="checkbox13">7</label>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="nav-link">
-                                <input id="checkbox14" type="checkbox">
-                                <label for="checkbox14">8</label>
-                            </div>
-                        </li>
-                    </ul>
-                </ul>
+                @include('project.parts.kullanilis_sekli')
+                @include('project.parts.bulundugu_kat')
+                @include('project.parts.oda_sayisi')
+                @include('project.parts.yon')
             </nav>
 
             <main class="col-sm-9 ml-sm-auto col-md-10 p-0">
