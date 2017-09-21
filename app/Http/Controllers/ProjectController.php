@@ -20,11 +20,10 @@ class ProjectController extends Controller
     {
         EstateProject::setSession($project->id);
 
-        $distinctUsages = $apartment->getDistinctUsages();
-
-        return view('project.detail', compact('project', 'distinctUsages'));
+        $searchColumns = $apartment->getSearchColumns();
+//        dd($searchColumns);
+        return view('project.detail', compact('project', 'searchColumns'));
     }
-
 
 
 }

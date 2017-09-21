@@ -8,40 +8,52 @@ use DB;
 
 class ApartmentRepository extends EstateProjectApartment
 {
-    public function KullanilisSekli() {
+    private function KullanilisSekli() {
         return DB::table($this->table)
             ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
-            ->distinct()
+            ->distinct('KullanilisSekli')
             ->get(['KullanilisSekli']);
     }
 
-    public function BulunduguKat() {
+    private function BulunduguKat() {
         return DB::table($this->table)
             ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
             ->distinct()
             ->get(['BulunduguKat']);
     }
 
-    public function OdaSayisi() {
+    private function OdaSayisi() {
         return DB::table($this->table)
             ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
             ->distinct()
             ->get(['OdaSayisi']);
     }
 
-    public function Yon() {
+    private function Yon() {
         return DB::table($this->table)
             ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
             ->distinct()
             ->get(['Yon']);
     }
 
-    public function BrutM2()
+    private function BrutM2()
     {
         return DB::table($this->table)
             ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
             ->distinct()
             ->get(['BrutM2']);
+    }
+
+    public function getSearchColumns()
+    {
+        return [
+            'Kullanılış Şekli' => $this->KullanilisSekli(),
+            'Bulunduğu Kat' => $this->BulunduguKat(),
+            'Oda Sayısı' => $this->OdaSayisi(),
+            'Yön' => $this->Yon(),
+            'Brüt Metrekare' => $this->BrutM2()
+
+        ];
     }
 
 }
