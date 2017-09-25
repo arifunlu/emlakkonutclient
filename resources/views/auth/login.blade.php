@@ -39,7 +39,7 @@
         {{ csrf_field() }}
         <h2 class="form-signin-heading">Hoş geldiniz!</h2>
         <div class="input-group{{ $errors->has('name') ? ' has-error' : '' }}">
-          <span class="input-group-addon" id="basic-addon1"><img src="/img/user.svg"></img></span>
+          <span class="input-group-addon" id="basic-addon1"><img src="/img/user.svg"></span>
           <input type="text" id="name" class="form-control" placeholder="Kullanıcı Adı" aria-describedby="basic-addon1"
                  name="name" value="{{ app()->isLocal() ? config('app.kkysUser') : old('name')  }}" required autofocus>
         </div>
@@ -49,7 +49,7 @@
           </span>
         @endif
         <div class="input-group{{ $errors->has('password') ? ' has-error' : '' }} pass">
-          <span class="input-group-addon" id="basic-addon1"><img src="/img/lock.svg"></img></span>
+          <span class="input-group-addon" id="basic-addon1"><img src="/img/lock.svg"></span>
           <input type="password" id="password" class="form-control" placeholder="Şifre" aria-describedby="basic-addon1"
                  name="password" value="{{app()->isLocal() ? config('app.kkysPassword') : '' }}" required>
         </div>
