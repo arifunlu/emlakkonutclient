@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Model\ServiceResponse;
 use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
@@ -47,6 +48,18 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
+        try {
+            $username = config('app.kkysUser');
+            $password = config('app.kkysPassword');
+
+            $sr = ServiceResponse::setUserAttributesFromService($username, $password);
+            //            $serviceResponse = ServiceResponse::setUserAttributesFromService($credentials['name'], $credentials['password']);
+
+        } catch (\Exception $exception) {
+            dd('http://192.168.0.186:94/SunumService.svc/KullaniciDogrulama servisi calismiyor.');
+            echo $exception->getMessage();
+        }
+
         $this->validateLogin($request);
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
         // the login attempts for this application. We'll key this by the username and
@@ -58,16 +71,18 @@ class LoginController extends Controller
         }
 
 
-        $credentials = $this->credentials($request);
-        if (app()->isLocal()) {
-            $user = User::query()->where('name', $credentials['name'])->first();
-            \Auth::login($user);
-            $this->clearLoginAttempts($request);
-
-            return $this->sendLoginResponse($request);
-        }
+        //        $credentials = $this->credentials($request);
+        //        if (app()->isLocal()) {
+        //            $user = User::query()->where('name', $credentials['name'])->first();
+        //            \Auth::login($user);
+        //            $this->clearLoginAttempts($request);
+        //
+        //            return $this->sendLoginResponse($request);
+        //        }
 
         $serviceResponse = null;  // ServiceResponse::setUserAttributesFromService($credentials['name'], $credentials['password']);
+
+
         //todo: 571571
         if ($serviceResponse && $serviceResponse->Durum == 0) {
             $user = User::setAttributesFromService($serviceResponse->Sonuc, $credentials['name']);

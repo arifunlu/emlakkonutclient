@@ -12,7 +12,9 @@
 */
 
 Auth::routes();
-Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
-Route::get('/', 'ProjectController@index')->name('home');
-Route::get('/project/{project}', 'ProjectController@detail')->name('project.detail');
-Route::get('/map', 'MapController@index')->name('map');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+    Route::get('/', 'ProjectController@index')->name('home');
+    Route::get('/project/{project}', 'ProjectController@detail')->name('project.detail');
+    Route::get('/map', 'MapController@index')->name('map');
+});
