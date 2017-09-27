@@ -9684,9 +9684,9 @@ button {
 .btn-back {
   position: absolute;
   z-index: 999;
-  top: 1.8rem;
-  left: 2rem;
-  width: 31px;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 3rem;
 }
 
 .btn-print {
