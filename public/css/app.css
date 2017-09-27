@@ -9681,6 +9681,13 @@ button {
   left: 38%;
 }
 
+.btn-back {
+  position: absolute;
+  z-index: 999;
+  top: 1.8rem;
+  left: 2rem;
+}
+
 .btn-print {
   position: absolute;
   z-index: 999;

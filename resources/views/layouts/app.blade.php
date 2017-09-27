@@ -17,6 +17,7 @@
     </head>
     <body>
         <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-custom">
+            <img class="btn-back" src="/img/back.svg" onclick="window.location='{{ URL::route('home') }}'" role="button"/>
             <a class="navbar-brand" href="#">
                 <img src="/img/logo.png"/>
             </a>
