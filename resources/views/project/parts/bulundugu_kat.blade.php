@@ -1,6 +1,6 @@
 <ul class="nav nav-pills flex-column">
     <li class="nav-item" data-toggle="collapse" data-target="#bulunduguKat">
-        <a class="nav-link" href="#">Bulunduğu Kat<span class="arrow"></span></a>
+        <a class="nav-link" href="#">Kat<span class="arrow"></span></a>
     </li>
     <ul class="sub-menu collapse show" id="bulunduguKat">
         @foreach($bulunduguKat as $kat)

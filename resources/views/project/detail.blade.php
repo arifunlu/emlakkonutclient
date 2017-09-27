@@ -10,9 +10,16 @@
             <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
                 <h5 class="navbar-brand">{{$project->ProjeAdi}}</h5>
                 @include('project.parts.kullanilis_sekli')
+                @include('project.parts.yon')
                 @include('project.parts.bulundugu_kat')
                 @include('project.parts.oda_sayisi')
-                @include('project.parts.yon')
+                @include('project.parts.metraj')
+                @include('project.parts.fiyat_araligi')
+                @include('project.parts.ada')
+                @include('project.parts.parsel')
+                @include('project.parts.blok')
+                @include('project.parts.kapi_no')
+                @include('project.parts.sozlesme')
             </nav>
 
             <main class="col-sm-9 ml-sm-auto col-md-10 p-0">
@@ -101,8 +108,8 @@
                                     <tbody>
                                         @foreach($project->EstateProjectApartment as $apartment)
                                             <tr>
-                                                <td>{{$apartment->BlokNo }}</td>
-                                                <td>{{$apartment->KapiNo }}</td>
+                                                <td><a href="#">{{$apartment->BlokNo }}</a></td>
+                                                <td><a href="#">{{$apartment->KapiNo }}</a></td>
                                                 <td>{{$apartment->BulunduguKat }}</td>
                                                 <td>{{$apartment->Yon }}</td>
                                                 <td>{{$apartment->OdaSayisi }}</td>
