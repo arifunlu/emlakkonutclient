@@ -88,8 +88,12 @@ function check_intersect(x, y) {
         p0['y'] = perimeter[i]['y'];
         p1['x'] = perimeter[i + 1]['x'];
         p1['y'] = perimeter[i + 1]['y'];
-        if (p1['x'] == p2['x'] && p1['y'] == p2['y']) { continue; }
-        if (p0['x'] == p3['x'] && p0['y'] == p3['y']) { continue; }
+        if (p1['x'] == p2['x'] && p1['y'] == p2['y']) {
+            continue;
+        }
+        if (p0['x'] == p3['x'] && p0['y'] == p3['y']) {
+            continue;
+        }
         if (line_intersects(p0, p1, p2, p3) == true) {
             return true;
         }
@@ -116,7 +120,6 @@ function point_it(event) {
             return false;
         }
         draw(true);
-        alert('Poligon oluşturuldu.');
         event.preventDefault();
         return false;
     } else {
@@ -131,7 +134,10 @@ function point_it(event) {
             alert('Çizdiğiniz çizgi başka bir çizgiyle kesişiyor.');
             return false;
         }
-        perimeter.push({ 'x': x, 'y': y });
+        perimeter.push({
+            'x': x,
+            'y': y
+        });
         draw(false);
         return false;
     }
