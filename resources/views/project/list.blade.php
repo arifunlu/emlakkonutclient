@@ -49,7 +49,7 @@
                             <div class="rotate">{{$project->ProjeAdi}}</div>
                         </div>
                         <div class="panelContent" onclick="window.location='{{ URL::route('project.detail', $project->id) }}'">
-                            <img src="{{$project->get352x386Url()}}" />
+                            <img @if($project->get352x386Url()) src="{{$project->get352x386Url()}}" @endif />
                         </div>
                     </div>
                     @endforeach
