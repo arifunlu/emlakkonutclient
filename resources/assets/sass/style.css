@@ -116,6 +116,9 @@
   font-weight: normal;
 }
 .form-signin .form-control {
+  border: 0;
+  border-radius: 0;
+  padding: 1rem .8rem;
   position: relative;
   height: auto;
   -webkit-box-sizing: border-box;
@@ -133,11 +136,6 @@
 }
 .form-signin input[type="password"] {
   border-radius: 0;
-}
-.form-control {
-  border: 0;
-  border-radius: 0;
-  padding: 1rem .8rem;
 }
 .input-group-addon {
   background-color: transparent;
