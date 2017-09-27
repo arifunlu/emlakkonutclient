@@ -25,7 +25,8 @@ class ProjectController extends Controller
         $odaSayisi = $apartment->OdaSayisi();
         $yon = $apartment->Yon();
 
-        return view('project.detail', compact('project', 'kullanilisSekli', 'bulunduguKat', 'odaSayisi', 'yon'));
+        return view('project.detail',
+            compact('project', 'kullanilisSekli', 'bulunduguKat', 'odaSayisi', 'yon', 'apartments'));
     }
 
 

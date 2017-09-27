@@ -35,7 +35,7 @@ class ProjectLocationPhoto extends Model
     protected static $directory = 'uploads/location/';
 
     public static function directory() {
-        return public_path(static::$directory);
+        return Setting::PublicPath(static::$directory);
     }
 
     public function getImagePath() {
@@ -44,10 +44,10 @@ class ProjectLocationPhoto extends Model
 
     public function getImageUrl() {
         $path = $this->getImagePath();
-        return $path ? \URL::to($path) : '';
+        return $path ? Setting::AdminUrl($path) : '';
     }
 
     public function getThumbnailUrl() {
-        return \URL::to(static::$directory . $this->thumbnail);
+        return Setting::AdminUrl(static::$directory . $this->thumbnail);
     }
 }
