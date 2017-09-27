@@ -15,10 +15,10 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @show
     </head>
-    <body oncontextmenu="return false;">
+    <body>
         <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-custom">
             <a class="navbar-brand" href="#">
-                <img src="img/logo.png"/>
+                <img src="/img/logo.png"/>
             </a>
             <i class="icon-Print btn-print" onclick="window.print();" role="button"></i>
         </nav>
