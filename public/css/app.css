@@ -9686,6 +9686,7 @@ button {
   z-index: 999;
   top: 1.8rem;
   left: 2rem;
+  width: 31px;
 }
 
 .btn-print {
