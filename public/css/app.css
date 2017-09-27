@@ -9333,7 +9333,7 @@ a.text-dark:hover {
   border-radius: 0;
 }
 
-.input-group-addon {
+.form-signin .input-group-addon {
   background-color: transparent;
   border: 0;
   border-radius: 0;
