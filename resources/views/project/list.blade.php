@@ -43,7 +43,7 @@
             <div id="accordion">
                 <div class="scroll-container">
                     <h3 id="search-not-found" style="color: #fff; display: none;">Proje bulunamadı.</h3>
-                    @foreach($projects as $project):
+                    @foreach($projects as $project)
                     <div class="panel" style="width: 50px;">
                         <div class="pink">
                             <div class="rotate">{{$project->ProjeAdi}}</div>

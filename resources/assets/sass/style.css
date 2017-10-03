@@ -116,11 +116,13 @@
   font-weight: normal;
 }
 .form-signin .form-control {
+  border: 0;
+  border-radius: 0;
+  padding: 1rem .8rem;
   position: relative;
   height: auto;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 10px;
   font-size: 16px;
   border-bottom: 1px solid rgba(0, 0, 0, .15);
 }
@@ -134,12 +136,7 @@
 .form-signin input[type="password"] {
   border-radius: 0;
 }
-.form-control {
-  border: 0;
-  border-radius: 0;
-  padding: 1rem .8rem;
-}
-.input-group-addon {
+.form-signin .input-group-addon {
   background-color: transparent;
   border: 0;
   border-radius: 0;
@@ -354,6 +351,7 @@ h1 {
   color: #fff;
   text-align: center;
   background-color: #00a65e;
+  width: 100%;
 }
 
 .up {
@@ -479,6 +477,14 @@ button {
   position: fixed;
   z-index: 999;
   left: 38%;
+}
+
+.btn-back {
+  position: absolute;
+  z-index: 999;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 3rem;
 }
 
 .btn-print {
