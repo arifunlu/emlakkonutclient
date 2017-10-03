@@ -11,7 +11,7 @@ class ProjectController extends Controller
 
     public function index()
     {
-        $projects = EstateProject::get();
+        $projects = EstateProject::orderBy('ProjeAdi')->get();
 
         return view('project.list', compact('projects'));
     }
