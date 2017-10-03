@@ -13,7 +13,6 @@ use Illuminate\Http\Request;
 
 class FloorController extends Controller
 {
-
     public function detail(EstateProjectApartment $apartment, ApartmentRepository $apartmentRepository)
     {
         $kullanilisSekli = $apartmentRepository->KullanilisSekli();
@@ -26,7 +25,7 @@ class FloorController extends Controller
         $block = Block::getBlock($island->id, $parcel->id, $apartment->BlokNo);
         $floor = Floor::getFloor($island->id, $parcel->id, $block->id, $apartment->BulunduguKat);
 
-        return view('parcel.detail',
+        return view('detail',
             compact('project', 'parcel', 'kullanilisSekli', 'bulunduguKat', 'odaSayisi', 'yon', 'apartment', 'floor')
         );
     }

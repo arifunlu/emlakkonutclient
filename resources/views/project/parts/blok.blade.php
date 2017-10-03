@@ -3,11 +3,11 @@
         <a class="nav-link" href="#">Blok<span class="arrow"></span></a>
     </li>
     <ul class="sub-menu collapse show" id="blok">
-        @foreach($yon as $cephe)
+        @foreach($blocks as $block)
             <li class="nav-item">
                 <div class="nav-link">
-                    <input id="checkbox{{$cephe }}" type="checkbox">
-                    <label for="checkbox{{$cephe }}">{{$cephe }}</label>
+                    <input id="block{{$block }}" name="blok[]" value="{{$block }}" type="checkbox">
+                    <label for="block{{$block }}">{{$block }}</label>
                 </div>
             </li>
         @endforeach

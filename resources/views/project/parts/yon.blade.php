@@ -6,8 +6,8 @@
         @foreach($yon as $cephe)
             <li class="nav-item">
                 <div class="nav-link">
-                    <input id="checkbox{{$cephe }}" type="checkbox">
-                    <label for="checkbox{{$cephe }}">{{$cephe }}</label>
+                    <input id="yon{{$cephe }}" name="yon[]" value="{{$cephe}}" type="checkbox">
+                    <label for="yon{{$cephe }}">{{$cephe }}</label>
                 </div>
             </li>
         @endforeach

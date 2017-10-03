@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
-
     public function index()
     {
         $projects = EstateProject::orderBy('ProjeAdi')->get();
@@ -24,10 +23,22 @@ class ProjectController extends Controller
         $bulunduguKat = $apartment->BulunduguKat();
         $odaSayisi = $apartment->OdaSayisi();
         $yon = $apartment->Yon();
+        $islands = $apartment->islandGroup();
+        $parcels = $apartment->parcelGroup();
+        $blocks = $apartment->blockGroup();
 
         return view('project.detail',
-            compact('project', 'kullanilisSekli', 'bulunduguKat', 'odaSayisi', 'yon', 'apartments'));
+            compact(
+                'project',
+                'kullanilisSekli',
+                'bulunduguKat',
+                'odaSayisi',
+                'yon',
+                'apartments',
+                'islands',
+                'parcels',
+                'blocks'
+            )
+        );
     }
-
-
 }

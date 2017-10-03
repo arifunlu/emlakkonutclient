@@ -6,8 +6,8 @@
         @foreach($bulunduguKat as $kat)
             <li class="nav-item">
                 <div class="nav-link">
-                    <input id="checkbox{{$kat }}" type="checkbox">
-                    <label for="checkbox{{$kat }}">{{$kat }}</label>
+                    <input id="kat{{$kat }}" name="kat[]" value="{{$kat}}" type="checkbox">
+                    <label for="kat{{$kat }}">{{$kat }}</label>
                 </div>
             </li>
         @endforeach

@@ -3,13 +3,10 @@
         <a class="nav-link" href="#">Kapı Numarası<span class="arrow"></span></a>
     </li>
     <ul class="sub-menu collapse show" id="kapi_no">
-        @foreach($yon as $cephe)
-            <li class="nav-item">
-                <div class="nav-link">
-                    <input id="checkbox{{$cephe }}" type="checkbox">
-                    <label for="checkbox{{$cephe }}">{{$cephe }}</label>
-                </div>
-            </li>
-        @endforeach
+        <li class="nav-item">
+            <div class="nav-link">
+                <input id="kapiNo" name="kapiNo" value="{{old('kapiNo')}}" type="text">
+            </div>
+        </li>
     </ul>
 </ul>

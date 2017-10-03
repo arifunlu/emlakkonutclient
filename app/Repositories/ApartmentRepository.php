@@ -83,41 +83,99 @@ use DB;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Repositories\ApartmentRepository whereYon($value)
  * @mixin \Eloquent
  */
-class ApartmentRepository extends EstateProjectApartment
+class ApartmentRepository
 {
-    public function KullanilisSekli() {
-        return DB::table($this->table)
-            ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
-            ->distinct()
-            ->get(['KullanilisSekli'])->pluck('KullanilisSekli');
+    public $apartment;
+
+    public function __construct(EstateProjectApartment $apartment)
+    {
+        $this->apartment = $apartment;
     }
 
-    public function BulunduguKat() {
-        return DB::table($this->table)
-            ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
-            ->distinct()
-            ->get(['BulunduguKat'])->pluck('BulunduguKat');
+    public function KullanilisSekli()
+    {
+        return $this->myGroup('KullanilisSekli');
     }
 
-    public function OdaSayisi() {
-        return DB::table($this->table)
-            ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
-            ->distinct()
-            ->get(['OdaSayisi'])->pluck('OdaSayisi');
+    public function BulunduguKat()
+    {
+        return $this->myGroup('BulunduguKat');
     }
 
-    public function Yon() {
-        return DB::table($this->table)
-            ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
-            ->distinct()
-            ->get(['Yon'])->pluck('Yon');
+    public function OdaSayisi()
+    {
+        return $this->myGroup('OdaSayisi');
+    }
+
+    public function Yon()
+    {
+        return $this->myGroup('Yon');
     }
 
     public function BrutM2()
     {
-        return DB::table($this->table)
-            ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
-            ->distinct()
-            ->get(['BrutM2'])->pluck('BrutM2');
+        return $this->myGroup('BrutM2');
+    }
+
+    public function netM2Group()
+    {
+        $groupRange = 10;
+        $result = [];
+        $max = $this->apartment->where('project_id', EstateProject::getCurrentProjectIdFromSession())->max('NetM2');
+        $min = $this->apartment->where('project_id', EstateProject::getCurrentProjectIdFromSession())->min('NetM2');
+        $maxRound = ceil($max / $groupRange) * $groupRange;
+
+        for ($minRound = floor($min / $groupRange) * $groupRange; $minRound < $maxRound; $minRound += $groupRange) {
+            $result[] = [$minRound, $minRound + $groupRange];
+        }
+
+        return $result;
+    }
+
+    public function priceGroup()
+    {
+        $groupRange = 50000;
+        $result = [];
+        $max = (int)$this->apartment->where('project_id', EstateProject::getCurrentProjectIdFromSession())
+            ->max('SatisDegeri');
+        $min = (int)$this->apartment->where('project_id', EstateProject::getCurrentProjectIdFromSession())
+            ->min('SatisDegeri');
+        $maxRound = ceil($max / $groupRange) * $groupRange;
+
+        for ($minRound = floor($min / $groupRange) * $groupRange; $minRound < $maxRound; $minRound += $groupRange) {
+            $result[] = [$minRound, $minRound + $groupRange];
+        }
+
+        return $result;
+    }
+
+    public function islandGroup()
+    {
+        return $this->myGroup('Ada');
+    }
+
+    public function parcelGroup()
+    {
+        return $this->myGroup('Parsel');
+    }
+
+    public function blockGroup()
+    {
+        return $this->myGroup('BlokNo');
+    }
+
+    public function floorGroup()
+    {
+        return $this->myGroup('KapiNo');
+    }
+
+    public function contractGroup()
+    {
+        return $this->myGroup('SozlesmeNo');
+    }
+
+    private function myGroup($columnName) {
+        return $this->apartment->where('project_id', EstateProject::getCurrentProjectIdFromSession())
+            ->distinct()->get([$columnName])->pluck($columnName);
     }
 }
