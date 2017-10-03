@@ -115,6 +115,7 @@ class User extends Authenticatable
 
     public function estateProject()
     {
-        return $this->belongsToMany(EstateProject::class, 'user_estate_project', 'user_id', 'project_id');
+        return $this->belongsToMany(EstateProject::class, 'user_estate_project', 'user_id', 'project_id')
+            ->orderBy('ProjeAdi');
     }
 }
