@@ -6,7 +6,7 @@
         @foreach($kullanilisSekli as $kullanilis)
             <li class="nav-item">
                 <div class="nav-link">
-                    <input id="kullanis{{$kullanilis }}" name="kullanis[]" value="{{$kullanilis }}" type="checkbox">
+                    <input id="kullanis{{$kullanilis }}" name="kullanis[]" value="{{$kullanilis }}" type="checkbox" onchange="onChangeFilters(this)">
                     <label for="kullanis{{$kullanilis }}">{{$kullanilis }}</label>
                 </div>
             </li>

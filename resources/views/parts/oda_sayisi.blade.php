@@ -6,7 +6,7 @@
         @foreach($odaSayisi as $oda)
             <li class="nav-item">
                 <div class="nav-link">
-                    <input id="oda{{$oda }}" name="oda[]" value="{{$oda}}" type="checkbox">
+                    <input id="oda{{$oda }}" name="oda[]" value="{{$oda}}" type="checkbox" onchange="onChangeFilters(this)">
                     <label for="oda{{$oda }}">{{$oda }}</label>
                 </div>
             </li>

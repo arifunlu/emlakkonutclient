@@ -6,7 +6,7 @@
         @foreach($bulunduguKat as $kat)
             <li class="nav-item">
                 <div class="nav-link">
-                    <input id="kat{{$kat }}" name="kat[]" value="{{$kat}}" type="checkbox">
+                    <input id="kat{{$kat }}" name="kat[]" value="{{$kat}}" type="checkbox" onchange="onChangeFilters(this)">
                     <label for="kat{{$kat }}">{{$kat }}</label>
                 </div>
             </li>

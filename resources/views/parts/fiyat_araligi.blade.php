@@ -13,5 +13,10 @@
                 <input id="priceMax" name="fiyatMax" value="{{old('priceMax')}}" type="text" placeholder="max TL">
             </div>
         </li>
+        <li class="nav-item">
+            <div class="nav-link">
+                <button type="button" onclick="onClickTextFilters('fiyat')">Ara</button>
+            </div>
+        </li>
     </ul>
 </ul>

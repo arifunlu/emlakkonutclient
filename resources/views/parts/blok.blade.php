@@ -6,7 +6,7 @@
         @foreach($blocks as $block)
             <li class="nav-item">
                 <div class="nav-link">
-                    <input id="block{{$block }}" name="blok[]" value="{{$block }}" type="checkbox">
+                    <input id="block{{$block }}" name="blok[]" value="{{$block }}" type="checkbox" onchange="onChangeFilters(this)">
                     <label for="block{{$block }}">{{$block }}</label>
                 </div>
             </li>

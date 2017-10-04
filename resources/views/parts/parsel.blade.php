@@ -6,7 +6,7 @@
         @foreach($parcels as $parcel)
             <li class="nav-item">
                 <div class="nav-link">
-                    <input id="parcel{{$parcel }}" name="parsel[]" value="{{$parcel}}" type="checkbox">
+                    <input id="parcel{{$parcel }}" name="parsel[]" value="{{$parcel}}" type="checkbox" onchange="onChangeFilters(this)">
                     <label for="parcel{{$parcel }}">{{$parcel }}</label>
                 </div>
             </li>

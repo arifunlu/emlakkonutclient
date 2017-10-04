@@ -8,5 +8,10 @@
                 <input id="kapiNo" name="kapiNo" value="{{old('kapiNo')}}" type="text">
             </div>
         </li>
+        <li class="nav-item">
+            <div class="nav-link">
+                <button type="button" onclick="onClickTextFilters('kapi')">Ara</button>
+            </div>
+        </li>
     </ul>
 </ul>

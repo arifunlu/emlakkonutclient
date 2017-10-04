@@ -6,7 +6,7 @@
         @foreach($islands as $island)
             <li class="nav-item">
                 <div class="nav-link">
-                    <input id="ada{{$island }}" name="ada[]" value="{{$island }}" type="checkbox">
+                    <input id="ada{{$island }}" name="ada[]" value="{{$island }}" type="checkbox" onchange="onChangeFilters(this)">
                     <label for="ada{{$island }}">{{$island }}</label>
                 </div>
             </li>

@@ -122,5 +122,47 @@
             }
         }
 
+        var data = {};
+
+        function onChangeFilters(e) {
+            if (e.checked) {
+                var param = e.id;
+
+                if (param.indexOf("ada") > -1) {
+                    data.ada = e.value;
+                } else if (param.indexOf("parsel") > -1) {
+                    data.parsel = e.value;
+                }
+
+                $.post("/search", {
+                    data: JSON.stringify(data),
+                    success: function(data) {
+
+                    }
+                });
+            }
+        }
+
+        function onClickTextFilters(s) {
+            if (s === "fiyat") {
+                data.priceMin = document.getElementById("priceMin").value;
+                data.priceMax = document.getElementById("priceMax").value;
+            } else if (s === "kapi") {
+                data.kapiNo = document.getElementById("kapiNo").value;
+            } else if (s === "metraj") {
+                data.netM2Min = document.getElementById("netM2Min").value;
+                data.netM2Max = document.getElementById("netM2Max").value;
+            } else if (s === "sozlesme") {
+                data.sozlesme = document.getElementById("sozlesme").value;
+            }
+
+            $.post("/search", {
+                data: JSON.stringify(data),
+                success: function(data) {
+
+                }
+            });
+        }
+
     </script>
 @endsection

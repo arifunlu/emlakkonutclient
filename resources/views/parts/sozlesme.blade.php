@@ -8,5 +8,10 @@
                 <input id="sozlesme" name="sozlesme" value="{{old('sozlesme')}}" type="text">
             </div>
         </li>
+        <li class="nav-item">
+            <div class="nav-link">
+                <button type="button" onclick="onClickTextFilters('sozlesme')">Ara</button>
+            </div>
+        </li>
     </ul>
 </ul>

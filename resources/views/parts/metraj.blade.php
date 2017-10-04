@@ -13,5 +13,10 @@
                 <input id="netM2Max" name="netM2" value="{{old('netM2Max')}}" type="text" placeholder="min metrekare">
             </div>
         </li>
+        <li class="nav-item">
+            <div class="nav-link">
+                <button type="button" onclick="onClickTextFilters('metraj')">Ara</button>
+            </div>
+        </li>
     </ul>
 </ul>
