@@ -21,6 +21,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/floor/{apartment}', 'FloorController@detail');
     Route::get('/map', 'MapController@index')->name('map');
     Route::post('/search', 'SearchController@index');
+    Route::get('/block/{apartment}', 'BlockController@detail')->name('block.detail');
+    Route::get('/apartment/{apartment}', 'ApartmentController@detail')->name('apartment.detail');
 });
 
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');

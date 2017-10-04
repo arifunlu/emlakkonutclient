@@ -64,4 +64,16 @@ class Block extends Model
 
         return $result;
     }
+
+    public function getApartments() {
+        $parcel = Parcel::find($this->parcel_id);
+        return EstateProjectApartment::where('project_id', $this->project_id)
+            ->where('Ada', $parcel->island->island_kkys)
+            ->where('Parsel', $parcel->parcel)
+            ->where('BlokNo', $this->block_no)
+            ->orderBy('BlokNo', 'DESC')
+            ->orderBy("Yon", 'ASC')
+            ->orderBy('KapiNo', 'ASC')
+            ->get();
+    }
 }

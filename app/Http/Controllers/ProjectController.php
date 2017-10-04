@@ -26,10 +26,12 @@ class ProjectController extends Controller
         $islands = $apartment->islandGroup();
         $parcels = $apartment->parcelGroup();
         $blocks = $apartment->blockGroup();
+        $apartments = $project->EstateProjectApartment;
 
         return view('project.detail',
             compact(
                 'project',
+                'apartments',
                 'kullanilisSekli',
                 'bulunduguKat',
                 'odaSayisi',

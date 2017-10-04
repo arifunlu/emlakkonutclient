@@ -141,12 +141,12 @@ class Parcel extends Model {
     public function getApartments()
     {
         return EstateProjectApartment::where('project_id', $this->project_id)
+            ->where('Ada', $this->island->island_kkys)
             ->where('Parsel', $this->parcel)
             ->orderBy('BlokNo', 'DESC')
             ->orderBy("Yon", 'ASC')
             ->orderBy('KapiNo', 'ASC')
             ->get();
-
     }
 
     public function setInteractivity($interactiveJson)

@@ -9,7 +9,7 @@
         <div class="row">
             <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
                 <h5 class="navbar-brand">{{$project->ProjeAdi}}</h5>
-                @include('sections.filter_bar')
+                @include('sections.apartment_filter_bar')
             </nav>
 
             @include('sections.apartment_list')
@@ -22,7 +22,7 @@
     <script src="/js/polygon.js"></script>
     <script src="/js/image-map-pro.min.js"></script>
     <script>
-        var objectJson = {!! $parcel->parcelInteractivity ? $parcel->parcelInteractivity->interactiveJson : json_encode(false) !!};
+        var objectJson = {!! $interactiveObject !!};
         ;(function ($, window, document, undefined) {
             $(document).ready(function () {
                 $('#image-map-pro-container').imageMapPro(objectJson);

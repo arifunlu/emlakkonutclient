@@ -9,10 +9,7 @@
         <div class="row">
             <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
                 <h5 class="navbar-brand">{{$project->ProjeAdi}}</h5>
-                @include('project.parts.kullanilis_sekli')
-                @include('project.parts.bulundugu_kat')
-                @include('project.parts.oda_sayisi')
-                @include('project.parts.yon')
+                @include('sections.filter_bar')
             </nav>
 
             <main class="col-sm-9 ml-sm-auto col-md-10 p-0">
