@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 
 class ApartmentController extends Controller
 {
-    public function detail(EstateProjectApartment $apartment, ApartmentRepository $apartmentRepository)
+    public function detail(EstateProjectApartment $apartment)
     {
         $island = Island::getFromApartment($apartment);
         $parcel = Parcel::getFromApartment($apartment, $island);
