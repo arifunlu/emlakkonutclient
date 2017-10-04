@@ -8,9 +8,8 @@ use Illuminate\Http\Request;
 class SearchController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        $estateProject = EstateProject::find(1);
-        return $estateProject->EstateProjectApartment;
+        return $request->all();
     }
 }
