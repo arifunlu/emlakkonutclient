@@ -61,47 +61,47 @@ class ApartmentRepository
 
     public function KullanilisSekli()
     {
-        return $this->myGroup('SozlesmeNo KapiNo BlokNo Parsel Ada BrutM2 Yon OdaSayisi BulunduguKat KullanilisSekli');
+        return $this->myGroup('KullanilisSekli');
     }
 
     public function BulunduguKat()
     {
-        return $this->myGroup('SozlesmeNo KapiNo BlokNo Parsel Ada BrutM2 Yon OdaSayisi BulunduguKat');
+        return $this->myGroup('BulunduguKat');
     }
 
     public function OdaSayisi()
     {
-        return $this->myGroup('SozlesmeNo KapiNo BlokNo Parsel Ada BrutM2 Yon OdaSayisi');
+        return $this->myGroup('OdaSayisi');
     }
 
     public function Yon()
     {
-        return $this->myGroup('SozlesmeNo KapiNo BlokNo Parsel Ada BrutM2 Yon');
+        return $this->myGroup('Yon');
     }
 
     public function BrutM2()
     {
-        return $this->myGroup('SozlesmeNo KapiNo BlokNo Parsel Ada BrutM2');
+        return $this->myGroup('BrutM2');
     }
 
     public function islandGroup()
     {
-        return $this->myGroup('SozlesmeNo KapiNo BlokNo Parsel Ada');
+        return $this->myGroup('Ada');
     }
 
     public function parcelGroup()
     {
-        return $this->myGroup('SozlesmeNo KapiNo BlokNo Parsel');
+        return $this->myGroup('Parsel');
     }
 
     public function blockGroup()
     {
-        return $this->myGroup('SozlesmeNo KapiNo BlokNo');
+        return $this->myGroup('BlokNo');
     }
 
     public function floorGroup()
     {
-        return $this->myGroup('SozlesmeNo KapiNo');
+        return $this->myGroup('KapiNo');
     }
 
     public function contractGroup()
