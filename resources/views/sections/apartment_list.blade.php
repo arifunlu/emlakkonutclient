@@ -12,7 +12,19 @@
     </thead>
     <tbody>
         @foreach($apartments as $apartment)
-            <tr>
+            @php
+                switch ($apartment->GayrimenkulDurumu) {
+                    case 'Satıldı':
+                         $style = 'style="background: red;"';
+                        break;
+                    case 'Ön Satış':
+                        $style = 'style="background: yellow;"';
+                        break;
+                    default:
+                        $style = '';
+                }
+            @endphp
+            <tr {!! $style !!}>
                 <td>
                     <a href="{{URL::route('block.detail', $apartment->id)}}">{{$apartment->BlokNo}}</a>
                 </td>
