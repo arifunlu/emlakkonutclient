@@ -6,30 +6,50 @@
         var data = {};
 
         function onChangeFilters(e) {
-            var d;
-
-            if (e.checked) {
-                d = e.value;
-            } else {
-                d = "";
-            }
-
             var param = e.id;
 
             if (param.indexOf("ada") > -1) {
-                data.ada = d;
+                if (e.checked) {
+                    data.ada = e.value;
+                } else {
+                    delete data.ada;
+                }
             } else if (param.indexOf("parsel") > -1) {
-                data.parsel = d;
+                if (e.checked) {
+                    data.parsel = e.value;
+                } else {
+                    delete data.ada;
+                }
             } else if (param.indexOf("kullanis") > -1) {
-                data.kullanis = d;
+                if (e.checked) {
+                    data.kullanis = e.value;
+                } else {
+                    delete data.kullanis;
+                }
             } else if (param.indexOf("yon") > -1) {
-                data.yon = d;
+                if (e.checked) {
+                    data.yon = e.value;
+                } else {
+                    delete data.yon;
+                }
             } else if (param.indexOf("kat") > -1) {
-                data.kat = d;
+                if (e.checked) {
+                    data.kat = e.value;
+                } else {
+                    delete data.kat;
+                }
             } else if (param.indexOf("oda") > -1) {
-                data.oda = d;
+                if (e.checked) {
+                    data.oda = e.value;
+                } else {
+                    delete data.oda;
+                }
             } else if (param.indexOf("block") > -1) {
-                data.blok = d;
+                if (e.checked) {
+                    data.blok = e.value;
+                } else {
+                    delete data.blok;
+                }
             }
 
             $.ajax({
