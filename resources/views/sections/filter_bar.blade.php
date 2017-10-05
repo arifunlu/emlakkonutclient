@@ -3,52 +3,60 @@
 @section('javascript')
     @parent
     <script>
-        var data = {};
+        var data = {
+            ada: [],
+            parsel: [],
+            kullanis: [],
+            yon: [],
+            kat: [],
+            oda: [],
+            blok: []
+        };
 
         function onChangeFilters(e) {
             var param = e.id;
 
             if (param.indexOf("ada") > -1) {
                 if (e.checked) {
-                    data.ada = e.value;
+                    data.ada.push(e.value);
                 } else {
-                    delete data.ada;
+                    data.ada.splice(data.ada.indexOf(e.value), 1);
                 }
             } else if (param.indexOf("parsel") > -1) {
                 if (e.checked) {
-                    data.parsel = e.value;
+                    data.parsel.push(e.value);
                 } else {
-                    delete data.ada;
+                    data.parsel.splice(data.parsel.indexOf(e.value), 1);
                 }
             } else if (param.indexOf("kullanis") > -1) {
                 if (e.checked) {
-                    data.kullanis = e.value;
+                    data.kullanis.push(e.value);
                 } else {
-                    delete data.kullanis;
+                    data.kullanis.splice(data.kullanis.indexOf(e.value), 1);
                 }
             } else if (param.indexOf("yon") > -1) {
                 if (e.checked) {
-                    data.yon = e.value;
+                    data.yon.push(e.value);
                 } else {
-                    delete data.yon;
+                    data.yon.splice(data.yon.indexOf(e.value), 1);
                 }
             } else if (param.indexOf("kat") > -1) {
                 if (e.checked) {
-                    data.kat = e.value;
+                    data.kat.push(e.value);
                 } else {
-                    delete data.kat;
+                    data.kat.splice(data.kat.indexOf(e.value), 1);
                 }
             } else if (param.indexOf("oda") > -1) {
                 if (e.checked) {
-                    data.oda = e.value;
+                    data.oda.push(e.value);
                 } else {
-                    delete data.oda;
+                    data.oda.splice(data.oda.indexOf(e.value), 1);
                 }
             } else if (param.indexOf("block") > -1) {
                 if (e.checked) {
-                    data.blok = e.value;
+                    data.blok.push(e.value);
                 } else {
-                    delete data.blok;
+                    data.blok.splice(data.blok.indexOf(e.value), 1);
                 }
             }
 
