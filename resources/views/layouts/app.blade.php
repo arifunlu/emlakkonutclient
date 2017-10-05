@@ -12,23 +12,31 @@
 
         @section('css')
         <!-- Styles -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+            <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @show
     </head>
     <body>
         <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-custom">
-            <img class="btn-back" src="/img/back.svg" onclick="window.location='{{ URL::route('home') }}'" role="button"/>
+            <img class="btn-back" src="/img/back.svg" onclick="window.location='{{ URL::route('home') }}'"
+                 role="button"/>
             <a class="navbar-brand" href="#">
                 <img src="/img/logo.png"/>
             </a>
             <i class="icon-Print btn-print" onclick="window.print();" role="button"></i>
         </nav>
 
-        @yield('content')
+    @yield('content')
 
-        @section('javascript')
+    @section('javascript')
         <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}"></script>
+            <script src="{{ asset('js/app.js') }}"></script>
+            <script>
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+            </script>
         @show
     </body>
 </html>

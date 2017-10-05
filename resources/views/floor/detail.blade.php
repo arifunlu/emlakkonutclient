@@ -28,48 +28,27 @@
                     <div class="d-flex flex-row justify-content-between">
                         <div></div>
                         <canvas id="jPolygon" onmousedown="point_it(event)"
-                                data-imgsrc="http://avrupark.com/images/kat-planlari/2+1-A-BLOK-2.jpg" width="960"
+                                data-imgsrc="{{$floor->floorPhoto->getImageUrl()}}" width="960"
                                 height="540"></canvas>
                         <div id="image-map-pro-container"></div>
                         <div class="d-flex flex-row justify-content-end">
-                            <div class="d-flex flex-column align-items-center" style="z-index: 99;">
-                                <img src="/img/pay.png" style="margin-top: 3rem;" role="button" data-toggle="collapse"
-                                     data-target="#rightIcerik" onmouseover="this.src='/img/pay2.png';"
-                                     onmouseout="this.src='/img/pay.png';"/>
-                                <img src="/img/point.png" style="margin-top: 3rem;" onclick="toggleDraw(this);"
-                                     role="button"/>
-                                <img src="/img/clear.png" onclick="clear_canvas();" role="button"
-                                     onmouseover="this.src='/img/clear2.png';" onmouseout="this.src='/img/clear.png';"/>
-                                <img src="/img/zoom_in.png" onclick="updateZoom(0.2);" role="button"
-                                     onmouseover="this.src='/img/zoom_in2.png';"
-                                     onmouseout="this.src='/img/zoom_in.png';"/>
-                                <img src="/img/zoom.png" onclick="updateZoom(0);" role="button"
-                                     onmouseover="this.src='/img/zoom2.png';" onmouseout="this.src='/img/zoom.png';"/>
-                                <img src="/img/zoom_out.png" onclick="updateZoom(-0.2);" role="button"
-                                     onmouseover="this.src='/img/zoom_out2.png';"
-                                     onmouseout="this.src='/img/zoom_out.png';"/>
-                                <img src="/img/map.png" onclick="window.location='{{ URL::route('map') }}'"
-                                     role="button" onmouseover="this.src='/img/map2.png';"
-                                     onmouseout="this.src='/img/map.png';"/>
-                            </div>
+                            @include('sections.right_bar')
                             <div id="rightIcerik" class="collapse">
-                                <h5>B TİP BLOK - 3+1 DAİRE</h5>
-                                <span>Giriş Holü:</span>
-                                <span>Koridor:</span>
-                                <span>Salon:</span>
-                                <span>Mutfak:</span>
-                                <span>Banyo:</span>
-                                <span>Ebeveyn Yatak Odası:</span>
-                                <span>Oda 1:</span>
-                                <span>Oda 2:</span>
-                                <span>Ebeveyn Banyosu:</span>
-                                <span>Kapalı Balkon:</span>
+                                <h5>{{$apartment->BlokNo}} - {{$apartment->KullanilisSekli}}}</h5>
+                                <span>Ada:{{$apartment->Ada}}</span>
+                                <span>Parsel:{{$apartment->Parsel}}</span>
+                                <span>Blok No:{{$apartment->BlokNo}}</span>
+                                <span>Kullanım Şekli:{{$apartment->KullanilisSekli}}</span>
+                                <span>Oda Sayısı:{{$apartment->OdaSayisi}}</span>
+                                <span>Yön:{{$apartment->Yon}}</span>
+                                <span>Gayrimenkul Durumu:{{$apartment->GayrimenkulDurumu}}</span>
                                 <hr>
-                                <span>Net Alan:</span>
-                                <span>Açık Balkon:</span>
+                                <span>Net Alan:{{$apartment->NetM2}}</span>
+                                <span>Açık Net Alan:{{$apartment->AcikNetM2}}</span>
+                                <span>Brüt Alan:{{$apartment->BrutM2}}</span>
                                 <hr>
-                                <span>Balkon Dahil Toplam Net Alan:</span>
-                                <span>Satışa Esas Brüt Alan:</span>
+                                <span>Bulunduğu Kat:{{$apartment->BulunduguKat}}</span>
+                                <span>Kapı Numarası:{{$apartment->KapiNo}}</span>
                             </div>
                         </div>
                     </div>

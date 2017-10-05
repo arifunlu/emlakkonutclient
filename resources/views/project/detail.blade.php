@@ -121,6 +121,7 @@
                 displayMode = true;
             }
         }
+<<<<<<< HEAD
 
         var data = {};
 
@@ -174,5 +175,7 @@
             });
         }
 
+=======
+>>>>>>> 6e3ff365bf4aca4a56aa5122259ea86c7b4e749f
     </script>
 @endsection
