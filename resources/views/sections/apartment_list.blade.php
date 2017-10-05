@@ -7,8 +7,8 @@
             <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader"
                     onclick="onClickActiveNav(this)">PARSEL VAZİYET PLANI
             </button>
-            <button id="btnDaire" type="button" class="btn btn-success tableheader"
-                    onclick="onClickActiveNav(this)">DAİRE PLANI
+            <button id="btnDaire" type="button" class="btn btn-success tableheader" onclick="onClickActiveNav(this)">
+                DAİRE PLANI
             </button>
         </div>
         <div class="d-flex flex-row justify-content-between">
@@ -22,21 +22,17 @@
                     <img src="/img/pay.png" style="margin-top: 3rem;" role="button" data-toggle="collapse"
                          data-target="#rightIcerik" onmouseover="this.src='/img/pay2.png';"
                          onmouseout="this.src='/img/pay.png';"/>
-                    <img src="/img/point.png" style="margin-top: 3rem;" onclick="toggleDraw(this);"
-                         role="button"/>
+                    <img src="/img/point.png" style="margin-top: 3rem;" onclick="toggleDraw(this);" role="button"/>
                     <img src="/img/clear.png" onclick="clear_canvas();" role="button"
                          onmouseover="this.src='/img/clear2.png';" onmouseout="this.src='/img/clear.png';"/>
                     <img src="/img/zoom_in.png" onclick="updateZoom(0.2);" role="button"
-                         onmouseover="this.src='/img/zoom_in2.png';"
-                         onmouseout="this.src='/img/zoom_in.png';"/>
+                         onmouseover="this.src='/img/zoom_in2.png';" onmouseout="this.src='/img/zoom_in.png';"/>
                     <img src="/img/zoom.png" onclick="updateZoom(0);" role="button"
                          onmouseover="this.src='/img/zoom2.png';" onmouseout="this.src='/img/zoom.png';"/>
                     <img src="/img/zoom_out.png" onclick="updateZoom(-0.2);" role="button"
-                         onmouseover="this.src='/img/zoom_out2.png';"
-                         onmouseout="this.src='/img/zoom_out.png';"/>
-                    <img src="/img/map.png" onclick="window.location='{{ URL::route('map') }}'"
-                         role="button" onmouseover="this.src='/img/map2.png';"
-                         onmouseout="this.src='/img/map.png';"/>
+                         onmouseover="this.src='/img/zoom_out2.png';" onmouseout="this.src='/img/zoom_out.png';"/>
+                    <img src="/img/map.png" onclick="window.location='{{ URL::route('map') }}'" role="button"
+                         onmouseover="this.src='/img/map2.png';" onmouseout="this.src='/img/map.png';"/>
                 </div>
                 <div id="rightIcerik" class="collapse">
                     <h5>B TİP BLOK - 3+1 DAİRE</h5>
@@ -61,8 +57,7 @@
         </div>
     </section>
 
-    <div id="plan-table" class="col-sm-9 ml-sm-auto col-md-10 p-0 m-0" role="tablist"
-         aria-multiselectable="true">
+    <div id="plan-table" class="col-sm-9 ml-sm-auto col-md-10 p-0 m-0" role="tablist" aria-multiselectable="true">
         <div class="card">
             <div class="card-header" role="tab" id="headingOne">
                 <img id="img-up" src="/img/down.png" class="up" role="button" onclick="upIconChange()"
@@ -84,8 +79,12 @@
                         <tbody>
                             @foreach($apartments as $apartment)
                                 <tr>
-                                    <td><a href="{{URL::route('block.detail', $apartment->id)}}">{{$apartment->BlokNo }}</a></td>
-                                    <td><a href="{{URL::route('apartment.detail', $apartment->id)}}">{{$apartment->KapiNo }}</a></td>
+                                    <td>
+                                        <a href="{{URL::route('block.detail', $apartment->id)}}">{{$apartment->BlokNo }}</a>
+                                    </td>
+                                    <td>
+                                        <a href="{{URL::route('apartment.detail', $apartment->id)}}">{{$apartment->KapiNo }}</a>
+                                    </td>
                                     <td>{{$apartment->BulunduguKat }}</td>
                                     <td>{{$apartment->Yon }}</td>
                                     <td>{{$apartment->OdaSayisi }}</td>
