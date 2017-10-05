@@ -60,13 +60,13 @@ class LoginController extends Controller
 
 
         $credentials = $this->credentials($request);
-        if (true || app()->isLocal()) {
-            $user = User::query()->where('name', 'm_y')->first();
-            \Auth::login($user);
-            $this->clearLoginAttempts($request);
-
-            return $this->sendLoginResponse($request);
-        }
+//        if (true || app()->isLocal()) {
+//            $user = User::query()->where('name', 'm_y')->first();
+//            \Auth::login($user);
+//            $this->clearLoginAttempts($request);
+//
+//            return $this->sendLoginResponse($request);
+//        }
 
 
         try {

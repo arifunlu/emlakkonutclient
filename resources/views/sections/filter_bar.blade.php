@@ -35,10 +35,12 @@
                     data.blok = e.value;
                 }
 
-                $.post("/search", {
-                    data: JSON.stringify(data),
-                    success: function(data) {
-
+                $.ajax({
+                    type: "POST",
+                    url: {!! json_encode(URL::route('search')) !!},
+                    data: data,
+                    success: function(responseData) {
+                        $('#apartmentList tbody').html(responseData)
                     }
                 });
             }
@@ -57,10 +59,12 @@
                 data.sozlesme = document.getElementById("sozlesme").value;
             }
 
-            $.post("/search", {
-                data: JSON.stringify(data),
-                success: function(data) {
-
+            $.ajax({
+                type: "POST",
+                url: {!! json_encode(URL::route('search')) !!},
+                data: data,
+                success: function(responseData) {
+                    $('#apartmentList tbody').html(responseData)
                 }
             });
         }

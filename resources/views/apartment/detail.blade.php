@@ -12,7 +12,7 @@
                 @include('sections.apartment_filter_bar')
             </nav>
 
-            @include('sections.apartment_list')
+            @include('sections.body')
         </div>
     </div>
 @endsection

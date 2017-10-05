@@ -25,8 +25,7 @@ class SearchController extends Controller
             'kapiNo' => 'KapiNo',
             'sozlesme' => 'SozlesmeNo'
         ];
-
-        $data = $request->get('data', []);
+        $data = $request->all();
         $query = EstateProjectApartment::where('project_id', EstateProject::getCurrentProjectIdFromSession());
         foreach ($data as $key => $value) {
             if(isset($keyMap[$key])) {
@@ -39,6 +38,7 @@ class SearchController extends Controller
             }
         }
 
-        return $query->get()->toArray();
+        $apartments =  $query->get();
+        return view('sections.apartment_list', compact('apartments'));
     }
 }
