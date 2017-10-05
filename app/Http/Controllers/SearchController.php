@@ -15,10 +15,10 @@ class SearchController extends Controller
             'yon' => 'Yon',
             'kat' => 'BulunduguKat',
             'oda' => 'OdaSayisi',
-            'netM2Min' => ['NetM2', '>='],
-            'netM2Max' => ['NetM2', '<='],
-            'fiyatMin' => ['SatisDegeri', '>='],
-            'fiyatMax' => ['SatisDegeri', '<='],
+            'netM2Min' => ['BrutM2', '>='],
+            'netM2Max' => ['BrutM2', '<='],
+            'priceMin' => ['SatisDegeri', '>='],
+            'priceMax' => ['SatisDegeri', '<='],
             'ada' => 'Ada',
             'parcel' => 'Parsel',
             'blok' => 'BlokNo',
@@ -28,9 +28,9 @@ class SearchController extends Controller
         $data = $request->all();
         $query = EstateProjectApartment::where('project_id', EstateProject::getCurrentProjectIdFromSession());
         foreach ($data as $key => $value) {
-            if(isset($keyMap[$key])) {
+            if (isset($keyMap[$key])) {
                 $condition = $keyMap[$key];
-                if(is_array($condition)) {
+                if (is_array($condition)) {
                     $query->where($condition[0], $condition[1], $value);
                 } else {
                     $query->where($condition, $value);
@@ -38,7 +38,8 @@ class SearchController extends Controller
             }
         }
 
-        $apartments =  $query->get();
+        $apartments = $query->get();
+
         return view('sections.apartment_list', compact('apartments'));
     }
 }
