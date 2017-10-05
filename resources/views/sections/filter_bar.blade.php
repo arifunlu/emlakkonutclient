@@ -1,18 +1,8 @@
-@include('parts.kullanilis_sekli')
-@include('parts.ada')
-@include('parts.parsel')
-@include('parts.blok')
-@include('parts.oda_sayisi')
-@include('parts.bulundugu_kat')
-@include('parts.yon')
-@include('parts.metraj')
-@include('parts.fiyat_araligi')
-@include('parts.kapi_no')
-@include('parts.sozlesme')
+@include('parts.kullanilis_sekli')@include('parts.ada')@include('parts.parsel')@include('parts.blok')@include('parts.oda_sayisi')@include('parts.bulundugu_kat')@include('parts.yon')@include('parts.metraj')@include('parts.fiyat_araligi')@include('parts.kapi_no')@include('parts.sozlesme')
 
 @section('javascript')
     @parent
-    <script >
+    <script>
         var data = {};
 
         function onChangeFilters(e) {
@@ -20,7 +10,7 @@
 
             if (e.checked) {
                 d = e.value;
-            else {
+            } else {
                 d = "";
             }
 
@@ -46,7 +36,7 @@
                 type: "POST",
                 url: {!! json_encode(URL::route('search')) !!},
                 data: data,
-                success: function(responseData) {
+                success: function (responseData) {
                     $('#apartmentList').html(responseData);
                 }
             });
@@ -69,7 +59,7 @@
                 type: "POST",
                 url: {!! json_encode(URL::route('search')) !!},
                 data: data,
-                success: function(responseData) {
+                success: function (responseData) {
                     $('#apartmentList').html(responseData);
                 }
             });
