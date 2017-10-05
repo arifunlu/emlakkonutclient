@@ -39,6 +39,6 @@ class SearchController extends Controller
             }
         }
 
-        return $query->get();
+        return $query->get()->toArray();
     }
 }
