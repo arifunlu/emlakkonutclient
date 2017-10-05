@@ -23,6 +23,16 @@
                     data.ada = e.value;
                 } else if (param.indexOf("parsel") > -1) {
                     data.parsel = e.value;
+                } else if (param.indexOf("kullanis") > -1) {
+                    data.kullanis = e.value;
+                } else if (param.indexOf("yon") > -1) {
+                    data.yon = e.value;
+                } else if (param.indexOf("kat") > -1) {
+                    data.kat = e.value;
+                } else if (param.indexOf("oda") > -1) {
+                    data.oda = e.value;
+                } else if (param.indexOf("blok") > -1) {
+                    data.blok = e.value;
                 }
 
                 $.post("/search", {
