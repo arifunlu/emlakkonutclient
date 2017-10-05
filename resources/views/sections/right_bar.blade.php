@@ -1,5 +1,5 @@
 <div class="d-flex flex-column align-items-center" style="z-index: 99;">
-    <img src="/img/pay.png" style="margin-top: 3rem;" role="button" data-toggle="collapse"
+    <img src="/img/pay.png" style="margin-top: 3rem; display: none;" role="button" data-toggle="collapse"
          data-target="#rightIcerik" onmouseover="this.src='/img/pay2.png';"
          onmouseout="this.src='/img/pay.png';"/>
     <img src="/img/point.png" style="margin-top: 3rem;" onclick="toggleDraw(this);"

@@ -13,9 +13,10 @@
         @section('css')
         <!-- Styles -->
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+            <link rel="icon" type="image/png" href="/img/fav.png" />
         @show
     </head>
-    <body>
+    <body oncontextmenu="return false;">
         <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-custom">
             <img class="btn-back" src="/img/back.svg" onclick="window.location='{{ URL::route('home') }}'"
                  role="button"/>
@@ -23,6 +24,7 @@
                 <img src="/img/logo.png"/>
             </a>
             <i class="icon-Print btn-print" onclick="window.print();" role="button"></i>
+            <p style="font-size: .88rem; position: absolute; top: 3.4rem; right: 1.75rem;">Yazdır</p>
         </nav>
 
     @yield('content')

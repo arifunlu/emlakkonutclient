@@ -5,7 +5,7 @@
                     onclick="onClickActiveNav(this)">GENEL VAZİYET PLANI
             </button>
             <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader"
-                    onclick="onClickActiveNav(this)">PARSEL VAZİYET PLANI
+                    onclick="onClickActiveNav(this)">NUMARATAJ
             </button>
             <button id="btnDaire" type="button" class="btn btn-success tableheader" onclick="onClickActiveNav(this)">
                 DAİRE PLANI
@@ -58,22 +58,24 @@
                                 <th>KAT</th>
                                 <th>YÖN</th>
                                 <th>ODA</th>
-                                <th>METREKARE</th>
+                                <th>BRÜT METREKARE</th>
+                                <th>SATIŞ FİYATI</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($apartments as $apartment)
                                 <tr>
                                     <td>
-                                        <a href="{{URL::route('block.detail', $apartment->id)}}">{{$apartment->BlokNo }}</a>
+                                        <a href="{{URL::route('block.detail', $apartment->id)}}">{{$apartment->BlokNo}}</a>
                                     </td>
                                     <td>
-                                        <a href="{{URL::route('apartment.detail', $apartment->id)}}">{{$apartment->KapiNo }}</a>
+                                        <a href="{{URL::route('apartment.detail', $apartment->id)}}">{{$apartment->KapiNo}}</a>
                                     </td>
-                                    <td>{{$apartment->BulunduguKat }}</td>
-                                    <td>{{$apartment->Yon }}</td>
-                                    <td>{{$apartment->OdaSayisi }}</td>
-                                    <td>{{$apartment->BrutM2 }}</td>
+                                    <td>{{$apartment->BulunduguKat}}</td>
+                                    <td>{{$apartment->Yon}}</td>
+                                    <td>{{$apartment->OdaSayisi}}</td>
+                                    <td>{{$apartment->BrutM2}}</td>
+                                    <td>{{$apartment->BrutM2}}</td>
                                 </tr>
                             @endforeach
                         </tbody>

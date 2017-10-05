@@ -9539,6 +9539,9 @@ h1 {
 
 .sub-menu {
   list-style: none;
+  max-height: 9.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .sidebar .navbar-brand > img {
@@ -9661,6 +9664,7 @@ h1 {
 
 .table {
   margin: 0;
+  line-height: 1.2;
 }
 
 .table td {
@@ -9678,7 +9682,7 @@ button {
 .btn-grp-fix {
   position: fixed;
   z-index: 999;
-  left: 38%;
+  left: 40%;
 }
 
 .btn-back {
@@ -9692,7 +9696,7 @@ button {
 .btn-print {
   position: absolute;
   z-index: 999;
-  top: 1.8rem;
+  top: 1.3rem;
   right: 2rem;
   font-size: 2rem;
 }
