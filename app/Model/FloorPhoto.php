@@ -49,11 +49,10 @@ class FloorPhoto extends Model
     }
 
     public function getImageUrl() {
-        $path = $this->getImagePath();
-        return $path ? \URL::to($path) : '';
+        return Setting::AdminUrl($this->getImagePath());
     }
 
     public function getThumbnailUrl() {
-        return \URL::to(static::$directory . $this->thumbnail);
+        return Setting::AdminUrl(static::$directory . $this->thumbnail);
     }
 }
