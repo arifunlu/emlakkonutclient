@@ -48,7 +48,11 @@
                 <img id="img-up" src="/img/down.png" class="up" role="button" onclick="upIconChange()"
                      data-toggle="collapse" data-parent="#plan-table" data-target="#collapseOne"/>
             </div>
-            @include('sections.apartment_list')
+            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                <div class="card-block" id="apartmentList">
+                    @include('sections.apartment_list')
+                </div>
+            </div>
         </div>
     </div>
 </main>

@@ -40,7 +40,7 @@
                     url: {!! json_encode(URL::route('search')) !!},
                     data: data,
                     success: function(responseData) {
-                        $('#apartmentList tbody').html(responseData)
+                        $('#apartmentList').html(responseData)
                     }
                 });
             }
@@ -64,7 +64,7 @@
                 url: {!! json_encode(URL::route('search')) !!},
                 data: data,
                 success: function(responseData) {
-                    $('#apartmentList tbody').html(responseData)
+                    $('#apartmentList').html(responseData)
                 }
             });
         }
