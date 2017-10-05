@@ -16,34 +16,40 @@
         var data = {};
 
         function onChangeFilters(e) {
+            var d;
+
             if (e.checked) {
-                var param = e.id;
-
-                if (param.indexOf("ada") > -1) {
-                    data.ada = e.value;
-                } else if (param.indexOf("parsel") > -1) {
-                    data.parsel = e.value;
-                } else if (param.indexOf("kullanis") > -1) {
-                    data.kullanis = e.value;
-                } else if (param.indexOf("yon") > -1) {
-                    data.yon = e.value;
-                } else if (param.indexOf("kat") > -1) {
-                    data.kat = e.value;
-                } else if (param.indexOf("oda") > -1) {
-                    data.oda = e.value;
-                } else if (param.indexOf("blok") > -1) {
-                    data.blok = e.value;
-                }
-
-                $.ajax({
-                    type: "POST",
-                    url: {!! json_encode(URL::route('search')) !!},
-                    data: data,
-                    success: function(responseData) {
-                        $('#apartmentList').html(responseData)
-                    }
-                });
+                d = e.value;
+            else {
+                d = "";
             }
+
+            var param = e.id;
+
+            if (param.indexOf("ada") > -1) {
+                data.ada = d;
+            } else if (param.indexOf("parsel") > -1) {
+                data.parsel = d;
+            } else if (param.indexOf("kullanis") > -1) {
+                data.kullanis = d;
+            } else if (param.indexOf("yon") > -1) {
+                data.yon = d;
+            } else if (param.indexOf("kat") > -1) {
+                data.kat = d;
+            } else if (param.indexOf("oda") > -1) {
+                data.oda = d;
+            } else if (param.indexOf("block") > -1) {
+                data.blok = d;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: {!! json_encode(URL::route('search')) !!},
+                data: data,
+                success: function(responseData) {
+                    $('#apartmentList').html(responseData);
+                }
+            });
         }
 
         function onClickTextFilters(s) {
@@ -64,7 +70,7 @@
                 url: {!! json_encode(URL::route('search')) !!},
                 data: data,
                 success: function(responseData) {
-                    $('#apartmentList').html(responseData)
+                    $('#apartmentList').html(responseData);
                 }
             });
         }
