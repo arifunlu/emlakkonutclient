@@ -5,12 +5,12 @@
     <ul class="sub-menu collapse show" id="fiyat_araligi">
         <li class="nav-item">
             <div class="nav-link">
-                <input id="priceMin" name="fiyatMin" value="{{old('priceMin')}}" type="text" placeholder="min TL">
+                <input id="priceMin" name="fiyatMin" value="{{old('priceMin')}}" type="number" placeholder="min TL">
             </div>
         </li>
         <li class="nav-item">
             <div class="nav-link">
-                <input id="priceMax" name="fiyatMax" value="{{old('priceMax')}}" type="text" placeholder="max TL">
+                <input id="priceMax" name="fiyatMax" value="{{old('priceMax')}}" type="number" placeholder="max TL">
             </div>
         </li>
         <li class="nav-item">
