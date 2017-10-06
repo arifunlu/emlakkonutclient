@@ -27,7 +27,7 @@ class SearchController extends Controller
         ];
         $data = $request->all();
         $query = EstateProjectApartment::where('project_id', EstateProject::getCurrentProjectIdFromSession());
-        ;
+
         foreach ($data as $key => $valueSet) {
             if (isset($keyMap[$key])) {
                 $condition = $keyMap[$key];

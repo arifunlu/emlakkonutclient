@@ -39,7 +39,7 @@ class ApartmentController extends Controller
                 'project',
                 'apartment',
                 'interactiveObject',
-
+                'floor',
                 'parcel',
                 'kullanilisSekli',
                 'bulunduguKat',
