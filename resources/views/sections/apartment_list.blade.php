@@ -15,10 +15,10 @@
             @php
                 switch ($apartment->GayrimenkulDurumu) {
                     case 'Satıldı':
-                         $style = 'style="background-color: #ff000080;"';
+                         $style = 'style="background-color: rgba(255, 0, 0, 0.5);"';
                         break;
                     case 'Ön Satış':
-                        $style = 'style="background-color: #ffff0080;"';
+                        $style = 'style="background-color: rgba(255, 255, 0, 0.5);"';
                         break;
                     default:
                         $style = '';
