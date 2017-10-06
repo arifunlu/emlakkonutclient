@@ -22,19 +22,25 @@ class SearchController extends Controller
             'ada' => 'Ada',
             'parcel' => 'Parsel',
             'blok' => 'BlokNo',
-            'kapiNo' => 'KapiNo',
-            'sozlesme' => 'SozlesmeNo'
+            'kapiNo' => ['KapiNo', '='],
+            'sozlesme' => ['SozlesmeNo', '=']
         ];
         $data = $request->all();
         $query = EstateProjectApartment::where('project_id', EstateProject::getCurrentProjectIdFromSession());
         ;
-        foreach ($data as $key => $value) {
+        foreach ($data as $key => $valueSet) {
             if (isset($keyMap[$key])) {
                 $condition = $keyMap[$key];
                 if (is_array($condition)) {
+                    $value = $valueSet;
                     $query->where($condition[0], $condition[1], $value);
                 } else {
-                    $query->where($condition, $value);
+
+                    $query->where(function($query) use ($valueSet, $condition) {
+                        foreach ($valueSet as $value) {
+                            $query->orWhere($condition, $value);
+                        }
+                    });
                 }
             }
         }
