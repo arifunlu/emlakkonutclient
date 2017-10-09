@@ -5,9 +5,9 @@
                     onclick="onClickActiveNav(this)">GENEL VAZİYET PLANI
             </button>
             <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader"
-                    onclick="onClickActiveNav(this)" disabled>NUMARATAJ
+                    onclick="onClickActiveNav(this)">NUMARATAJ
             </button>
-            <button id="btnDaire" type="button" class="btn btn-success tableheader" onclick="onClickActiveNav(this)" disabled>
+            <button id="btnDaire" type="button" class="btn btn-success tableheader" onclick="onClickActiveNav(this)">
                 DAİRE PLANI
             </button>
         </div>
