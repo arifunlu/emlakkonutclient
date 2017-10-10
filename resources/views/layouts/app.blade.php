@@ -10,20 +10,22 @@
 
         <title>{{ config('app.name') }}</title>
 
+        <link rel="icon" type="image/png" href="/img/fav.png" />
+
         @section('css')
         <!-- Styles -->
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-            <link rel="icon" type="image/png" href="/img/fav.png" />
         @show
     </head>
     <body oncontextmenu="return false;">
         <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-custom">
             <img class="btn-back" src="/img/back.svg" onclick="window.location='{{ URL::route('home') }}'"
                  role="button"/>
+            <p style="font-size: .88rem; position: absolute; top: 3.4rem; left: 1.75rem;">Projeler</p>
             <a class="navbar-brand" href="#">
                 <img src="/img/logo.png"/>
             </a>
-            <i class="icon-Print btn-print" onclick="window.print();" role="button"></i>
+            <img class="btn-print" src="/img/print.svg" onclick="window.print();" role="button"/>
             <p style="font-size: .88rem; position: absolute; top: 3.4rem; right: 1.75rem;">Yazdır</p>
         </nav>
 

@@ -4,9 +4,11 @@
             <th>BLOK</th>
             <th>KAPI NO</th>
             <th>KAT</th>
+            <th>KULLANIM ŞEKLİ</th>
             <th>YÖN</th>
             <th>ODA</th>
-            <th>BRÜT METREKARE</th>
+            <th>BRÜT ALAN</th>
+            <th>NET ALAN</th>
             <th>SATIŞ FİYATI</th>
         </tr>
     </thead>
@@ -32,8 +34,10 @@
                     <a href="{{URL::route('apartment.detail', $apartment->id)}}">{{$apartment->KapiNo}}</a>
                 </td>
                 <td>{{$apartment->BulunduguKat}}</td>
+                <td>{{$apartment->BulunduguKat}}</td>
                 <td>{{$apartment->Yon}}</td>
                 <td>{{$apartment->OdaSayisi}}</td>
+                <td>{{$apartment->BrutM2}}</td>
                 <td>{{$apartment->BrutM2}}</td>
                 <td>{{printThousandSeparator($apartment->SatisDegeri)}} TL</td>
             </tr>

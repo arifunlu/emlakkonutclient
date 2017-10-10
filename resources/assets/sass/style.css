@@ -94,27 +94,33 @@
   background-color: #eee;
   text-align: center;
 }
+
 .form-logo {
   width: 150px;
 }
+
 .form-signin {
   max-width: 600px;
   padding: 50px 100px;
   margin: 0 auto;
   background-color: #fff;
 }
+
 .form-signin-heading {
   font-size: 28px;
   text-align: center;
 }
+
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
   margin-bottom: 20px;
   color: #666;
 }
+
 .form-signin .checkbox {
   font-weight: normal;
 }
+
 .form-signin .form-control {
   border: 0;
   border-radius: 0;
@@ -126,22 +132,27 @@
   font-size: 16px;
   border-bottom: 1px solid rgba(0, 0, 0, .15);
 }
+
 .form-signin .form-control:focus {
   z-index: 2;
   border-color: #2c9bff;
 }
+
 .form-signin input[type="email"] {
   border-radius: 0;
 }
+
 .form-signin input[type="password"] {
   border-radius: 0;
 }
+
 .form-signin .input-group-addon {
   background-color: transparent;
   border: 0;
   border-radius: 0;
   font-size: 1.9rem;
 }
+
 .pass {
   margin-bottom: 50px;
 }
@@ -243,7 +254,7 @@ h1 {
   padding: 20px;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #005aab;
+  background-color: #004085;
 }
 
 .sidebar {
@@ -290,12 +301,12 @@ h1 {
 }
 
 .sidebar>.nav>.nav-item {
-  font-size: 1.5rem;
-  border-left: 10px solid #00a65e;
+  font-size: 1.2rem;
+  border-left: 10px solid #208837;
 }
 
 .tableheader {
-  background-color: #00a65e;
+  background-color: #208837;
   color: #f2f2f2;
 }
 
@@ -337,7 +348,7 @@ h1 {
 
 .sub-menu {
   list-style: none;
-  max-height: 9.5rem;
+  max-height: 10rem;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -353,7 +364,7 @@ h1 {
   white-space: normal;
   color: #fff;
   text-align: center;
-  background-color: #00a65e;
+  background-color: #208837;
   width: 100%;
 }
 
@@ -384,6 +395,10 @@ h1 {
   border-top-right-radius: 0;
 }
 
+.btn-success.active {
+  background-color: #1a6f2d;
+}
+
 
 /* Base for label styling */
 
@@ -397,6 +412,7 @@ h1 {
   position: relative;
   padding-left: 1.95em;
   cursor: pointer;
+  font-size: .9rem;
 }
 
 
@@ -463,6 +479,7 @@ h1 {
 .table {
   margin: 0;
   line-height: 1.2;
+  text-align: center;
 }
 
 .table td {
@@ -486,8 +503,8 @@ button {
 .btn-back {
   position: absolute;
   z-index: 999;
-  top: 1.5rem;
-  left: 1.5rem;
+  top: 1.3rem;
+  left: 1.7rem;
   width: 3rem;
 }
 
@@ -496,7 +513,7 @@ button {
   z-index: 999;
   top: 1.3rem;
   right: 2rem;
-  font-size: 2rem;
+  width: 2rem;
 }
 
 #map {
@@ -537,6 +554,17 @@ button {
   }
 }
 
+@media (min-width: 768px) {
+  .col-md-2 {
+    flex: 0 0 15%;
+    max-width: 15%;
+  }
+  .col-md-10 {
+    flex: 0 0 85%;
+    max-width: 85%;
+  }
+}
+
 #plan-table .card-header {
   padding: 0;
   background-color: transparent;
@@ -550,22 +578,26 @@ button {
 }
 
 input#inputSearch::-webkit-input-placeholder {
-  color:#fff;
+  color: #fff;
   font-family: 'Asap', sans-serif;
 }
+
 input#inputSearch::-moz-placeholder {
-  color:#fff;
+  color: #fff;
   font-family: 'Asap', sans-serif;
 }
+
 input#inputSearch:-moz-placeholder {
-  color:#fff;
+  color: #fff;
   font-family: 'Asap', sans-serif;
 }
+
 input#inputSearch:-ms-input-placeholder {
-  color:#fff;
+  color: #fff;
   font-family: 'Asap', sans-serif;
 }
+
 input#inputSearch::-ms-input-placeholder {
-  color:#fff;
+  color: #fff;
   font-family: 'Asap', sans-serif;
 }
