@@ -28,7 +28,8 @@ class ProjectController extends Controller
         $blocks = $apartment->blockGroup();
         $apartments = $project->EstateProjectApartment;
 
-        return view('project.detail',
+        return view(
+            'project.detail',
             compact(
                 'project',
                 'apartments',

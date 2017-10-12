@@ -1,4 +1,14 @@
-@include('parts.kullanilis_sekli')@include('parts.ada')@include('parts.parsel')@include('parts.blok')@include('parts.oda_sayisi')@include('parts.bulundugu_kat')@include('parts.yon')@include('parts.metraj')@include('parts.fiyat_araligi')@include('parts.kapi_no')@include('parts.sozlesme')
+@include('parts.kullanilis_sekli')
+@include('parts.ada')
+@include('parts.parsel')
+@include('parts.blok')
+@include('parts.oda_sayisi')
+@include('parts.bulundugu_kat')
+@include('parts.yon')
+@include('parts.metraj')
+@include('parts.fiyat_araligi')
+@include('parts.kapi_no')
+@include('parts.sozlesme')
 
 @section('javascript')
     @parent
