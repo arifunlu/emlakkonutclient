@@ -5,12 +5,12 @@
     <ul class="sub-menu collapse show" id="metraj">
         <li class="nav-item">
             <div class="nav-link">
-                <input id="brutM2Min" name="brut" value="{{old('brutM2Min')}}" type="number" placeholder="min metrekare">
+                <input id="brutM2Min" name="brutM2Min" value="{{old('brutM2Min')}}" type="number" placeholder="min metrekare">
             </div>
         </li>
         <li class="nav-item">
             <div class="nav-link">
-                <input id="brutM2Max" name="brut" value="{{old('brutM2Max')}}" type="number" placeholder="max metrekare">
+                <input id="brutM2Max" name="brutM2Max" value="{{old('brutM2Max')}}" type="number" placeholder="max metrekare">
             </div>
         </li>
         <li class="nav-item">
