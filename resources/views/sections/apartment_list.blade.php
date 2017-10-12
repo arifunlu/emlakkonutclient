@@ -34,7 +34,7 @@
                     <a href="{{URL::route('apartment.detail', $apartment->id)}}">{{$apartment->KapiNo}}</a>
                 </td>
                 <td>{{$apartment->BulunduguKat}}</td>
-                <td>{{$apartment->KullanisSekli}}</td>
+                <td>{{$apartment->KullanilisSekli}}</td>
                 <td>{{$apartment->Yon}}</td>
                 <td>{{$apartment->OdaSayisi}}</td>
                 <td>{{$apartment->BrutM2}}</td>
