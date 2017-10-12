@@ -15,8 +15,10 @@ class SearchController extends Controller
             'yon' => 'Yon',
             'kat' => 'BulunduguKat',
             'oda' => 'OdaSayisi',
-            'netM2Min' => ['BrutM2', '>='],
-            'netM2Max' => ['BrutM2', '<='],
+            'netM2Min' => ['NetM2', '>='],
+            'netM2Max' => ['NetM2', '<='],
+            'brutM2Min' => ['BrutM2', '>='],
+            'brutM2Max' => ['BrutM2', '<='],
             'priceMin' => ['SatisDegeri', '>='],
             'priceMax' => ['SatisDegeri', '<='],
             'ada' => 'Ada',
@@ -33,10 +35,11 @@ class SearchController extends Controller
                 $condition = $keyMap[$key];
                 if (is_array($condition)) {
                     $value = $valueSet;
-                    $query->where($condition[0], $condition[1], $value);
+                    if ($value !== null) {
+                        $query->where($condition[0], $condition[1], $value);
+                    }
                 } else {
-
-                    $query->where(function($query) use ($valueSet, $condition) {
+                    $query->where(function ($query) use ($valueSet, $condition) {
                         foreach ($valueSet as $value) {
                             $query->orWhere($condition, $value);
                         }

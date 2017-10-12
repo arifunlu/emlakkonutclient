@@ -6,6 +6,7 @@
 @include('parts.bulundugu_kat')
 @include('parts.yon')
 @include('parts.metraj')
+@include('parts.NetM2')
 @include('parts.fiyat_araligi')
 @include('parts.kapi_no')
 @include('parts.sozlesme')
@@ -86,7 +87,10 @@
                 data.priceMax = document.getElementById("priceMax").value;
             } else if (s === "kapi") {
                 data.kapiNo = document.getElementById("kapiNo").value;
-            } else if (s === "metraj") {
+            } else if (s === "brutM2") {
+                data.brutM2Min = document.getElementById("brutM2Min").value;
+                data.brutM2Max = document.getElementById("brutM2Max").value;
+            } else if(s === "NetM2") {
                 data.netM2Min = document.getElementById("netM2Min").value;
                 data.netM2Max = document.getElementById("netM2Max").value;
             } else if (s === "sozlesme") {
