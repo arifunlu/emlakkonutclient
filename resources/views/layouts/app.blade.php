@@ -19,9 +19,7 @@
     </head>
     <body oncontextmenu="return false;">
         <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-custom">
-            <img class="btn-back" src="/img/back.svg" onclick="window.location='{{ URL::route('home') }}'"
-                 role="button"/>
-            <p style="font-size: .88rem; position: absolute; top: 3.4rem; left: 1.75rem;">Projeler</p>
+            <img class="btn-back" src="/img/back.svg" onclick="window.history.back()" role="button"/>
             <a class="navbar-brand" href="#">
                 <img src="/img/logo.png"/>
             </a>

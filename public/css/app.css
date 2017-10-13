@@ -9275,18 +9275,16 @@ a.text-dark:hover {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar {
   width: 6px;
-  background-color: rgba(0, 0, 0, 0.2);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #444;
+  background-color: #bbb;
 }
 
 .form-header {
@@ -9569,7 +9567,6 @@ h1 {
   padding: 1rem;
   white-space: normal;
   color: #fff;
-  text-align: center;
   background-color: #208837;
   width: 100%;
 }
@@ -9712,6 +9709,14 @@ button {
   top: 1.3rem;
   left: 1.7rem;
   width: 3rem;
+}
+
+.btn-project {
+  position: absolute;
+  z-index: 999;
+  top: 2rem;
+  left: 1.4rem;
+  width: 2rem;
 }
 
 .btn-print {
