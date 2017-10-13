@@ -9786,6 +9786,7 @@ button {
   position: absolute;
   z-index: 99;
   visibility: hidden;
+  margin-left: 10%;
 }
 
 input#inputSearch::-webkit-input-placeholder {
