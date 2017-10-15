@@ -79,7 +79,7 @@
                     $('#apartmentList').html(responseData.html);
 
                     for (var i in responseData.activeBlocks) {
-                        $("block_" + responseData.activeBlocks[i]).css('background-color', 'green');
+                        $("#block_" + responseData.activeBlocks[i]).css('background-color', 'green');
                     }
                 }
             });
@@ -109,7 +109,7 @@
                     $('#apartmentList').html(responseData.html);
                     
                     for (var i in responseData.activeBlocks) {
-                        $("block_" + responseData.activeBlocks[i]).css('background-color', 'green');
+                        $("#block_" + responseData.activeBlocks[i]).css('background-color', 'green');
                     }
                 }
             });

@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <div class="row">
             <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
-                <h5 class="navbar-brand">{{$project->ProjeAdi}}</h5>
+                <h5 class="navbar-brand" onclick="window.location='{{ URL::route('home') }}'" role="button"><span><img src="/img/menu_icon.svg" style="width: 1rem; margin-right: 4px;"/> {{$project->ProjeAdi}}</span></h5>
                 @include('sections.filter_bar')
             </nav>
 
