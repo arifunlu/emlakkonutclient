@@ -10,7 +10,7 @@ class ProjectController extends Controller
 {
     public function index()
     {
-        $projects = EstateProject::orderBy('ProjeAdi')->get();
+        $projects = EstateProject::where('status', 1)->orderBy('ProjeAdi')->get();
 
         return view('project.list', compact('projects'));
     }
