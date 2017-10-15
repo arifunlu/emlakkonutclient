@@ -2,12 +2,12 @@
     <section id="sectionIcerik">
         <div class="btn-group btn-grp-fix" role="group">
             <button id="btnGenelVaziyet" type="button" class="btn btn-success tableheader"
-                    onclick="onClickActiveNav(this)">GENEL VAZİYET PLANI
+                    onclick="{{URL::route('project.detail', $project->id)}}">GENEL VAZİYET PLANI
             </button>
             <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader"
-                    onclick="onClickActiveNav(this)">NUMARATAJ
+                    onclick="{{URL::route('block.detail', $block->id)}}">NUMARATAJ
             </button>
-            <button id="btnDaire" type="button" class="btn btn-success active tableheader" onclick="onClickActiveNav(this)">
+            <button id="btnDaire" type="button" class="btn btn-success active tableheader">
                 DAİRE PLANI
             </button>
         </div>
