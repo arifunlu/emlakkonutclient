@@ -54,12 +54,12 @@ class FloorPhoto extends Model
 
     public function getImageUrl()
     {
-        return Setting::url($this->getImagePath());
+        return Setting::adminUrl($this->getImagePath());
     }
 
     public function getThumbnailUrl()
     {
-        return Setting::url(static::$directory . $this->thumbnail);
+        return Setting::adminUrl(static::$directory . $this->thumbnail);
     }
 
     public static function clientUrl($url)
