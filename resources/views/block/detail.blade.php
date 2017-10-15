@@ -12,7 +12,7 @@
                 @include('sections.filter_bar')
             </nav>
 
-            @include('sections.body')
+            @include('sections.numarataj_body')
         </div>
     </div>
 @endsection
