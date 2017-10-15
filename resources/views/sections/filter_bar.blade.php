@@ -76,7 +76,11 @@
                 url: {!! json_encode(URL::route('search')) !!},
                 data: data,
                 success: function (responseData) {
-                    $('#apartmentList').html(responseData);
+                    $('#apartmentList').html(responseData.html);
+
+                    for (var i in responseData.activeBlocks) {
+                        $("block_" + responseData.activeBlocks[i]).css('background-color', 'green');
+                    }
                 }
             });
         }
@@ -102,7 +106,11 @@
                 url: {!! json_encode(URL::route('search')) !!},
                 data: data,
                 success: function (responseData) {
-                    $('#apartmentList').html(responseData);
+                    $('#apartmentList').html(responseData.html);
+                    
+                    for (var i in responseData.activeBlocks) {
+                        $("block_" + responseData.activeBlocks[i]).css('background-color', 'green');
+                    }
                 }
             });
         }
