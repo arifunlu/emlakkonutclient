@@ -49,7 +49,9 @@ class SearchController extends Controller
         }
 
         $apartments = $query->get();
-
-        return view('sections.apartment_list', compact('apartments'));
+        $response = [];
+        $response['html'] = view('sections.apartment_list', compact('apartments'));
+        $response['activeBlocks'] = array_unique($apartments->pluck(BlokNo));
+        return $response;
     }
 }
