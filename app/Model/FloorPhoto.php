@@ -34,8 +34,11 @@ class FloorPhoto extends Model
 {
     protected $table = 'floor_photo';
     protected static $directory = 'uploads/floor/';
+    private const CLIENT_PUBLIC_URL = 'ClientPublicUrl';
+    public $clientUrl = null;
 
-    public static function directory() {
+    public static function directory()
+    {
         return public_path(static::$directory);
     }
 
@@ -44,15 +47,38 @@ class FloorPhoto extends Model
         return $this->belongsTo(Floor::class, 'floor_id');
     }
 
-    public function getImagePath() {
+    public function getImagePath()
+    {
         return static::$directory . $this->name;
     }
 
-    public function getImageUrl() {
-        return Setting::AdminUrl($this->getImagePath());
+    public function getImageUrl()
+    {
+        return Setting::url($this->getImagePath());
     }
 
-    public function getThumbnailUrl() {
-        return Setting::AdminUrl(static::$directory . $this->thumbnail);
+    public function getThumbnailUrl()
+    {
+        return Setting::url(static::$directory . $this->thumbnail);
+    }
+
+    public static function clientUrl($url)
+    {
+        if (!self::$instance) {
+            self::$instance = new self();
+        }
+
+        $urlSection = ltrim($url, '/');
+
+        return self::$instance->getClientUrl() . $urlSection;
+    }
+
+    private function getClientUrl()
+    {
+        if (!$this->clientUrl) {
+            $this->clientUrl = self::where('name', self::CLIENT_PUBLIC_URL)->first()->value;
+        }
+
+        return $this->clientUrl;
     }
 }

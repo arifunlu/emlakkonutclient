@@ -34,20 +34,25 @@ class ProjectLocationPhoto extends Model
     protected $table = 'project_location_photo';
     protected static $directory = 'uploads/location/';
 
-    public static function directory() {
+    public static function directory()
+    {
         return Setting::PublicPath(static::$directory);
     }
 
-    public function getImagePath() {
+    public function getImagePath()
+    {
         return static::$directory . $this->name;
     }
 
-    public function getImageUrl() {
+    public function getImageUrl()
+    {
         $path = $this->getImagePath();
-        return $path ? Setting::AdminUrl($path) : '';
+
+        return $path ? Setting::adminUrl($path) : '';
     }
 
-    public function getThumbnailUrl() {
-        return Setting::AdminUrl(static::$directory . $this->thumbnail);
+    public function getThumbnailUrl()
+    {
+        return Setting::adminUrl(static::$directory . $this->thumbnail);
     }
 }

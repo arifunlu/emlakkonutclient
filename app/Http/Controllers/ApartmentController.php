@@ -34,7 +34,8 @@ class ApartmentController extends Controller
         $blocks = [$apartment->BlokNo];
         $project = $parcel->estateProject;
 
-        return view('apartment.detail',
+        return view(
+            'apartment.detail',
             compact(
                 'project',
                 'apartment',
