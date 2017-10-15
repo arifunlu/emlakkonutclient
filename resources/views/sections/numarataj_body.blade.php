@@ -7,7 +7,7 @@
             <button id="btnParselVaziyet" type="button" class="btn btn-success active tableheader"
                     onclick="onClickActiveNav(this)">NUMARATAJ
             </button>
-            <button id="btnDaire" type="button" class="btn btn-success tableheader" onclick="onClickActiveNav(this)">
+            <button id="btnDaire" type="button" class="btn btn-success tableheader" onclick="onClickActiveNav(this)" disabled>
                 DAİRE PLANI
             </button>
         </div>
