@@ -41,6 +41,14 @@
                 <td>{{$apartment->NetM2}}</td>
                 <td>{{printThousandSeparator($apartment->SatisDegeri)}} TL</td>
             </tr>
+
+            var blocks = objectJson.spots;
+            for (var i in blocks) {
+                if (blocks[i].title === {{$apartment->BlokNo}}) {
+                    blocks[i].title.default_style.background_color = "green";
+                    break;
+                }
+            }
         @endforeach
     </tbody>
 </table>
