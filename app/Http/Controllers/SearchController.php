@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Model\EstateProject;
 use App\Model\EstateProjectApartment;
 use Illuminate\Http\Request;
+use View;
 
 class SearchController extends Controller
 {
@@ -50,8 +51,8 @@ class SearchController extends Controller
 
         $apartments = $query->get();
         $response = [];
-        $response['html'] = view('sections.apartment_list', compact('apartments'));
-        $response['activeBlocks'] = array_unique($apartments->pluck(BlokNo));
+        $response['html'] = View::make('sections.apartment_list', compact('apartments'))->render();
+        $response['activeBlocks'] = array_unique($apartments->pluck('BlokNo')->toArray());
         return $response;
     }
 }
