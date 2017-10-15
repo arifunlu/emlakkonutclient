@@ -16,7 +16,6 @@
                 <div></div>
                 <canvas id="jPolygon" onmousedown="point_it(event)" data-imgsrc="{{$floor->floorPhoto ? $floor->floorPhoto->getImageUrl() : 'http://avrupark.com/images/kat-planlari/2+1-A-BLOK-2.jpg'}}"
                         width="960" height="540"></canvas>
-                <div id="image-map-pro-container"></div>
                 <div class="d-flex flex-row justify-content-end" style="height: 91vh;">
                     @include('sections.right_bar')
                     <div id="rightIcerik" class="collapse">

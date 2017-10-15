@@ -594,7 +594,6 @@ button {
 #jPolygon {
   position: absolute;
   z-index: 99;
-  visibility: hidden;
   margin-top: 2%;
   margin-left: 12%;
 }
