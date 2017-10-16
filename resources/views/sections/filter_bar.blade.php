@@ -78,8 +78,15 @@
                 success: function (responseData) {
                     $('#apartmentList').html(responseData.html);
 
+                    var blocks = objectJson.spots;
                     for (var i in responseData.activeBlocks) {
                         $("#block_" + responseData.activeBlocks[i]).css('background-color', 'green');
+
+                        for (var j in blocks) {
+                            if (blocks[j].title === responseData.activeBlocks[i]) {
+                                blocks[j].default_style.background_color = "green";
+                            }
+                        }
                     }
                 }
             });
