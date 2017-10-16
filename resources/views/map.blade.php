@@ -21,8 +21,11 @@
       <script>
           function initMap() {
             var polygonArray = [];
+            var triangleCoords = {!!$projectLocation->map_data ? $projectLocation->map_data : json_encode(null); !!};
+            var lat = triangleCoords[0].split[","][0];
+            var lng = triangleCoords[0].split[","][1];
             var map = new google.maps.Map(document.getElementById("map"), {
-                center: {lat: 41.0082, lng: 28.9784},
+                center: {lat: parseFloat(lat), lng: parseFloat(lng)},
                 zoom: 14,
                 scaleControl: false,
                 streetViewControl: false,
@@ -30,8 +33,6 @@
             });
 
             @if($projectLocation)
-                var triangleCoords = {!!$projectLocation->map_data ? $projectLocation->map_data : json_encode(null); !!};
-
                 if (triangleCoords) {
                     for (var i in triangleCoords) {
                         triangleCoords[i] = $.map(triangleCoords[i], function(obj) {
