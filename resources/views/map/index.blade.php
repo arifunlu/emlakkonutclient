@@ -26,16 +26,12 @@
     <script>
         function initMap() {
             var polygonArray = [];
-            @if ($location) {
+            @if ($location)
                 var triangleCoords = {!!$location->map_data ? $location->map_data : json_encode(null); !!};
-                var lat = triangleCoords[0].split[","][0];
-                var lng = triangleCoords[0].split[","][1];
-            } else {
-                var lat = 41.0082;
-                var lng = 28.9784;
-            }
+            var lat = triangleCoords[0].split[","][0];
+            var lng = triangleCoords[0].split[","][1];
             var map = new google.maps.Map(document.getElementById("map"), {
-                center: {lat: parseFloat(lat), lng: parseFloat(lng)},
+                center: {lat: lat ? parseFloat(lat) : 41.0082, lng: lng ? parseFloat(lng) : 28.9784},
                 zoom: 14,
                 scaleControl: false,
                 streetViewControl: false,
