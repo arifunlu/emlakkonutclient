@@ -31,7 +31,7 @@
             var lng = triangleCoords[0][0] ? triangleCoords[0][0].split(",")[1] : 28.9784;
             var map = new google.maps.Map(document.getElementById("map"), {
                 center: {lat: parseFloat(lat), lng: parseFloat(lng)},
-                zoom: 18,
+                zoom: 15,
                 scaleControl: false,
                 streetViewControl: false,
                 mapTypeControl: false
