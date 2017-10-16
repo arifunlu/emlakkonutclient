@@ -49,7 +49,8 @@ class ApartmentController extends Controller
                 'apartments',
                 'islands',
                 'parcels',
-                'blocks'
+                'blocks',
+                'block'
             )
         );
     }
