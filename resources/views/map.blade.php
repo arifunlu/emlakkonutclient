@@ -24,6 +24,7 @@
             var triangleCoords = {!!$projectLocation->map_data ? $projectLocation->map_data : json_encode(null); !!};
             var lat = triangleCoords[0].split[","][0];
             var lng = triangleCoords[0].split[","][1];
+            alert(lat);
             var map = new google.maps.Map(document.getElementById("map"), {
                 center: {lat: parseFloat(lat), lng: parseFloat(lng)},
                 zoom: 14,
