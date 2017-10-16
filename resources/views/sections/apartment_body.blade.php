@@ -2,10 +2,10 @@
     <section id="sectionIcerik">
         <div class="btn-group btn-grp-fix" role="group">
             <button id="btnGenelVaziyet" type="button" class="btn btn-success tableheader"
-                    onclick="{{URL::route('project.detail', $project->id)}}">GENEL VAZİYET PLANI
+                    onclick="window.location='{{URL::route('project.detail', $project->id)}}'">GENEL VAZİYET PLANI
             </button>
             <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader"
-                    onclick="{{URL::route('block.detail', $block->id)}}">NUMARATAJ
+                    onclick="window.location='{{URL::route('block.detail', $block->id)}}'">NUMARATAJ
             </button>
             <button id="btnDaire" type="button" class="btn btn-success active tableheader">
                 DAİRE PLANI
