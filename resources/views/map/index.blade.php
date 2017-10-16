@@ -28,8 +28,8 @@
             var polygonArray = [];
             @if ($location)
                 var triangleCoords = {!!$location->map_data ? $location->map_data : json_encode(null); !!};
-            var lat = triangleCoords[0][0].split[","][0];
-            var lng = triangleCoords[0][0].split[","][1];
+            var lat = triangleCoords[0][0].split(",")[0];
+            var lng = triangleCoords[0][0].split(",")[1];
             var map = new google.maps.Map(document.getElementById("map"), {
                 center: {lat: lat ? parseFloat(lat) : 41.0082, lng: lng ? parseFloat(lng) : 28.9784},
                 zoom: 14,
