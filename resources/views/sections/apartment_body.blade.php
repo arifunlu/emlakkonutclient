@@ -5,7 +5,7 @@
                     onclick="window.location='{{URL::route('project.detail', $project->id)}}'">GENEL VAZİYET PLANI
             </button>
             <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader"
-                    onclick="window.location='{{URL::route('block.detail', $block->id)}}'">NUMARATAJ
+                    onclick="window.location='{{URL::route('block.detail', $apartment->id)}}'">NUMARATAJ
             </button>
             <button id="btnDaire" type="button" class="btn btn-success active tableheader">
                 DAİRE PLANI
