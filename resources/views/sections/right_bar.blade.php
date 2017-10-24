@@ -17,4 +17,7 @@
     <img src="/img/map.png" onclick="window.location='{{ URL::route('map') }}'"
          role="button" onmouseover="this.src='/img/map2.png';"
          onmouseout="this.src='/img/map.png';"/>
+    <img src="/img/medya.png" style="margin-top: 3rem; display: none;" role="button" data-toggle="collapse"
+         data-target="#rightIcerik" onmouseover="this.src='/img/medya2.png';"
+         onmouseout="this.src='/img/medya.png';"/>
 </div>
