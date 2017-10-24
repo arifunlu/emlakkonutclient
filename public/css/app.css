@@ -9700,7 +9700,7 @@ button {
 .btn-grp-fix {
   position: fixed;
   z-index: 999;
-  left: 40%;
+  left: 33%;
 }
 
 .btn-back {
