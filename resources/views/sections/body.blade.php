@@ -17,11 +17,13 @@
         <div class="d-flex flex-row justify-content-between">
             <div></div>
             <div id="image-map-pro-container"></div>
-            <div class="d-flex flex-column align-items-center" style="z-index: 99;">
-                <img src="/img/medya.png" role="button" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.src='/img/medya2.png';" onmouseout="this.src='/img/medya.png';"/>
-            </div>
-            <div id="medyaIcerik" class="collapse">
-                Test
+            <div style="margin-top: 37rem; margin-right: -12rem; display: inherit;">
+                <div class="d-flex flex-column align-items-center" style="z-index: 99;">
+                    <img src="/img/medya.png" role="button" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.src='/img/medya2.png';" onmouseout="this.src='/img/medya.png';"/>
+                </div>
+                <div id="medyaIcerik" class="collapse">
+                    Test
+                </div>
             </div>
             <div class="d-flex flex-row justify-content-end" style="height: 91vh;">
                 @include('sections.right_bar')
