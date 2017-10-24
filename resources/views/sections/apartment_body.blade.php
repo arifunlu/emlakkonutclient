@@ -10,10 +10,7 @@
             <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader" onclick="window.location='{{URL::route('block.detail', $apartment->id)}}'">
                 NUMARATAJ
             </button>
-            <button id="btnDaire" type="button" class="btn btn-success tableheader">
-                KAT PLANI
-            </button>
-            <button id="btnDaire" type="button" class="btn btn-success tableheader">
+            <button id="btnDaire" type="button" class="btn btn-success tableheader active">
                 DAİRE PLANI
             </button>
         </div>

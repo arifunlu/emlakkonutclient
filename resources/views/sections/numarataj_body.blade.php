@@ -7,11 +7,8 @@
             <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader">
                 BLOK
             </button>
-            <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader">
+            <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader active">
                 NUMARATAJ
-            </button>
-            <button id="btnDaire" type="button" class="btn btn-success tableheader" disabled>
-                KAT PLANI
             </button>
             <button id="btnDaire" type="button" class="btn btn-success tableheader" disabled>
                 DAİRE PLANI

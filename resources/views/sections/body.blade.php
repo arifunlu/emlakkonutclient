@@ -11,9 +11,6 @@
                 NUMARATAJ
             </button>
             <button id="btnDaire" type="button" class="btn btn-success tableheader" disabled>
-                KAT PLANI
-            </button>
-            <button id="btnDaire" type="button" class="btn btn-success tableheader" disabled>
                 DAİRE PLANI
             </button>
         </div>
