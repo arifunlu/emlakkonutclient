@@ -1,13 +1,19 @@
 <main class="col-sm-9 ml-sm-auto col-md-10 p-0">
     <section id="sectionIcerik">
         <div class="btn-group btn-grp-fix" role="group">
-            <button id="btnGenelVaziyet" type="button" class="btn btn-success active tableheader"
-                    onclick="onClickActiveNav(this)">GENEL VAZİYET PLANI
+            <button id="btnGenelVaziyet" type="button" class="btn btn-success active tableheader">
+                G. VAZİYET PLANI
             </button>
-            <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader"
-                    onclick="onClickActiveNav(this)" disabled>NUMARATAJ
+            <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader" disabled>
+                BLOK
             </button>
-            <button id="btnDaire" type="button" class="btn btn-success tableheader" onclick="onClickActiveNav(this)" disabled>
+            <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader" disabled>
+                NUMARATAJ
+            </button>
+            <button id="btnDaire" type="button" class="btn btn-success tableheader" disabled>
+                KAT PLANI
+            </button>
+            <button id="btnDaire" type="button" class="btn btn-success tableheader" disabled>
                 DAİRE PLANI
             </button>
         </div>

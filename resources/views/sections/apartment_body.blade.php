@@ -1,13 +1,19 @@
 <main class="col-sm-9 ml-sm-auto col-md-10 p-0">
     <section id="sectionIcerik">
         <div class="btn-group btn-grp-fix" role="group">
-            <button id="btnGenelVaziyet" type="button" class="btn btn-success tableheader"
-                    onclick="window.location='{{URL::route('project.detail', $project->id)}}'">GENEL VAZİYET PLANI
+            <button id="btnGenelVaziyet" type="button" class="btn btn-success active tableheader" onclick="window.location='{{URL::route('project.detail', $project->id)}}'">
+                G. VAZİYET PLANI
             </button>
-            <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader"
-                    onclick="window.location='{{URL::route('block.detail', $apartment->id)}}'">NUMARATAJ
+            <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader">
+                BLOK
             </button>
-            <button id="btnDaire" type="button" class="btn btn-success active tableheader">
+            <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader" onclick="window.location='{{URL::route('block.detail', $apartment->id)}}'">
+                NUMARATAJ
+            </button>
+            <button id="btnDaire" type="button" class="btn btn-success tableheader">
+                KAT PLANI
+            </button>
+            <button id="btnDaire" type="button" class="btn btn-success tableheader">
                 DAİRE PLANI
             </button>
         </div>
