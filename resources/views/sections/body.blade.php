@@ -17,6 +17,9 @@
         <div class="d-flex flex-row justify-content-between">
             <div></div>
             <div id="image-map-pro-container"></div>
+            <div id="medyaIcerik" class="collapse">
+                Test
+            </div>
             <div class="d-flex flex-row justify-content-end" style="height: 91vh;">
                 @include('sections.right_bar')
                 <div id="rightIcerik" class="collapse">
@@ -37,13 +40,6 @@
                     <hr>
                     <span>Balkon Dahil Toplam Net Alan:</span>
                     <span>Satışa Esas Brüt Alan:</span>
-                </div>
-                <div id="medyaIcerik" class="collapse">
-                    <ul class="list-group">
-                        <li class="list-group-item list-group-item-primary">This</li>
-                        <li class="list-group-item list-group-item-primary">This</li>
-                        <li class="list-group-item list-group-item-primary">This</li>
-                    </ul>
                 </div>
             </div>
         </div>
