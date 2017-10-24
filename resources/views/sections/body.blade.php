@@ -38,6 +38,13 @@
                     <span>Balkon Dahil Toplam Net Alan:</span>
                     <span>Satışa Esas Brüt Alan:</span>
                 </div>
+                <div id="medyaIcerik" class="collapse">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-primary">This</li>
+                        <li class="list-group-item list-group-item-primary">This</li>
+                        <li class="list-group-item list-group-item-primary">This</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>

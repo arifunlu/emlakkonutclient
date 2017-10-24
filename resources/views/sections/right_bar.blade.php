@@ -18,6 +18,6 @@
          role="button" onmouseover="this.src='/img/map2.png';"
          onmouseout="this.src='/img/map.png';"/>
     <img src="/img/medya.png" role="button" data-toggle="collapse"
-         data-target="#rightIcerik" onmouseover="this.src='/img/medya2.png';"
+         data-target="#medyaIcerik" onmouseover="this.src='/img/medya2.png';"
          onmouseout="this.src='/img/medya.png';"/>
 </div>

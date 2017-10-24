@@ -394,6 +394,14 @@ h1 {
   z-index: 99;
 }
 
+#medyaIcerik {
+  background-color: rgb(55, 0, 255);
+  padding: 1rem;
+  width: 20rem;
+  height: 8rem;
+  z-index: 99;
+}
+
 .bg-gray:before {
   background-color: #F2F2F2;
 }
