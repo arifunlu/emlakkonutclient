@@ -23,9 +23,9 @@
                 </div>
                 <div id="medyaIcerik" class="collapse">
                     <ul class="d-flex justify-content-around align-items-stretch">
-                        <li><img src="/img/cam.svg" style="width: 2.5rem;"/>Tanıtım Videosu</li>
-                        <li><img src="/img/doc.svg" style="width: 2rem;"/>Doküman</li>
-                        <li><img src="/img/img.svg" style="width: 2.5rem;"/>Foto Galeri</li>
+                        <li class="list-group-item"><img src="/img/cam.svg" style="width: 2.5rem;"/>Tanıtım Videosu</li>
+                        <li class="list-group-item"><img src="/img/doc.svg" style="width: 2rem;"/>Doküman</li>
+                        <li class="list-group-item"><img src="/img/img.svg" style="width: 2.5rem;"/>Foto Galeri</li>
                     </ul>
                 </div>
             </div>
