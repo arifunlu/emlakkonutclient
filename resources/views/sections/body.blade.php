@@ -19,7 +19,7 @@
             <div id="image-map-pro-container"></div>
             <div style="display: inherit;position: absolute;right: 0;top: 37rem;">
                 <div style="z-index: 100;">
-                    <img src="/img/medya.png" role="button" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.style.opacity=.6;this.filters.alpha.opacity=60;" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=100;"/>
+                    <img src="/img/medya.png" role="button" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;"/>
                 </div>
                 <div id="medyaIcerik" class="collapse">
                     <div class="d-flex justify-content-between">
@@ -70,7 +70,7 @@
         </div>
     </div>
 
-    <div class="modal" id="slideModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="slideModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
         <div class="modal-header">
