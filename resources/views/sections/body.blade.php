@@ -23,11 +23,11 @@
                 </div>
                 <div id="medyaIcerik" class="collapse">
                     <div class="d-flex justify-content-between">
-                        <div data-toggle="modal" data-target="#carouselModal" class="d-flex flex-column align-items-center justify-content-between" style="color: #fff; width: 80px;"><img src="/img/cam.svg" style="width: 2.5rem;"/>Tanıtım Videosu</div>
+                        <div role="button" data-toggle="modal" data-target="#carouselModal" class="d-flex flex-column align-items-center justify-content-between" style="color: #fff; width: 80px;"><img src="/img/cam.svg" style="width: 2.5rem;"/>Tanıtım Videosu</div>
                         <div style="border-left: 1px solid #eee;"></div>
-                        <div data-toggle="modal" data-target="#carouselModal" class="d-flex flex-column align-items-center justify-content-between" style="color: #fff; width: 80px;"><img src="/img/doc.svg" style="width: 2rem;"/>Doküman</div>
+                        <div role="button" data-toggle="modal" data-target="#carouselModal" class="d-flex flex-column align-items-center justify-content-between" style="color: #fff; width: 80px;"><img src="/img/doc.svg" style="width: 2rem;"/>Doküman</div>
                         <div style="border-left: 1px solid #eee;"></div>
-                        <div data-toggle="modal" data-target="#carouselModal" class="d-flex flex-column align-items-center justify-content-between" style="color: #fff; width: 80px;"><img src="/img/img.svg" style="width: 2.5rem;"/>Foto Galeri</div>
+                        <div role="button" data-toggle="modal" data-target="#carouselModal" class="d-flex flex-column align-items-center justify-content-between" style="color: #fff; width: 80px;"><img src="/img/img.svg" style="width: 2.5rem;"/>Foto Galeri</div>
                     </div>
                 </div>
             </div>
