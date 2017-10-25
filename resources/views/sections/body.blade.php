@@ -19,10 +19,14 @@
             <div id="image-map-pro-container"></div>
             <div style="display: inherit;position: absolute;right: 0;top: 37rem;">
                 <div style="z-index: 100;">
-                    <img src="/img/medya.png" role="button" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.style.opacity=.5;this.filters.alpha.opacity=50;" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=100;"/>
+                    <img src="/img/medya.png" role="button" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.style.opacity=.6;this.filters.alpha.opacity=60;" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=100;"/>
                 </div>
                 <div id="medyaIcerik" class="collapse">
-                    Test
+                    <span>
+                        <p><img src="/img/cam.svg"/>Tanıtım Videosu</p>
+                        <p><img src="/img/doc.svg"/>Tanıtım Videosu</p>
+                        <p><img src="/img/img.svg"/>Tanıtım Videosu</p>
+                    </span>
                 </div>
             </div>
             <div class="d-flex flex-row justify-content-end" style="height: 91vh;">
