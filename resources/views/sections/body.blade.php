@@ -17,8 +17,8 @@
         <div class="d-flex flex-row justify-content-between">
             <div></div>
             <div id="image-map-pro-container"></div>
-            <div style="margin-top: 37rem; margin-right: -12rem; display: inherit;">
-                <div class="d-flex flex-column align-items-center" style="z-index: 99;">
+            <div style="display: inherit;position: absolute;right: 0;top: 37rem;">
+                <div style="z-index: 100;">
                     <img src="/img/medya.png" role="button" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.style.opacity=.5;this.filters.alpha.opacity=50;" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=100;"/>
                 </div>
                 <div id="medyaIcerik" class="collapse">
