@@ -23,11 +23,11 @@
                 </div>
                 <div id="medyaIcerik" class="collapse">
                     <div class="d-flex justify-content-between">
-                        <div data-toggle="modal" data-target="#carouselExampleControls" class="d-flex flex-column align-items-center justify-content-between" style="color: #fff; width: 80px;"><img src="/img/cam.svg" style="width: 2.5rem;"/>Tanıtım Videosu</div>
+                        <div data-toggle="modal" data-target="#carouselModal" class="d-flex flex-column align-items-center justify-content-between" style="color: #fff; width: 80px;"><img src="/img/cam.svg" style="width: 2.5rem;"/>Tanıtım Videosu</div>
                         <div style="border-left: 1px solid #eee;"></div>
-                        <div data-toggle="modal" data-target="#carouselExampleControls" class="d-flex flex-column align-items-center justify-content-between" style="color: #fff; width: 80px;"><img src="/img/doc.svg" style="width: 2rem;"/>Doküman</div>
+                        <div data-toggle="modal" data-target="#carouselModal" class="d-flex flex-column align-items-center justify-content-between" style="color: #fff; width: 80px;"><img src="/img/doc.svg" style="width: 2rem;"/>Doküman</div>
                         <div style="border-left: 1px solid #eee;"></div>
-                        <div data-toggle="modal" data-target="#carouselExampleControls" class="d-flex flex-column align-items-center justify-content-between" style="color: #fff; width: 80px;"><img src="/img/img.svg" style="width: 2.5rem;"/>Foto Galeri</div>
+                        <div data-toggle="modal" data-target="#carouselModal" class="d-flex flex-column align-items-center justify-content-between" style="color: #fff; width: 80px;"><img src="/img/img.svg" style="width: 2.5rem;"/>Foto Galeri</div>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,8 @@
         </div>
     </div>
 
-    <div id="carouselExampleControls" class="carousel slide modal fade" data-ride="carousel">
+    <div class="modal fade" id="carouselModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
         <img class="d-block w-100" src="..." alt="First slide">
@@ -90,5 +91,6 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
+    </div>
     </div>
 </main>
