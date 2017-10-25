@@ -17,27 +17,6 @@
         <div class="d-flex flex-row justify-content-between">
             <div></div>
             <div id="image-map-pro-container"></div>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#carouselModal">
-  Launch demo modal
-</button>
-    <div class="modal fade" id="carouselModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
             <div style="display: inherit;position: absolute;right: 0;top: 37rem;">
                 <div style="z-index: 100;">
                     <img src="/img/medya.png" role="button" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.style.opacity=.6;this.filters.alpha.opacity=60;" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=100;"/>
