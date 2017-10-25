@@ -15,6 +15,6 @@
          onmouseover="this.src='/img/zoom_out2.png';"
          onmouseout="this.src='/img/zoom_out.png';"/>
     <img src="/img/map.png" onclick="window.location='{{ URL::route('map') }}'"
-         role="button" onmouseover="this.style.opacity=.6;this.filters.alpha.opacity=60"
-         onmouseout="this.style.opacity=.6;this.filters.alpha.opacity=60"/>
+         role="button" onmouseover="this.src='/img/map2.png';"
+         onmouseout="this.src='/img/map.png';"/>
 </div>
