@@ -24,8 +24,8 @@
                 <div id="medyaIcerik" class="collapse">
                     <span>
                         <p><img src="/img/cam.svg" style="width: 1rem;"/>Tanıtım Videosu</p>
-                        <p><img src="/img/doc.svg" style="width: 1rem;"/>Tanıtım Videosu</p>
-                        <p><img src="/img/img.svg" style="width: 1rem;"/>Tanıtım Videosu</p>
+                        <p><img src="/img/doc.svg" style="width: 1rem;"/>Doküman</p>
+                        <p><img src="/img/img.svg" style="width: 1rem;"/>Foto Galeri</p>
                     </span>
                 </div>
             </div>
