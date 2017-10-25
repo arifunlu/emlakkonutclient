@@ -22,11 +22,11 @@
                     <img src="/img/medya.png" role="button" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.style.opacity=.6;this.filters.alpha.opacity=60;" onmouseout="this.style.opacity=1;this.filters.alpha.opacity=100;"/>
                 </div>
                 <div id="medyaIcerik" class="collapse">
-                    <span>
+                    <div class="d-flex justify-content-around align-items-stretch">
                         <p><img src="/img/cam.svg" style="width: 2rem;"/>Tanıtım Videosu</p>
                         <p><img src="/img/doc.svg" style="width: 2rem;"/>Doküman</p>
                         <p><img src="/img/img.svg" style="width: 2rem;"/>Foto Galeri</p>
-                    </span>
+                    </div>
                 </div>
             </div>
             <div class="d-flex flex-row justify-content-end" style="height: 91vh;">
