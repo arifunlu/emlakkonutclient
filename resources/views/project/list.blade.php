@@ -34,31 +34,33 @@
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="input-group search-group">
-                <input id="inputSearch" type="text" class="form-control search" placeholder="Ara..."  aria-describedby="basic-addon1" onkeyup="filter(this);" />
-                <i class="icon-search input-group-addon"></i>
-            </div>
-
-            <div id="accordion">
-                <div class="scroll-container">
-                    <h3 id="search-not-found" style="color: #fff; display: none;">Proje bulunamadı.</h3>
-                    @foreach($projects as $project)
-                    <div class="panel" style="width: 50px;">
-                        <div class="pink">
-                            <div class="rotate">{{$project->ProjeAdi}}</div>
-                        </div>
-                        <div class="panelContent" onclick="window.location='{{ URL::route('project.detail', $project->id) }}'">
-                            <img src="{{$project->get352x386Url()}}" />
-                        </div>
-                    </div>
-                    @endforeach
+        <div id="app">
+            <div class="container">
+                <div class="input-group search-group">
+                    <input id="inputSearch" type="text" class="form-control search" placeholder="Ara..."  aria-describedby="basic-addon1" onkeyup="filter(this);" />
+                    <i class="icon-search input-group-addon"></i>
                 </div>
-            </div>
 
-            <div class="arrow">
-                <i class="icon-Backward btn-arrow" style="margin-right: 3rem;" role="button" onclick="scrollBack();"></i>
-                <i class="icon-Forward btn-arrow" role="button" onclick="scrollNext();"></i>
+                <div id="accordion">
+                    <div class="scroll-container">
+                        <h3 id="search-not-found" style="color: #fff; display: none;">Proje bulunamadı.</h3>
+                        @foreach($projects as $project)
+                        <div class="panel" style="width: 50px;">
+                            <div class="pink">
+                                <div class="rotate">{{$project->ProjeAdi}}</div>
+                            </div>
+                            <div class="panelContent" onclick="window.location='{{ URL::route('project.detail', $project->id) }}'">
+                                <img src="{{$project->get352x386Url()}}" />
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+
+                <div class="arrow">
+                    <i class="icon-Backward btn-arrow" style="margin-right: 3rem;" role="button" onclick="scrollBack();"></i>
+                    <i class="icon-Forward btn-arrow" role="button" onclick="scrollNext();"></i>
+                </div>
             </div>
         </div>
 
