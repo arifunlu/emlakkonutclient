@@ -30,7 +30,7 @@
             @yield('content')
         </div>
 
-    @section('javascript')
+        @section('javascript')
         <!-- Scripts -->
             <script src="{{ asset('js/app.js') }}"></script>
             <script>

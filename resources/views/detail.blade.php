@@ -209,7 +209,6 @@
 
 @section('javascript')
   @parent
-    <script src="/js/polygon.js"></script>
     <script src="/js/image-map-pro.min.js"></script>
     <script>
       ;(function ($, window, document, undefined) {
@@ -218,7 +217,6 @@
 
             $("#image-map-pro-container").panzoom();
             $("#jPolygon").panzoom();
-            clear_canvas();
         });
       })(jQuery, window, document);
 
