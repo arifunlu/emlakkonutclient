@@ -18,16 +18,17 @@
         @show
     </head>
     <body oncontextmenu="return false;">
-        <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-custom">
-            <img class="btn-back" src="/img/back.svg" onclick="window.history.back()" role="button"/>
-            <a class="navbar-brand">
-                <img src="/img/logo.png"/>
-            </a>
-            <img class="btn-print" src="/img/print.svg" onclick="window.print();" role="button"/>
-            <p style="font-size: .88rem; position: absolute; top: 3.4rem; right: 1.75rem;">Yazdır</p>
-        </nav>
-
-    @yield('content')
+        <div id="app">
+            <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-custom">
+                <img class="btn-back" src="/img/back.svg" onclick="window.history.back()" role="button"/>
+                <a class="navbar-brand">
+                    <img src="/img/logo.png"/>
+                </a>
+                <img class="btn-print" src="/img/print.svg" onclick="window.print();" role="button"/>
+                <p style="font-size: .88rem; position: absolute; top: 3.4rem; right: 1.75rem;">Yazdır</p>
+            </nav>
+            @yield('content')
+        </div>
 
     @section('javascript')
         <!-- Scripts -->
