@@ -112,13 +112,11 @@
             if (toggle) {
                 $("#jPolygon").panzoom({panOnlyWhenZoomed: true, minScale: 1});
                 p.style.opacity = .6;
-                p.filters.alpha.opacity = 60;
                 toggle = false;
                 displayMode = false;
             } else {
                 $("#jPolygon").panzoom();
                 p.style.opacity = 1;
-                p.filters.alpha.opacity = 100;
                 toggle = true;
                 displayMode = true;
             }
