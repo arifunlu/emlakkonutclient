@@ -88,16 +88,16 @@
 }
 
 ::-webkit-scrollbar-track {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar {
-	width: 6px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	background-color: #bbb;
+  border-radius: 10px;
+  background-color: #bbb;
 }
 
 .form-header {
@@ -417,6 +417,11 @@ h1 {
 
 .btn-success.active {
   background-color: #1a6f2d;
+}
+
+.btn-success:disabled {
+  opacity: 1;
+  color: #e2e2e2;
 }
 
 

@@ -9610,6 +9610,11 @@ h1 {
   background-color: #1a6f2d;
 }
 
+.btn-success:disabled {
+  opacity: 1;
+  color: #e2e2e2;
+}
+
 /* Base for label styling */
 
 [type="checkbox"]:not(:checked),
