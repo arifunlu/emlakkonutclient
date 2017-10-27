@@ -10124,6 +10124,12 @@ h1 {
   z-index: 99;
 }
 
+#slideModal {
+  margin: auto;
+  margin-top: 10%;
+  width: 960px;
+}
+
 .bg-gray:before {
   background-color: #F2F2F2;
 }
