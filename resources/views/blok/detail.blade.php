@@ -12,7 +12,7 @@
                 @include('sections.filter_bar')
             </nav>
 
-            @include('sections.body')
+            @include('sections.block_body')
         </div>
     </div>
 @endsection
@@ -21,7 +21,7 @@
     @parent
     <script src="/js/image-map-pro.min.js"></script>
     <script>
-        var objectJson = {!! $project->EstateProjectInteractivity ? $project->EstateProjectInteractivity->interactiveJson     : json_encode(false) !!};
+        var objectJson = {!! $parcel->parcelInteractivity ? $parcel->parcelInteractivity->interactiveJson : json_encode(false) !!};
         ;(function ($, window, document, undefined) {
             $(document).ready(function () {
                 $('#image-map-pro-container').imageMapPro(objectJson);
@@ -118,5 +118,6 @@
                 displayMode = true;
             }
         }
+
     </script>
 @endsection

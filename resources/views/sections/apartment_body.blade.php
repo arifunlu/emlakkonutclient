@@ -4,7 +4,7 @@
             <button id="btnGenelVaziyet" type="button" class="btn btn-success tableheader" onclick="window.location='{{URL::route('project.detail', $project->id)}}'">
                 G. VAZİYET PLANI
             </button>
-            <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader">
+            <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader" onclick="window.location='{{URL::route('blok.detail')}}'">
                 BLOK
             </button>
             <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader" onclick="window.location='{{URL::route('block.detail', $apartment->id)}}'">

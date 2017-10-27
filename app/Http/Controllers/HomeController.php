@@ -22,18 +22,8 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function home()
+    public function blok()
     {
-        return view('home');
-    }
-
-    public function detail()
-    {
-        return view('detail');
-    }
-
-    public function map()
-    {
-        return view('map');
+        return view('blok.detail');
     }
 }
