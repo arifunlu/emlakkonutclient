@@ -71,6 +71,8 @@
     </div>
 
     <div class="modal fade" id="slideModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-body">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -78,6 +80,9 @@
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100" width="720" height="405" src="http://192.81.215.163/uploads/project/phpRksG8G.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <iframe id="ytplayer" class="d-block w-100" width="720" height="405" src="https://www.youtube.com/embed/M7lc1UVf-VE?controls=0&showinfo=0" frameborder="0" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -88,6 +93,8 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
+        </div>
+        </div>
         </div>
     </div>
 
