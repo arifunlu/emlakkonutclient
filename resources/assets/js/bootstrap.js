@@ -9,8 +9,8 @@ window._ = require('lodash');
 try {
     window.$ = window.jQuery = require('jquery');
 
+    //require('popper.js');
     require('bootstrap');
-    require('popper.js');
     require('jquery.panzoom');
 } catch (e) {}
 
