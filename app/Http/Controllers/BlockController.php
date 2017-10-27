@@ -50,7 +50,7 @@ class BlockController extends Controller
         );
     }
 
-    public function 360(EstateProjectApartment $apartment, ApartmentRepository $apartmentRepository)
+    public function block360(EstateProjectApartment $apartment, ApartmentRepository $apartmentRepository)
     {
         $island = Island::getFromApartment($apartment);
         $parcel = Parcel::getFromApartment($apartment, $island);
@@ -73,7 +73,7 @@ class BlockController extends Controller
             ApartmentRepository::columnBlockNo);
         $project = $parcel->estateProject;
 
-        return view('360.detail',
+        return view('block360.detail',
             compact(
                 'project',
                 'parcel',

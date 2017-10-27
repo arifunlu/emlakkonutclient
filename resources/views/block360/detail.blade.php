@@ -12,7 +12,7 @@
                 @include('sections.filter_bar')
             </nav>
 
-            @include('sections.360_body')
+            @include('sections.block360_body')
         </div>
     </div>
 @endsection
