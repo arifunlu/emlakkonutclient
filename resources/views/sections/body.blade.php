@@ -77,10 +77,10 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item">
-                <iframe id="ytplayer" class="d-block w-100" width="720" height="480" src="https://www.youtube.com/embed/M7lc1UVf-VE?controls=0&showinfo=0" frameborder="0"></iframe>
+                <iframe class="d-block w-100" width="720" height="480" src="https://www.youtube.com/embed/M7lc1UVf-VE?controls=0&showinfo=0" frameborder="0"></iframe>
             </div>
             <div class="carousel-item">
-                <iframe id="ytplayer" class="d-block w-100" width="720" height="480" src="https://www.youtube.com/embed/M7lc1UVf-VE?controls=0&showinfo=0" frameborder="0"></iframe>
+                <iframe class="d-block w-100" width="720" height="480" src="https://www.youtube.com/embed/M7lc1UVf-VE?controls=0&showinfo=0" frameborder="0"></iframe>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
