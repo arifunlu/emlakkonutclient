@@ -82,7 +82,7 @@
                 <img class="d-block w-100" width="720" height="405" src="http://192.81.215.163/uploads/project/phpRksG8G.jpg" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <iframe id="ytplayer" class="d-block w-100" width="720" height="405" src="https://www.youtube.com/embed/M7lc1UVf-VE?controls=0&showinfo=0" frameborder="0" alt="Third slide">
+                <iframe id="ytplayer" class="d-block w-100" width="720" height="405" src="https://www.youtube.com/embed/M7lc1UVf-VE?controls=0&showinfo=0" frameborder="0" alt="Third slide"></iframe>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
