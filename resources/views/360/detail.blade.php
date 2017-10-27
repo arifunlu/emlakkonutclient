@@ -12,38 +12,14 @@
                 @include('sections.filter_bar')
             </nav>
 
-            @include('sections.block_body')
+            @include('sections.360_body')
         </div>
     </div>
 @endsection
 
 @section('javascript')
     @parent
-    <script src="/js/image-map-pro.min.js"></script>
     <script>
-        var objectJson = {!! $parcel->parcelInteractivity ? $parcel->parcelInteractivity->interactiveJson : json_encode(false) !!};
-        ;(function ($, window, document, undefined) {
-            $(document).ready(function () {
-                $('#image-map-pro-container').imageMapPro(objectJson);
-
-                $("#image-map-pro-container").panzoom();
-            });
-        })(jQuery, window, document);
-
-        function onClickActiveNav(p) {
-            var id = p.getAttribute('id');
-            $('.btn-grp-fix button.active').removeClass('active');
-            $('#' + id).addClass('active');
-
-            if (id === "btnDaire") {
-                $("#image-map-pro-container").css({visibility: 'hidden'});
-                $("#jPolygon").css({visibility: 'visible'});
-            } else {
-                $("#image-map-pro-container").css({visibility: 'visible'});
-                $("#jPolygon").css({visibility: 'hidden'});
-            }
-        }
-
         var zoomLevel = 1,
             zoomFactor = 100;
 
@@ -85,12 +61,6 @@
                 default:
                     zoomFactor = 100;
             }
-
-            $('#image-map-pro-container').css({
-                transform: 'scale(' + zoomLevel + ')',
-                '-moz-transform': 'scale(' + zoomLevel + ')'
-            });
-            $('#jPolygon').css({transform: 'scale(' + zoomLevel + ')', '-moz-transform': 'scale(' + zoomLevel + ')'});
         }
 
         function upIconChange() {
@@ -98,24 +68,6 @@
                 $("#img-up").attr("src", "/img/down.png");
             } else {
                 $("#img-up").attr("src", "/img/up.png");
-            }
-        }
-
-        var toggle = true;
-
-        function toggleDraw(p) {
-            $("#jPolygon").panzoom("destroy");
-
-            if (toggle) {
-                $("#jPolygon").panzoom({panOnlyWhenZoomed: true, minScale: 1});
-                p.style.opacity = .6;
-                toggle = false;
-                displayMode = false;
-            } else {
-                $("#jPolygon").panzoom();
-                p.style.opacity = 1;
-                toggle = true;
-                displayMode = true;
             }
         }
 

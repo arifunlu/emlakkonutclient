@@ -21,7 +21,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/map', 'MapController@index')->name('map');
     Route::post('/search', 'SearchController@index')->name('search');
     Route::get('/block/{apartment}', 'BlockController@detail')->name('block.detail');
-    Route::get('/blok', 'HomeController@blok')->name('blok.detail');
+    Route::get('/360', 'HomeController@360')->name('360.detail');
     Route::get('/floor/{apartment}', 'FloorController@detail');
     Route::get('/apartment/{apartment}', 'ApartmentController@detail')->name('apartment.detail');
 });

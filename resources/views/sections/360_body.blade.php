@@ -16,7 +16,7 @@
         </div>
         <div class="d-flex flex-row justify-content-between">
             <div></div>
-            <div id="image-map-pro-container"></div>
+
             <div class="d-flex flex-row justify-content-end" style="height: 91vh;">
                 @include('sections.right_bar')
                 <div id="rightIcerik" class="collapse">

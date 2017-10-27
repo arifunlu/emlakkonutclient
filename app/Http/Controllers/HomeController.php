@@ -22,8 +22,8 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function blok()
+    public function 360()
     {
-        return view('blok.detail');
+        return view('360.detail');
     }
 }
