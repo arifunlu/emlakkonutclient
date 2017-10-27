@@ -11,9 +11,9 @@ try {
 
     require('popper.js');
     require('bootstrap');
-} catch (e) {}
 
-require('../../../node_modules/jquery.panzoom');
+    require('jquery.panzoom');
+} catch (e) {}
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

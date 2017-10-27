@@ -11266,13 +11266,13 @@ window._ = __webpack_require__(13);
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(3);
+    window.$ = window.jQuery = __webpack_require__(3);
 
-  __webpack_require__(15);
-  __webpack_require__(16);
+    __webpack_require__(15);
+    __webpack_require__(16);
+
+    __webpack_require__(17);
 } catch (e) {}
-
-__webpack_require__(17);
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -11293,9 +11293,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var token = document.head.querySelector('meta[name="csrf-token"]');
 
 if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+    window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
 } else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
 /**
