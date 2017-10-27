@@ -22,8 +22,4 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function 360()
-    {
-        return view('360.detail');
-    }
 }

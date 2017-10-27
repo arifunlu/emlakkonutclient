@@ -16,7 +16,7 @@
         </div>
         <div class="d-flex flex-row justify-content-between">
             <div></div>
-
+            <iframe src="http://parkmavera3.com/Services/index.html" width="960" height="580"></iframe>
             <div class="d-flex flex-row justify-content-end" style="height: 91vh;">
                 @include('sections.right_bar')
                 <div id="rightIcerik" class="collapse">
