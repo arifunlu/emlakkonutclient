@@ -71,23 +71,26 @@
     </div>
 
     <div class="modal fade" id="slideModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Video Ekle</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img class="d-block w-100" src="..." alt="First slide">
+            </div>
+            <div class="carousel-item">
+            <img class="d-block w-100" src="..." alt="Second slide">
+            </div>
+            <div class="carousel-item">
+            <img class="d-block w-100" src="..." alt="Third slide">
+            </div>
         </div>
-        <div class="modal-body">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><input type="text" class="form-control" placeholder="URL"></li>
-            </ul>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
-            <button type="button" class="btn btn-primary">Kaydet</button>
-        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
         </div>
     </div>
 
