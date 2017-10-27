@@ -7,11 +7,10 @@ window._ = require('lodash');
  */
 
 try {
-    //window.$ = window.jQuery = require('jquery');
+    window.$ = window.jQuery = require('jquery');
 
     require('popper.js');
     require('bootstrap');
-
     require('jquery.panzoom');
 } catch (e) {}
 
