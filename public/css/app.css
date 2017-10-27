@@ -10124,10 +10124,10 @@ h1 {
   z-index: 99;
 }
 
-#slideModal {
+.modal-dialog {
   margin: auto;
   margin-top: 10%;
-  width: 960px;
+  max-width: 960px;
 }
 
 .bg-gray:before {
