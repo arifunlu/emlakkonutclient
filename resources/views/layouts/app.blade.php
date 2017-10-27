@@ -41,6 +41,21 @@
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     }
                 });
+
+                $('#slideVideo').popover({
+                    trigger: 'focus',
+                    html: "alalsldkoasdk"
+                });
+
+                $('#slideDoc').popover({
+                    trigger: 'focus',
+                    html: "alalsldkoasdk"
+                });
+
+                $('#slideFoto').popover({
+                    trigger: 'focus',
+                    html: "alalsldkoasdk"
+                });
             </script>
         @show
     </body>

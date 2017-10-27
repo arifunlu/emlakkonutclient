@@ -19,6 +19,7 @@
 
 @section('javascript')
     @parent
+    <script src="/js/polygon.js"></script>
     <script src="/js/image-map-pro.min.js"></script>
     <script>
         var objectJson = {!! $project->EstateProjectInteractivity ? $project->EstateProjectInteractivity->interactiveJson     : json_encode(false) !!};
@@ -27,6 +28,8 @@
                 $('#image-map-pro-container').imageMapPro(objectJson);
 
                 $("#image-map-pro-container").panzoom();
+                $("#jPolygon").panzoom();
+                clear_canvas();
             });
         })(jQuery, window, document);
 
