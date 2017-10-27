@@ -4,7 +4,7 @@
             <button id="btnGenelVaziyet" type="button" class="btn btn-success active tableheader">
                 G. VAZİYET PLANI
             </button>
-            <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader" disabled>
+            <button id="btnBlockVaziyet" type="button" class="btn btn-success tableheader" disabled>
                 BLOK
             </button>
             <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader" disabled>
