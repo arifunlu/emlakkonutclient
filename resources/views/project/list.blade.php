@@ -16,7 +16,7 @@
 
         <style>
             body {
-                padding-top: 7%;
+                padding-top: 8%;
                 background: url('/img/bg.jpg') no-repeat center center fixed;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
