@@ -9939,6 +9939,7 @@ a.text-dark:hover {
   font-size: 1.2rem;
   white-space: nowrap;
   cursor: pointer;
+  border-radius: 25px;
 }
 
 .panelContent {
@@ -9951,8 +9952,8 @@ a.text-dark:hover {
   width: 50px;
   height: 350px;
   float: left;
-  background-color: #EFEDED;
-  border-radius: 25px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bebebe), color-stop(#f2f2f2), to(#bebebe));
+  background: linear-gradient(#bebebe, #f2f2f2, #bebebe);
 }
 
 .rotate {
@@ -10025,7 +10026,8 @@ h1 {
 }
 
 .bg-custom {
-  background-color: #f2f2f2 !important;
+  background: -webkit-gradient(linear, right top, left top, from(#03244C), color-stop(#013370), to(#03244C));
+  background: linear-gradient(to left, #03244C, #013370, #03244C);
   -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
 }

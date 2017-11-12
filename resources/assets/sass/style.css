@@ -221,6 +221,7 @@
   font-size: 1.2rem;
   white-space: nowrap;
   cursor: pointer;
+  border-radius: 25px;
 }
 
 .panelContent {
@@ -233,8 +234,7 @@
   width: 50px;
   height: 350px;
   float: left;
-  background-color: #EFEDED;
-  border-radius: 25px;
+  background: linear-gradient(#bebebe,#f2f2f2,#bebebe);
 }
 
 .rotate {
@@ -304,7 +304,7 @@ h1 {
 }
 
 .bg-custom {
-  background-color: #f2f2f2 !important;
+  background: linear-gradient(to left, #03244C,#013370,#03244C);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
 }
 
