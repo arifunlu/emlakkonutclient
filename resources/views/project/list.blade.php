@@ -35,6 +35,11 @@
     </head>
     <body>
         <div id="app">
+            <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-custom">
+                <a class="navbar-brand">
+                    <img src="/img/logo.png"/>
+                </a>
+            </nav>
             <div class="container">
                 <div class="input-group search-group">
                     <input id="inputSearch" type="text" class="form-control search" placeholder="Ara..."  aria-describedby="basic-addon1" onkeyup="filter(this);" />

@@ -33,7 +33,7 @@
   <body>
     <div class="container">
       <div class="form-header">
-        <img src="/img/logo.png" class="form-logo">
+        <img src="/img/e_logo.png" class="form-logo">
       </div>
       <form class="form-signin" role="form" method="POST" action="{{ route('login') }}">
         {{ csrf_field() }}
