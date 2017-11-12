@@ -9952,6 +9952,7 @@ a.text-dark:hover {
   height: 350px;
   float: left;
   background-color: #EFEDED;
+  border-radius: 25px;
 }
 
 .rotate {
