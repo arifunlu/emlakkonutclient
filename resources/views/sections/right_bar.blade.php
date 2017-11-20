@@ -5,12 +5,12 @@
          role="button"/>
     <img src="/img/clear.png" onclick="clear_canvas();" role="button"
          onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;"/>
-    <img src="/img/zoom_in.png" onclick="updateZoom(0.2);" role="button"
+    <img src="/img/zoom_in.svg" onclick="updateZoom(0.2);" role="button"
          onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;"/>
-    <img src="/img/zoom.png" onclick="updateZoom(0);" role="button"
+    <img src="/img/zoom_fit.svg" onclick="updateZoom(0);" role="button"
          onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;"/>
-    <img src="/img/zoom_out.png" onclick="updateZoom(-0.2);" role="button"
+    <img src="/img/zoom_out.svg" onclick="updateZoom(-0.2);" role="button"
          onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;"/>
-    <img src="/img/map.png" onclick="window.location='{{ URL::route('map') }}'"
+    <img src="/img/map.svg" onclick="window.location='{{ URL::route('map') }}'"
          role="button" onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;"/>
 </div>
