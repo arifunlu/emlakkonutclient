@@ -19,8 +19,8 @@
                 <div></div>
                 <canvas id="jPolygon" onmousedown="point_it(event)" data-imgsrc="{{$floor->floorPhoto ? $floor->floorPhoto->getImageUrl() : 'http://avrupark.com/images/kat-planlari/2+1-A-BLOK-2.jpg'}}"
                         width="960" height="540"></canvas>
-                <div style="display: inherit;position: absolute;right: 0;top: 37rem;">
-                    <div style="z-index: 100; margin-right: .1rem;">
+                <div style="display: inherit;position: absolute;right: 0;top: 30rem;">
+                    <div style="z-index: 100; margin-right: .1rem; width: 2rem;">
                         <img src="/img/media.svg" role="button" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;"/>
                     </div>
                     <div id="medyaIcerik" class="collapse">
