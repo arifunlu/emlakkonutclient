@@ -4,9 +4,9 @@
             <button id="btnGenelVaziyet" type="button" class="btn btn-success tableheader" onclick="window.location='{{URL::route('project.detail', $project->id)}}'">
                 G. VAZİYET PLANI
             </button>
-            <button id="btnBlockVaziyet" type="button" class="btn btn-success tableheader" onclick="window.location='{{URL::route('block360.detail', $apartment->id)}}'">
+            <!--<button id="btnBlockVaziyet" type="button" class="btn btn-success tableheader" onclick="window.location='{{URL::route('block360.detail', $apartment->id)}}'">
                 BLOK
-            </button>
+            </button>-->
             <button id="btnParselVaziyet" type="button" class="btn btn-success tableheader active">
                 NUMARATAJ
             </button>
