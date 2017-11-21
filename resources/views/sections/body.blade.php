@@ -18,8 +18,8 @@
             <div></div>
             <div id="image-map-pro-container"></div>
             <div style="display: inherit;position: absolute;right: 0;top: 37rem;">
-                <div style="z-index: 100;">
-                    <img src="/img/medya.png" role="button" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;"/>
+                <div style="z-index: 100; margin-right: .1rem;">
+                    <img src="/img/media.svg" role="button" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;"/>
                 </div>
                 <div id="medyaIcerik" class="collapse">
                     <div class="d-flex justify-content-between">
