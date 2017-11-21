@@ -1,4 +1,4 @@
-<div style="z-index: 99; width: 2rem;">
+<div style="z-index: 99; width: 2rem; margin-right: .1rem;">
     <img src="/img/pay.png" style="margin-top: 3rem; display: none;" role="button" data-toggle="collapse"
          data-target="#rightIcerik" onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;"/>
     <img src="/img/draw.svg" style="margin-top: 10rem;" onclick="toggleDraw(this);"
