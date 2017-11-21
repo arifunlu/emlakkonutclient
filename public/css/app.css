@@ -10259,9 +10259,8 @@ button {
 .btn-back {
   position: absolute;
   z-index: 999;
-  top: 1.3rem;
   left: 1.7rem;
-  width: 3rem;
+  width: 1.3rem;
 }
 
 .btn-project {
