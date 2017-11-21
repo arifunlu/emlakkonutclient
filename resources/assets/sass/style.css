@@ -542,16 +542,16 @@ button {
 .btn-project {
   position: absolute;
   z-index: 999;
+  top: 2rem;
   left: 1.4rem;
-  width: 3.6rem;
+  width: 2rem;
 }
 
 .btn-print {
   position: absolute;
   z-index: 999;
-  top: 1.3rem;
   right: 2rem;
-  width: 2rem;
+  width: 3.6rem;
 }
 
 #map {
