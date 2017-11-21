@@ -18,9 +18,6 @@
             <div></div>
             <div id="image-map-pro-container"></div>
             <div style="display: inherit;position: absolute;right: 0;top: 30rem;">
-                <div style="z-index: 100; margin-right: .1rem; width: 2rem;">
-                    <img src="/img/media.svg" role="button" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;"/>
-                </div>
                 <div id="medyaIcerik" class="collapse">
                     <div class="d-flex justify-content-between">
                         <div id="slideVideo" role="button" class="d-flex flex-column align-items-center justify-content-between" style="color: #fff; width: 80px;"><img src="/img/cam.svg" style="width: 2.5rem;"/>Tanıtım Videosu</div>
@@ -29,6 +26,9 @@
                         <div style="border-left: 1px solid #eee;"></div>
                         <div id="slideFoto" role="button" class="d-flex flex-column align-items-center justify-content-between" style="color: #fff; width: 80px;"><img src="/img/img.svg" style="width: 2.5rem;"/>Foto Galeri</div>
                     </div>
+                </div>
+                <div style="z-index: 100; margin-right: .1rem; width: 2rem;">
+                    <img src="/img/media.svg" role="button" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;"/>
                 </div>
             </div>
             <div class="d-flex flex-row justify-content-end" style="height: 91vh;">
