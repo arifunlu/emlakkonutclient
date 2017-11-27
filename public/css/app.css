@@ -10137,6 +10137,16 @@ h1 {
   right: -125px;
 }
 
+.popover-body,
+.popover-body ul li {
+  color: #f2f2f2;
+  background-color: #013370;
+}
+
+.popover-body ul {
+  margin-left: -40px;
+}
+
 .bg-gray:before {
   background-color: #F2F2F2;
 }
