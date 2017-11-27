@@ -3,9 +3,9 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <button type="button" title="Kapat" class="btn btn-primary btn-sm rounded-circle btn-close" onclick="window.location='{!! URL::route('project.detail', $location->project_id) !!}'">
+            <!--<button type="button" title="Kapat" class="btn btn-primary btn-sm rounded-circle btn-close" onclick="window.location='{!! URL::route('project.detail', $location->project_id) !!}'">
                 <img src="/img/cancel.svg" style="width: 14px; height: 21px;"/>
-            </button>
+            </button>-->
             <div class="col-7 p-0" style="margin: auto;">
                 @if($location->photo):
                     <img  src="{{$location->photo->getImageUrl()}}"
