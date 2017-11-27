@@ -25,10 +25,10 @@
                     </div>
                     <div id="medyaIcerik" class="collapse">
                         <div class="d-flex justify-content-between">
-                            <div id="slideVideo" role="button" class="d-flex flex-column align-items-center justify-content-between" style="width: 80px;"><img src="/img/virtual_tour.svg" style="width: 1rem;"/>
-                            <div id="slideVideo" role="button" class="d-flex flex-column align-items-center justify-content-between" style="width: 80px;"><img src="/img/video.svg" style="width: 1rem;"/>
-                            <div id="slideDoc" role="button" class="d-flex flex-column align-items-center justify-content-between" style="width: 80px;"><img src="/img/doc.svg" style="width: 1rem;"/>
-                            <div id="slideFoto" role="button" class="d-flex flex-column align-items-center justify-content-between" style="width: 80px;"><img src="/img/media.svg" style="width: 1rem;"/>
+                            <div id="slideVideo" role="button" class="d-flex flex-column align-items-center justify-content-between" style="width: 80px;"><img src="/img/virtual_tour.svg" style="width: 2rem;"/>
+                            <div id="slideVideo" role="button" class="d-flex flex-column align-items-center justify-content-between" style="width: 80px;"><img src="/img/video.svg" style="width: 2rem;"/>
+                            <div id="slideDoc" role="button" class="d-flex flex-column align-items-center justify-content-between" style="width: 80px;"><img src="/img/doc.svg" style="width: 2rem;"/>
+                            <div id="slideFoto" role="button" class="d-flex flex-column align-items-center justify-content-between" style="width: 80px;"><img src="/img/media.svg" style="width: 2rem;"/>
                         </div>
                     </div>
                 </div>
