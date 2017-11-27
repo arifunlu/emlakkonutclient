@@ -19,11 +19,11 @@
             <div id="image-map-pro-container"></div>
             <div style="display: inherit;position: absolute;right: 0;top: 30rem;">
                 <div id="medyaIcerik" class="collapse">
-                    <div class="d-flex justify-content-between">
-                            <div id="slide360" role="button" class="d-flex flex-column align-items-center justify-content-between" style="width: 50px;"><img src="/img/virtual_tour.svg" style="width: 2rem;"/></div>
-                            <div id="slideVideo" role="button" class="d-flex flex-column align-items-center justify-content-between" style="width: 50px;"><img src="/img/video.svg" style="width: 2rem;"/></div>
-                            <div id="slideDoc" role="button" class="d-flex flex-column align-items-center justify-content-between" style="width: 50px;"><img src="/img/document.svg" style="width: 2rem;"/></div>
-                            <div id="slideFoto" role="button" class="d-flex flex-column align-items-center justify-content-between" style="width: 50px;"><img src="/img/photo_gallery.svg" style="width: 2rem;"/></div>
+                    <div class="d-flex justify-content-end">
+                            <div id="slide360" role="button"><img src="/img/virtual_tour.svg" style="width: 2rem;"/></div>
+                            <div id="slideVideo" role="button"><img src="/img/video.svg" style="width: 2rem;"/></div>
+                            <div id="slideDoc" role="button"><img src="/img/document.svg" style="width: 2rem;"/></div>
+                            <div id="slideFoto" role="button"><img src="/img/photo_gallery.svg" style="width: 2rem;"/></div>
                     </div>
                 </div>
                 <div style="z-index: 100; margin-right: .1rem; width: 2rem;">
