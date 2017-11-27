@@ -408,9 +408,12 @@ h1 {
   max-width: 960px;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
+.carousel-control-prev {
   left: -125px;
+}
+
+.carousel-control-next {
+  right: -125px;
 }
 
 .bg-gray:before {
