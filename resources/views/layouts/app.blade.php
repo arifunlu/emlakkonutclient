@@ -17,7 +17,7 @@
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @show
     </head>
-    <body oncontextmenu="return false;">
+    <body>
         <div id="app">
             <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-custom">
                 <img class="btn-back" src="/img/back.svg" onclick="window.history.back()" role="button"/>
