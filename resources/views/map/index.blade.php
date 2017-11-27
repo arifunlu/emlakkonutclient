@@ -33,8 +33,7 @@
                 center: {lat: parseFloat(lat), lng: parseFloat(lng)},
                 zoom: 15,
                 scaleControl: false,
-                streetViewControl: false,
-                mapTypeControl: false
+                streetViewControl: false
             });
 
             if (triangleCoords) {
