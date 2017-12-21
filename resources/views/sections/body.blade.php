@@ -13,6 +13,12 @@
             <button id="btnDaire" type="button" class="btn btn-success tableheader" disabled>
                 DAİRE PLANI
             </button>
+            <button id="btnDaire" type="button" class="btn btn-success tableheader" disabled>
+                SANAL MAKET
+            </button>
+            <button id="btnDaire" type="button" class="btn btn-success tableheader" disabled>
+                MEDYA
+            </button>
         </div>
         <div class="d-flex flex-row justify-content-between">
             <div></div>
