@@ -20,7 +20,7 @@
             </button>
         </div>
         <div class="btn-group" role="group" style="position: fixed; z-index: 999; left: 60.5%;">
-            <button id="btnDaire" type="button" class="btn btn-danger" style="border-top-left-radius: 0; border-top-right-radius: 0;">
+            <button id="btnDaire" type="button" class="btn btn-danger" style="border-top-left-radius: 0; border-top-right-radius: 0;" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;">
                 MEDYA
             </button>
         </div>
@@ -35,9 +35,6 @@
                             <div id="slideDoc" role="button" style="margin-right: 1rem;"><img src="/img/document.svg" style="width: 2rem;"/></div>
                             <div id="slideFoto" role="button" style="margin-right: 1rem;"><img src="/img/photo_gallery.svg" style="width: 2rem;"/></div>
                     </div>
-                </div>
-                <div style="z-index: 100; margin-right: .1rem; width: 2rem;">
-                    <img src="/img/media.svg" role="button" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;"/>
                 </div>
             </div>
             <div class="d-flex flex-row justify-content-end" style="height: 91vh;">
