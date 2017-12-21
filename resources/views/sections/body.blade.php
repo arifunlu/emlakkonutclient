@@ -14,13 +14,13 @@
                 DAİRE PLANI
             </button>
         </div>
-        <div class="btn-group" role="group" style="position: fixed; z-index: 999;left: 48%;">
-            <button id="btnDaire" type="button" class="btn btn-primary tableheader" disabled>
+        <div class="btn-group" role="group" style="position: fixed; z-index: 999;left: 60%;">
+            <button id="btnDaire" type="button" class="btn btn-primary tableheader" style="border-top-left-radius: 0; border-top-right-radius: 0;" disabled>
                 SANAL MAKET
             </button>
         </div>
-        <div class="btn-group" role="group" style="position: fixed; z-index: 999;left: 58%;">
-            <button id="btnDaire" type="button" class="btn btn-danger tableheader" disabled>
+        <div class="btn-group" role="group" style="position: fixed; z-index: 999;left: 78%;">
+            <button id="btnDaire" type="button" class="btn btn-danger tableheader" style="border-top-left-radius: 0; border-top-right-radius: 0;" disabled>
                 MEDYA
             </button>
         </div>
