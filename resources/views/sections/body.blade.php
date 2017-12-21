@@ -13,9 +13,13 @@
             <button id="btnDaire" type="button" class="btn btn-success tableheader" disabled>
                 DAİRE PLANI
             </button>
+        </div>
+        <div class="btn-group btn-grp-fix" role="group">
             <button id="btnDaire" type="button" class="btn btn-success tableheader" disabled>
                 SANAL MAKET
             </button>
+        </div>
+        <div class="btn-group btn-grp-fix" role="group">
             <button id="btnDaire" type="button" class="btn btn-success tableheader" disabled>
                 MEDYA
             </button>
