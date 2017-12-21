@@ -25,7 +25,7 @@
             </button>
         </div>
         <div class="d-flex flex-row justify-content-between">
-            <div style="display: inherit; position: absolute; left: 60%; top: 0;">
+            <div style="display: inherit; position: absolute; left: 60%; top: 3px;">
                 <div id="medyaIcerik" class="collapse">
                     <div class="d-flex justify-content-end">
                             <div id="slideVideo" role="button" style="margin-right: 1rem;"><img src="/img/video.svg" style="width: 2rem;"/></div>
