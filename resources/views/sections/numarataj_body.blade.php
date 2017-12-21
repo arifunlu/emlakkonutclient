@@ -14,7 +14,26 @@
                 DAİRE PLANI
             </button>
         </div>
+        <div class="btn-group" role="group" style="position: fixed; z-index: 999; left: 52%;">
+            <button id="btnDaire" type="button" class="btn btn-primary" style="border-top-left-radius: 0; border-top-right-radius: 0;">
+                SANAL MAKET
+            </button>
+        </div>
+        <div class="btn-group" role="group" style="position: fixed; z-index: 999; left: 60.5%;">
+            <button id="btnDaire" type="button" class="btn btn-danger" style="border-top-left-radius: 0; border-top-right-radius: 0;" data-toggle="collapse" data-target="#medyaIcerik">
+                MEDYA
+            </button>
+        </div>
         <div class="d-flex flex-row justify-content-between">
+            <div style="display: inherit; position: absolute; left: 60%; top: 0;">
+                <div id="medyaIcerik" class="collapse">
+                    <div class="d-flex justify-content-end">
+                            <div id="slideVideo" role="button" style="margin-right: 1rem;"><img src="/img/video.svg" style="width: 2rem;"/></div>
+                            <div id="slideDoc" role="button" style="margin-right: 1rem;"><img src="/img/document.svg" style="width: 2rem;"/></div>
+                            <div id="slideFoto" role="button" style="margin-right: 1rem;"><img src="/img/photo_gallery.svg" style="width: 2rem;"/></div>
+                    </div>
+                </div>
+            </div>
             <div></div>
             <div id="image-map-pro-container"></div>
             <div class="d-flex flex-row justify-content-end" style="height: 91vh;">

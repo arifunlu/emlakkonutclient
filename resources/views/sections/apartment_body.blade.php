@@ -14,22 +14,33 @@
                 DAİRE PLANI
             </button>
         </div>
+        <div class="btn-group" role="group" style="position: fixed; z-index: 999; left: 52%;">
+            <button id="btnDaire" type="button" class="btn btn-primary" style="border-top-left-radius: 0; border-top-right-radius: 0;">
+                SANAL MAKET
+            </button>
+        </div>
+        <div class="btn-group" role="group" style="position: fixed; z-index: 999; left: 60.5%;">
+            <button id="btnDaire" type="button" class="btn btn-danger" style="border-top-left-radius: 0; border-top-right-radius: 0;" data-toggle="collapse" data-target="#medyaIcerik">
+                MEDYA
+            </button>
+        </div>
         @if(isset($floor) && isset($apartment))
             <div class="d-flex flex-row justify-content-between">
+                <div style="display: inherit; position: absolute; left: 60%; top: 0;">
+                    <div id="medyaIcerik" class="collapse">
+                        <div class="d-flex justify-content-end">
+                                <div id="slideVideo" role="button" style="margin-right: 1rem;"><img src="/img/video.svg" style="width: 2rem;"/></div>
+                                <div id="slideDoc" role="button" style="margin-right: 1rem;"><img src="/img/document.svg" style="width: 2rem;"/></div>
+                                <div id="slideFoto" role="button" style="margin-right: 1rem;"><img src="/img/photo_gallery.svg" style="width: 2rem;"/></div>
+                        </div>
+                    </div>
+                </div>
                 <div></div>
                 <canvas id="jPolygon" onmousedown="point_it(event)" data-imgsrc="{{$floor->floorPhoto ? $floor->floorPhoto->getImageUrl() : 'http://avrupark.com/images/kat-planlari/2+1-A-BLOK-2.jpg'}}"
                         width="960" height="540"></canvas>
                 <div style="display: inherit;position: absolute;right: 0;top: 30rem;">
                     <div style="z-index: 100; margin-right: .1rem; width: 2rem;">
                         <img src="/img/media.svg" role="button" data-toggle="collapse" data-target="#medyaIcerik" onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;"/>
-                    </div>
-                    <div id="medyaIcerik" class="collapse">
-                        <div class="d-flex justify-content-end">
-                            <div id="slide360" role="button" style="margin-right: 1rem;"><img src="/img/virtual_tour.svg" style="width: 2rem;"/></div>
-                            <div id="slideVideo" role="button" style="margin-right: 1rem;"><img src="/img/video.svg" style="width: 2rem;"/></div>
-                            <div id="slideDoc" role="button" style="margin-right: 1rem;"><img src="/img/document.svg" style="width: 2rem;"/></div>
-                            <div id="slideFoto" role="button" style="margin-right: 1rem;"><img src="/img/photo_gallery.svg" style="width: 2rem;"/></div>
-                        </div>
                     </div>
                 </div>
                 <div class="d-flex flex-row justify-content-end" style="height: 91vh;">

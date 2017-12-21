@@ -25,10 +25,9 @@
             </button>
         </div>
         <div class="d-flex flex-row justify-content-between">
-            <div style="display: inherit; position: absolute; left: 61%; top: 0;">
+            <div style="display: inherit; position: absolute; left: 60%; top: 0;">
                 <div id="medyaIcerik" class="collapse">
                     <div class="d-flex justify-content-end">
-                            <div id="slide360" role="button" style="margin-right: 1rem;"><img src="/img/virtual_tour.svg" style="width: 2rem;"/></div>
                             <div id="slideVideo" role="button" style="margin-right: 1rem;"><img src="/img/video.svg" style="width: 2rem;"/></div>
                             <div id="slideDoc" role="button" style="margin-right: 1rem;"><img src="/img/document.svg" style="width: 2rem;"/></div>
                             <div id="slideFoto" role="button" style="margin-right: 1rem;"><img src="/img/photo_gallery.svg" style="width: 2rem;"/></div>
