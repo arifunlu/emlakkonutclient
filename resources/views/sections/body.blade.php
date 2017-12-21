@@ -24,10 +24,7 @@
                 MEDYA
             </button>
         </div>
-        <div class="d-flex flex-row justify-content-between">
-            <div></div>
-            <div id="image-map-pro-container"></div>
-            <div style="display: inherit;position: absolute;right: 0;top: 30rem;">
+        <div style="display: inherit; position: absolute; left: 61%; top: 0;">
                 <div id="medyaIcerik" class="collapse">
                     <div class="d-flex justify-content-end">
                             <div id="slide360" role="button" style="margin-right: 1rem;"><img src="/img/virtual_tour.svg" style="width: 2rem;"/></div>
@@ -36,7 +33,10 @@
                             <div id="slideFoto" role="button" style="margin-right: 1rem;"><img src="/img/photo_gallery.svg" style="width: 2rem;"/></div>
                     </div>
                 </div>
-            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-between">
+            <div></div>
+            <div id="image-map-pro-container"></div>
             <div class="d-flex flex-row justify-content-end" style="height: 91vh;">
                 @include('sections.right_bar')
                 <div id="rightIcerik" class="collapse">
