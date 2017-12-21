@@ -15,12 +15,12 @@
             </button>
         </div>
         <div class="btn-group btn-grp-fix" role="group">
-            <button id="btnDaire" type="button" class="btn btn-success tableheader" disabled>
+            <button id="btnDaire" type="button" class="btn btn-primary tableheader" disabled>
                 SANAL MAKET
             </button>
         </div>
         <div class="btn-group btn-grp-fix" role="group">
-            <button id="btnDaire" type="button" class="btn btn-success tableheader" disabled>
+            <button id="btnDaire" type="button" class="btn btn-danger tableheader" disabled>
                 MEDYA
             </button>
         </div>
