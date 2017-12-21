@@ -15,12 +15,12 @@
             </button>
         </div>
         <div class="btn-group" role="group" style="position: fixed; z-index: 999; left: 52%;">
-            <button id="btnDaire" type="button" class="btn btn-primary tableheader" style="border-top-left-radius: 0; border-top-right-radius: 0;" disabled>
+            <button id="btnDaire" type="button" class="btn btn-primary tableheader" style="border-top-left-radius: 0; border-top-right-radius: 0;">
                 SANAL MAKET
             </button>
         </div>
         <div class="btn-group" role="group" style="position: fixed; z-index: 999; left: 60.5%;">
-            <button id="btnDaire" type="button" class="btn btn-danger tableheader" style="border-top-left-radius: 0; border-top-right-radius: 0;" disabled>
+            <button id="btnDaire" type="button" class="btn btn-danger tableheader" style="border-top-left-radius: 0; border-top-right-radius: 0;">
                 MEDYA
             </button>
         </div>
