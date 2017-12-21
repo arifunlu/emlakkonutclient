@@ -1,6 +1,6 @@
 <main class="col-sm-9 ml-sm-auto col-md-10 p-0">
     <section id="sectionIcerik">
-        <div class="btn-group btn-grp-fix" role="group">
+        <div class="btn-group btn-grp-fix" role="group" style="position: fixed; z-index: 999; left: 30%;">
             <button id="btnGenelVaziyet" type="button" class="btn btn-success active tableheader">
                 G. VAZİYET PLANI
             </button>
@@ -14,12 +14,12 @@
                 DAİRE PLANI
             </button>
         </div>
-        <div class="btn-group" role="group" style="position: fixed; z-index: 999;left: 60%;">
+        <div class="btn-group" role="group" style="position: fixed; z-index: 999; left: 52%;">
             <button id="btnDaire" type="button" class="btn btn-primary tableheader" style="border-top-left-radius: 0; border-top-right-radius: 0;" disabled>
                 SANAL MAKET
             </button>
         </div>
-        <div class="btn-group" role="group" style="position: fixed; z-index: 999;left: 78%;">
+        <div class="btn-group" role="group" style="position: fixed; z-index: 999; left: 60.5%;">
             <button id="btnDaire" type="button" class="btn btn-danger tableheader" style="border-top-left-radius: 0; border-top-right-radius: 0;" disabled>
                 MEDYA
             </button>
