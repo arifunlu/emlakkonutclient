@@ -550,7 +550,7 @@ button {
   position: absolute;
   z-index: 999;
   left: 1.7rem;
-  width: 1.3rem;
+  width: 1.9rem;
 }
 
 .btn-project {
@@ -565,7 +565,7 @@ button {
   position: absolute;
   z-index: 999;
   right: 2rem;
-  width: 3.6rem;
+  width: 4.3rem;
 }
 
 #map {
