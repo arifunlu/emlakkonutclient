@@ -27,6 +27,7 @@ class ProjectController extends Controller
         $parcels = $apartment->parcelGroup();
         $blocks = $apartment->blockGroup();
         $apartments = $project->EstateProjectApartment;
+        $allVideosUrls = $project->getVideoUrls();
 
         return view(
             'project.detail',
@@ -40,7 +41,8 @@ class ProjectController extends Controller
                 'apartments',
                 'islands',
                 'parcels',
-                'blocks'
+                'blocks',
+                'allVideosUrls'
             )
         );
     }

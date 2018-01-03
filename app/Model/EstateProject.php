@@ -7,6 +7,7 @@ use App\Model\ParcelInteractivity;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
 use App\Model\Setting;
+use App\Model\ProjectVideosUrl;
 
 /**
  * App\Model\EstateProject
@@ -240,5 +241,31 @@ class EstateProject extends Model
     public function floor()
     {
         return $this->hasMany(Floor::class, 'project_id');
+    }
+
+    public function getVideoUrls()
+    {
+        return ProjectVideosUrl::where('project_id', $this->id)->where('url', '!=', '')->get();
+    }
+
+    public function getFolderFilesUrl($folder){
+        $res = [];
+        $dir = trim(Setting::PublicPath("uploads/project/" . $folder . '/' . $this->id));
+
+        // Open a directory, and read its contents
+        if (is_dir($dir)){
+            if ($dh = opendir($dir)){
+                while (($file = readdir($dh)) !== false){
+                    if($file != '.' && $file != '..'){
+                        $fileUrl = Setting::adminUrl('/uploads/project/' . $folder .'/' . $this->id . '/' . $file);
+                        array_push($res, $fileUrl);
+                    }
+                    
+                }
+                closedir($dh);
+            }
+        }
+
+        return $res;
     }
 }
