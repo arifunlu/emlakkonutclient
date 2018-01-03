@@ -6,6 +6,7 @@ use App\Designer\Designer;
 use App\Model\ParcelInteractivity;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
+use App\Model\Setting;
 
 /**
  * App\Model\EstateProject
@@ -106,6 +107,19 @@ class EstateProject extends Model
     public function getThumbnailPath()
     {
         return $this->projectPhoto ? '/uploads/project/' . $this->projectPhoto->thumbnail : '';
+    }
+
+    public function getLogoNameFormat(){
+        return 'PRJ_' . $this->id . '_LOGO.png';
+    }
+
+    public function getLogoUrl()
+    {
+        $logoPath =  trim(Setting::PublicPath("uploads/project/logos/" . $this->getLogoNameFormat()));
+        if(file_exists($logoPath)){
+            return Setting::adminUrl('/uploads/project/logos/' . $this->getLogoNameFormat());
+        }
+        return Setting::adminUrl('/img/upload.png'); 
     }
 
     public function getImageUrl()
