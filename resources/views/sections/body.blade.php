@@ -110,7 +110,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    @if(count($allVideosUrls) > 0)
+                    @if(count($project->getFolderFilesUrl('gallery')) > 0)
                         <div id="photoControls" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 @php($i = 0)
@@ -131,6 +131,35 @@
                         </div>
                     @else
                         There are no photos
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="docsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">All Docs</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @if(count($project->getFolderFilesUrl('docs')) > 0)
+                    <div class="row">
+                        @php($i = 1)
+                        @foreach($project->getFolderFilesUrl('docs') as $doc)
+                        <div class="col-md-2">
+                            <a href="{{ asset( $doc ) }}" target="_blank">
+                                <label class="input-group-addon"  style="cursor: pointer;"> Doc - {{ $i++ }} </label>
+                            </a>
+                        </div>
+                        @endforeach
+                    </div>
+                    @else
+                        There are no videos
                     @endif
                 </div>
             </div>
