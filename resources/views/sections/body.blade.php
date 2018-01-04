@@ -11,7 +11,7 @@
                 NUMARATAJ
             </button>
             <button id="btnDaire" type="button" class="btn btn-success tableheader" disabled>
-                DAİRE PLANI
+                DAİRE/KAT PLANI
             </button>
         </div>
         <div class="btn-group" role="group" style="position: fixed; z-index: 999; left: 52.9%;">
@@ -25,7 +25,7 @@
             </button>
         </div>
         <div class="d-flex flex-row justify-content-between">
-            <div style="display: inherit; position: absolute; left: 60%; top: 3px;">
+            <div style="display: inherit; position: absolute; left: 60%; top: 3px; z-index: 999;">
                 <div id="medyaIcerik" class="collapse">
                     <div class="d-flex justify-content-end">
                             <div id="slideVideo" role="button" style="margin-right: 1rem;"><img src="/img/video.svg" style="width: 2rem;"/></div>
