@@ -36,7 +36,7 @@
             </div>
             <div></div>
             <div id="image-map-pro-container"></div>
-            <div style="height: 91vh;">
+            <div style="height: 91vh; padding-top: 12rem;">
                 @include('sections.right_bar')
                 <div id="rightIcerik" class="collapse">
                     <h5>B TİP BLOK - 3+1 DAİRE</h5>

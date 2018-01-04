@@ -38,11 +38,11 @@
                 <div></div>
                 <canvas id="jPolygon" onmousedown="point_it(event)" data-imgsrc="{{$floor->floorPhoto ? $floor->floorPhoto->getImageUrl() : 'http://avrupark.com/images/kat-planlari/2+1-A-BLOK-2.jpg'}}"
                         width="960" height="540"></canvas>
-                <div style="height: 91vh;">
+                <div style="height: 91vh; padding-top: 12rem;">
                     <div style="z-index: 99; width: 2rem; margin-right: .1rem;">
                         <img src="/img/pay.png" style="margin-top: 3rem; display: none;" role="button" data-toggle="collapse"
                             data-target="#rightIcerik" onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;"/>
-                        <img src="/img/draw.svg" style="margin-top: 10rem;" onclick="toggleDraw(this);"
+                        <img src="/img/draw.svg" onclick="toggleDraw(this);"
                             role="button"/>
                         <img src="/img/clear.svg" onclick="clear_canvas();" role="button"
                             onmouseover="this.style.opacity=.6;" onmouseout="this.style.opacity=1;" style="margin-top: 1rem;"/>
