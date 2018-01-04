@@ -1,6 +1,6 @@
 <main class="col-sm-9 ml-sm-auto col-md-10 p-0">
     <section id="sectionIcerik">
-        <div class="btn-group btn-grp-fix" role="group" style="position: fixed; z-index: 999; left: 32%;">
+        <div class="btn-group btn-grp-fix" role="group" style="position: fixed; z-index: 999; left: 30.3%;">
             <button id="btnGenelVaziyet" type="button" class="btn btn-success active tableheader">
                 G. VAZİYET PLANI
             </button>
