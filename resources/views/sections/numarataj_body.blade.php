@@ -1,6 +1,6 @@
 <main class="col-sm-9 ml-sm-auto col-md-10 p-0">
     <section id="sectionIcerik">
-        <div class="btn-group btn-grp-fix" role="group">
+        <div class="btn-group btn-grp-fix" role="group" style="position: fixed; z-index: 999; left: 32%;">
             <button id="btnGenelVaziyet" type="button" class="btn btn-success tableheader" onclick="window.location='{{URL::route('project.detail', $project->id)}}'">
                 G. VAZİYET PLANI
             </button>
@@ -14,13 +14,13 @@
                 DAİRE PLANI
             </button>
         </div>
-        <div class="btn-group" role="group" style="position: fixed; z-index: 999; left: 52%;">
-            <button id="btnDaire" type="button" class="btn btn-primary" style="border-top-left-radius: 0; border-top-right-radius: 0;">
+        <div class="btn-group" role="group" style="position: fixed; z-index: 999; left: 52.9%;">
+            <button id="btnDaire" type="button" class="btn btn-primary" style="background-color: #013370; border-top-left-radius: 0; border-top-right-radius: 0;">
                 SANAL MAKET
             </button>
         </div>
         <div class="btn-group" role="group" style="position: fixed; z-index: 999; left: 60.5%;">
-            <button id="btnDaire" type="button" class="btn btn-danger" style="border-top-left-radius: 0; border-top-right-radius: 0;" data-toggle="collapse" data-target="#medyaIcerik">
+            <button id="btnDaire" type="button" class="btn btn-danger" style="background-color: #D50D17; border-top-left-radius: 0; border-top-right-radius: 0;" data-toggle="collapse" data-target="#medyaIcerik">
                 MEDYA
             </button>
         </div>
