@@ -15,7 +15,7 @@
             </button>
         </div>
         <div class="btn-group" role="group" style="position: fixed; z-index: 999; left: 52.9%;">
-            <button id="btnDaire" type="button" class="btn btn-primary" style="background-color: #013370; border-top-left-radius: 0; border-top-right-radius: 0;">
+            <button id="btnDaire" data-toggle="modal" data-target="#v360Modal" type="button" class="btn btn-primary" style="background-color: #013370; border-top-left-radius: 0; border-top-right-radius: 0;">
                 SANAL MAKET
             </button>
         </div>
@@ -166,4 +166,17 @@
         </div>
     </div>
 
+    <div class="modal fade" id="v360Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    @if(count($v360Url) > 0)
+                        <iframe height="500px" width="100%" allowfullscreen="true" src="{{$v360Url[0]->url}}"></iframe>
+                    @else
+                        There are no videos
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
 </main>

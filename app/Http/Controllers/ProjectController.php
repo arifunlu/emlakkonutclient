@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Model\EstateProject;
 use App\Repositories\ApartmentRepository;
 use Illuminate\Http\Request;
+use App\Model\Project360Url;
 
 class ProjectController extends Controller
 {
@@ -28,7 +29,7 @@ class ProjectController extends Controller
         $blocks = $apartment->blockGroup();
         $apartments = $project->EstateProjectApartment;
         $allVideosUrls = $project->getVideoUrls();
-
+        $v360Url = Project360Url::where('project_id', $project->id)->get();
         return view(
             'project.detail',
             compact(
@@ -42,7 +43,8 @@ class ProjectController extends Controller
                 'islands',
                 'parcels',
                 'blocks',
-                'allVideosUrls'
+                'allVideosUrls',
+                'v360Url'
             )
         );
     }
