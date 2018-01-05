@@ -72,11 +72,11 @@
                     content: '<ul class="list-group-flush"> @foreach($docsFileArray as $doc) @php $ext = pathinfo($doc, PATHINFO_EXTENSION); $fileName = basename($doc, ".".$ext); @endphp <li class="list-group-item"><a href="{{ asset( $doc ) }}" target="_blank" class="DocsListItems"> {{$fileName}} </a></li> @endforeach </ul>'
                 });
 
-                $('#slideFoto').popover({
-                    html: true,
-                    placement: 'top',
-                    content: '<ul class="list-group-flush"><li class="list-group-item" data-toggle="modal" data-target="#slidePhoto">Cras justo odio</li><li class="list-group-item">Dapibus ac facilisis in</li><li class="list-group-item">Morbi leo risus</li><li class="list-group-item">Porta ac consectetur ac</li><li class="list-group-item">Vestibulum at eros</li></ul>'
-                });
+                // $('#slideFoto').popover({
+                //     html: true,
+                //     placement: 'top',
+                //     content: '<ul class="list-group-flush"><li class="list-group-item" data-toggle="modal" data-target="#slidePhoto">Cras justo odio</li><li class="list-group-item">Dapibus ac facilisis in</li><li class="list-group-item">Morbi leo risus</li><li class="list-group-item">Porta ac consectetur ac</li><li class="list-group-item">Vestibulum at eros</li></ul>'
+                // });
             </script>
         @show
     </body>
