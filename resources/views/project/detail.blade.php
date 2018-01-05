@@ -118,5 +118,10 @@
                 displayMode = true;
             }
         }
+
+        function changeActiveVideo(id){
+            $('.YoutubeVideosSliders .carousel-item').removeClass('active');
+            $('#' + id).addClass('active');
+        }
     </script>
 @endsection
