@@ -21,6 +21,9 @@
         .modal{
             z-index: 1070 !important;
         }
+        .popover .arrow {
+            display: none;
+        }
         </style>
     </head>
     <body>
@@ -52,13 +55,14 @@
                     trigger: 'click',
                     html: true,
                     placement: 'top',
-                    content: '<ul class="list-group-flush"> @foreach($allVideosUrls as $videoUrl)<li onclick="changeActiveVideo(\'video{{$videoUrl->id}}\')" class="list-group-item" data-toggle="modal" data-target="#slideModal">{{$videoUrl->name}}</li>@endforeach </ul>'
+                    content: '<ul class="list-group-flush"> @foreach($allVideosUrls as $videoUrl)<li onclick="changeActiveVideo(\'video{{$videoUrl->id}}\')" class="list-group-item" data-toggle="modal" data-target="#slideModal" style="cursor: pointer;">{{$videoUrl->name}}</li>@endforeach </ul>'
                 });
 
+                @php($docsFileArray = $project->getFolderFilesUrl('docs'))
                 $('#slideDoc').popover({
                     html: true,
                     placement: 'top',
-                    content: '<ul class="list-group-flush"><li class="list-group-item" data-toggle="modal" data-target="#docsModal">Cras justo odio</li><li class="list-group-item">Dapibus ac facilisis in</li><li class="list-group-item">Morbi leo risus</li><li class="list-group-item">Porta ac consectetur ac</li><li class="list-group-item">Vestibulum at eros</li></ul>'
+                    content: '<ul class="list-group-flush"> @foreach($docsFileArray as $doc) <li class="list-group-item"><a href="{{ asset( $doc ) }}" target="_blank" style="color:#fff; cursor: pointer;"> Doc </a></li> @endforeach </ul>'
                 });
 
                 $('#slideFoto').popover({
