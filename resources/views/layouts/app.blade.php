@@ -24,6 +24,13 @@
         .popover .arrow {
             display: none;
         }
+
+        .DocsListItems{
+            color: #fff !important;
+            cursor: pointer;
+            text-decoration: none !important;
+            text-transform: capitalize;
+        }
         </style>
     </head>
     <body>
@@ -58,11 +65,11 @@
                     content: '<ul class="list-group-flush"> @foreach($allVideosUrls as $videoUrl)<li onclick="changeActiveVideo(\'video{{$videoUrl->id}}\')" class="list-group-item" data-toggle="modal" data-target="#slideModal" style="cursor: pointer;">{{$videoUrl->name}}</li>@endforeach </ul>'
                 });
 
-                @php($docsFileArray = $project->getFolderFilesUrl('docs'))
+                @php( $docsFileArray = $project->getFolderFilesUrl('docs'))
                 $('#slideDoc').popover({
                     html: true,
                     placement: 'top',
-                    content: '<ul class="list-group-flush"> @foreach($docsFileArray as $doc) <li class="list-group-item"><a href="{{ asset( $doc ) }}" target="_blank" style="color:#fff; cursor: pointer;"> Doc </a></li> @endforeach </ul>'
+                    content: '<ul class="list-group-flush"> @foreach($docsFileArray as $doc) @php $ext = pathinfo($doc, PATHINFO_EXTENSION); $fileName = basename($doc, ".".$ext); @endphp <li class="list-group-item"><a href="{{ asset( $doc ) }}" target="_blank" class="DocsListItems"> {{$fileName}} </a></li> @endforeach </ul>'
                 });
 
                 $('#slideFoto').popover({
