@@ -16,6 +16,12 @@
         <!-- Styles -->
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @show
+
+        <style>
+        .modal{
+            z-index: 1070 !important;
+        }
+        </style>
     </head>
     <body>
         <div id="app">
@@ -46,7 +52,7 @@
                     trigger: 'click',
                     html: true,
                     placement: 'top',
-                    content: '<ul class="list-group-flush"><li class="list-group-item" data-toggle="modal" data-target="#slideModal">Cras justo odio</li><li class="list-group-item">Dapibus ac facilisis in</li><li class="list-group-item">Morbi leo risus</li><li class="list-group-item">Porta ac consectetur ac</li><li class="list-group-item">Vestibulum at eros</li></ul>'
+                    content: '<ul class="list-group-flush"> @foreach($allVideosUrls as $videoUrl)<li onclick="changeActiveVideo(\'video{{$videoUrl->id}}\')" class="list-group-item" data-toggle="modal" data-target="#slideModal">{{$videoUrl->name}}</li>@endforeach </ul>'
                 });
 
                 $('#slideDoc').popover({

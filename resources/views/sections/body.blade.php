@@ -81,11 +81,11 @@
                 <div class="modal-body">
                     @if(count($allVideosUrls) > 0)
                     <div id="slideControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
+                        <div class="carousel-inner YoutubeVideosSliders">
                             @php($i = 0)
                             @foreach($allVideosUrls as $videoUrl)
-                            <div class="carousel-item {{ $i++ == 0 ? 'active' : ''}}">
-                                <iframe class="d-block w-100" width="720" height="480" src="{{$videoUrl->url}}?controls=0&showinfo=0" frameborder="0"></iframe>
+                            <div class="carousel-item {{ $i++ == 0 ? 'active' : ''}}" id="video{{$videoUrl->id}}">
+                                <iframe class="d-block w-100" width="720" height="480" src="https://www.youtube.com/embed/{{$videoUrl->url}}?controls=0&showinfo=0" frameborder="0"></iframe>
                             </div>
                             @endforeach
                         </div>
@@ -115,7 +115,7 @@
                             <div class="carousel-inner">
                                 @php($i = 0)
                                 @foreach($project->getFolderFilesUrl('gallery') as $photo)
-                                <div class="carousel-item {{ $i++ == 0 ? 'active' : ''}}">    
+                                <div class="carousel-item {{ $i++ == 0 ? 'active' : ''}}" >    
                                     <img class="d-block w-100" width="720" height="480" src="{{$photo}}">
                                 </div>
                                 @endforeach
