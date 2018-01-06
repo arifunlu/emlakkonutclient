@@ -85,7 +85,7 @@
                             @php($i = 0)
                             @foreach($allVideosUrls as $videoUrl)
                             <div class="carousel-item {{ $i++ == 0 ? 'active' : ''}}" id="video{{$videoUrl->id}}">
-                                <iframe class="d-block w-100" width="720" height="480" src="https://www.youtube.com/embed/{{$videoUrl->url}}?controls=0&showinfo=0" frameborder="0"></iframe>
+                                <iframe class="d-block w-100" width="720" height="480" src="{{$videoUrl->url}}?controls=0&showinfo=0" frameborder="0"></iframe>
                             </div>
                             @endforeach
                         </div>
