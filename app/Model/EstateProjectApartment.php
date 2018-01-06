@@ -171,4 +171,9 @@ class EstateProjectApartment extends Model {
                 return 'red';
         }
     }
+
+    public function numbering()
+    {
+        return $this->belongsTo(Numbering::class, 'numbering_id');
+    }
 }
