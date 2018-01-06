@@ -32,6 +32,26 @@
             text-transform: capitalize;
         }
         </style>
+
+        <style>
+        .ShapeTextStyle {
+            color: white;
+            font-weight: bold;
+            height: 100%;
+            width: 100%;
+            display: table;
+        }
+
+        .ShapeTextStyle span{
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .imp-shape:hover .ShapeTextStyle {
+            color:grey;
+        }
+        </style>
     </head>
     <body>
         <div id="app">
