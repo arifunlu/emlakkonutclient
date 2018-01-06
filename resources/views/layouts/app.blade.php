@@ -16,6 +16,22 @@
         <!-- Styles -->
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @show
+
+        <style>
+        .modal{
+            z-index: 1070 !important;
+        }
+        .popover .arrow {
+            display: none;
+        }
+
+        .DocsListItems{
+            color: #fff !important;
+            cursor: pointer;
+            text-decoration: none !important;
+            text-transform: capitalize;
+        }
+        </style>
     </head>
     <body>
         <div id="app">
@@ -46,20 +62,21 @@
                     trigger: 'click',
                     html: true,
                     placement: 'top',
-                    content: '<ul class="list-group-flush"><li class="list-group-item" data-toggle="modal" data-target="#slideModal">Cras justo odio</li><li class="list-group-item">Dapibus ac facilisis in</li><li class="list-group-item">Morbi leo risus</li><li class="list-group-item">Porta ac consectetur ac</li><li class="list-group-item">Vestibulum at eros</li></ul>'
+                    content: '<ul class="list-group-flush"> @foreach($allVideosUrls as $videoUrl)<li onclick="changeActiveVideo(\'video{{$videoUrl->id}}\')" class="list-group-item" data-toggle="modal" data-target="#slideModal" style="cursor: pointer;">{{$videoUrl->name}}</li>@endforeach </ul>'
                 });
 
+                @php( $docsFileArray = $project->getFolderFilesUrl('docs'))
                 $('#slideDoc').popover({
                     html: true,
                     placement: 'top',
-                    content: '<ul class="list-group-flush"><li class="list-group-item" data-toggle="modal" data-target="#docsModal">Cras justo odio</li><li class="list-group-item">Dapibus ac facilisis in</li><li class="list-group-item">Morbi leo risus</li><li class="list-group-item">Porta ac consectetur ac</li><li class="list-group-item">Vestibulum at eros</li></ul>'
+                    content: '<ul class="list-group-flush"> @foreach($docsFileArray as $doc) @php $ext = pathinfo($doc, PATHINFO_EXTENSION); $fileName = basename($doc, ".".$ext); @endphp <li class="list-group-item"><a href="{{ asset( $doc ) }}" target="_blank" class="DocsListItems"> {{$fileName}} </a></li> @endforeach </ul>'
                 });
 
-                $('#slideFoto').popover({
-                    html: true,
-                    placement: 'top',
-                    content: '<ul class="list-group-flush"><li class="list-group-item" data-toggle="modal" data-target="#slidePhoto">Cras justo odio</li><li class="list-group-item">Dapibus ac facilisis in</li><li class="list-group-item">Morbi leo risus</li><li class="list-group-item">Porta ac consectetur ac</li><li class="list-group-item">Vestibulum at eros</li></ul>'
-                });
+                // $('#slideFoto').popover({
+                //     html: true,
+                //     placement: 'top',
+                //     content: '<ul class="list-group-flush"><li class="list-group-item" data-toggle="modal" data-target="#slidePhoto">Cras justo odio</li><li class="list-group-item">Dapibus ac facilisis in</li><li class="list-group-item">Morbi leo risus</li><li class="list-group-item">Porta ac consectetur ac</li><li class="list-group-item">Vestibulum at eros</li></ul>'
+                // });
             </script>
         @show
     </body>
