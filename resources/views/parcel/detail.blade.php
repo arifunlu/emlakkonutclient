@@ -19,7 +19,7 @@
 
 @section('javascript')
     @parent
-    <script src="/js/image-map-pro.js"></script>
+    <script src="/js/image-map-pro.min.js"></script>
     <script>
         var objectJson = {!! $parcel->parcelInteractivity ? $parcel->parcelInteractivity->interactiveJson : json_encode(false) !!};
         ;(function ($, window, document, undefined) {

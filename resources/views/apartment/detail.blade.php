@@ -20,7 +20,7 @@
 @section('javascript')
     @parent
     <script src="/js/polygon.js"></script>
-    <script src="/js/image-map-pro.js"></script>
+    <script src="/js/image-map-pro.min.js"></script>
     <script>
         var objectJson = {!! $interactiveObject !!};
         ;(function ($, window, document, undefined) {
