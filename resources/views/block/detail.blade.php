@@ -3,7 +3,7 @@
     @parent
     <link rel="stylesheet" href="/css/image-map-pro.min.css">
 @endsection
-
+@php $numbering = null; @endphp
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -21,7 +21,7 @@
     @parent
     <script src="/js/image-map-pro.min.js"></script>
     <script>
-        var objectJson = {!! $numbering->numberingInteractivity ? $numbering->numberingInteractivity->interactiveJson : json_encode(false) !!};
+        var objectJson = {!! ($numbering) ? $numbering->numberingInteractivity->interactiveJson : json_encode(false) !!};
         ;(function ($, window, document, undefined) {
             $(document).ready(function () {
                 $('#image-map-pro-container').imageMapPro(objectJson);
