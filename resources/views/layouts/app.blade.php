@@ -51,6 +51,17 @@
         .imp-shape:hover .ShapeTextStyle {
             color:grey;
         }
+
+        .StyleOtherApartment {
+            margin-right: 10px !important;
+            margin-left: 10px !important;
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+        }
+
+        .HideRedApartment{
+            display: none !important;
+        }
         </style>
     </head>
     <body>
