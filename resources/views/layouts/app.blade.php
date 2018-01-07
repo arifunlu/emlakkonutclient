@@ -82,7 +82,7 @@
                     trigger: 'click',
                     html: true,
                     placement: 'top',
-                    content: '<ul class="list-group-flush"> @foreach($allVideosUrls as $videoUrl)<li onclick="changeActiveVideo(\'video{{$videoUrl->id}}\')" class="list-group-item" data-toggle="modal" data-target="#slideModal" style="cursor: pointer;">{{$videoUrl->name}}</li>@endforeach </ul>'
+                    content: '<ul class="list-group-flush"> @foreach($project->getVideoUrls() as $videoUrl)<li onclick="changeActiveVideo(\'video{{$videoUrl->id}}\')" class="list-group-item" data-toggle="modal" data-target="#slideModal" style="cursor: pointer;">{{$videoUrl->name}}</li>@endforeach </ul>'
                 });
 
                 @php( $docsFileArray = $project->getFolderFilesUrl('docs'))
