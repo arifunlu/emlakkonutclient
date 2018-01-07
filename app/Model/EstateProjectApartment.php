@@ -4,7 +4,6 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-
 /**
  * App\Model\EstateProjectApartment
  *
@@ -82,30 +81,28 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\EstateProjectApartment whereYon($value)
  * @mixin \Eloquent
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\EstateProjectApartment whereProjectId($value)
+ * @property int $numbering_id
+ * @property-read \App\Model\Numbering $numbering
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\EstateProjectApartment whereNumberingId($value)
  */
-class EstateProjectApartment extends Model {
-
+class EstateProjectApartment extends Model
+{
     protected $table = 'estate_project_apartment';
-
 
     public static function setAttributesFromService($projectPartsRaw)
     {
         $projectAll = EstateProject::all();
         $projectParts = json_decode($projectPartsRaw);
 
-        foreach ($projectParts as $projectPart)
-        {
-
+        foreach ($projectParts as $projectPart) {
             $estateProjectPart = static::where('ProjeID', $projectPart->ProjeID)
                 ->where('Ada', $projectPart->Ada)
                 ->where('Parsel', $projectPart->Parsel)
                 ->where('BlokNo', $projectPart->BlokNo)
                 ->where('KapiNo', $projectPart->KapiNo)
                 ->first();
-            if (!$estateProjectPart)
-            {
+            if (!$estateProjectPart) {
                 $estateProjectPart = new static();
-
             }
 
             $project = $projectAll->where('ProjeID', $projectPart->ProjeID)->first();
@@ -143,10 +140,7 @@ class EstateProjectApartment extends Model {
             $estateProjectPart->SozlesmeNo = $projectPart->SozlesmeNo;
             $estateProjectPart->MusteriAdi = $projectPart->MusteriAdi;
             $estateProjectPart->save();
-
-
         }
-
     }
 
     public static function setFloorPhoto($project, $file)

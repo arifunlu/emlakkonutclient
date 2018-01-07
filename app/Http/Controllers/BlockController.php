@@ -43,7 +43,8 @@ class BlockController extends Controller
                 'apartments',
                 'islands',
                 'parcels',
-                'blocks'
+                'blocks',
+                'numbering'
             )
         );
     }
