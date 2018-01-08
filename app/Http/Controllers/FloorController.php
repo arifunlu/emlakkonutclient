@@ -19,13 +19,15 @@ class FloorController extends Controller
         $bulunduguKat = $apartmentRepository->BulunduguKat();
         $odaSayisi = $apartmentRepository->OdaSayisi();
         $yon = $apartmentRepository->Yon();
+        EstateProject::setSession($apartment->project_id);
         $project = EstateProject::find($apartment->project_id);
         $island = Island::getIslandFromIslandKkys($apartment->Ada);
         $parcel = Parcel::getParcel($island->id, $apartment->Parsel);
         $block = Block::getBlock($island->id, $parcel->id, $apartment->BlokNo);
         $floor = Floor::getFloor($island->id, $parcel->id, $block->id, $apartment->BulunduguKat);
 
-        return view('detail',
+        return view(
+            'detail',
             compact('project', 'parcel', 'kullanilisSekli', 'bulunduguKat', 'odaSayisi', 'yon', 'apartment', 'floor')
         );
     }

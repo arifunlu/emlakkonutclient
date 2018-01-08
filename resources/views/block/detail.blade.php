@@ -3,7 +3,6 @@
     @parent
     <link rel="stylesheet" href="/css/image-map-pro.min.css">
 @endsection
-
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -21,7 +20,7 @@
     @parent
     <script src="/js/image-map-pro.min.js"></script>
     <script>
-        var objectJson = {!! $parcel->parcelInteractivity ? $parcel->parcelInteractivity->interactiveJson : json_encode(false) !!};
+        var objectJson = {!! ($numbering) ? $numbering->numberingInteractivity->interactiveJson : json_encode(false) !!};
         ;(function ($, window, document, undefined) {
             $(document).ready(function () {
                 $('#image-map-pro-container').imageMapPro(objectJson);
