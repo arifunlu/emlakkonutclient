@@ -89,13 +89,15 @@
                     }
                 });
 
-                $('#slideVideo').popover({
-                    trigger: 'click',
-                    html: true,
-                    placement: 'top',
-                    content: '<ul class="list-group-flush"> @foreach($allVideosUrls as $videoUrl)<li onclick="changeActiveVideo(\'video{{$videoUrl->id}}\')" class="list-group-item" data-toggle="modal" data-target="#slideModal" style="cursor: pointer;">{{$videoUrl->name}}</li>@endforeach </ul>'
-                });
-
+                @if(count($allVideosUrls))
+                    $('#slideVideo').popover({
+                        trigger: 'click',
+                        html: true,
+                        placement: 'top',
+                        content: '<ul class="list-group-flush"> @foreach($allVideosUrls as $videoUrl)<li onclick="changeActiveVideo(\'video{{$videoUrl->id}}\')" class="list-group-item" data-toggle="modal" data-target="#slideModal" style="cursor: pointer;">{{$videoUrl->name}}</li>@endforeach </ul>'
+                    });
+                @endif
+                
                 @php( $docsFileArray = $project->getFolderFilesUrl('docs'))
                 $('#slideDoc').popover({
                     html: true,

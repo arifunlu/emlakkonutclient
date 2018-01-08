@@ -28,7 +28,9 @@
             <div style="display: inherit; position: absolute; left: 60%; top: 3px; z-index: 999;">
                 <div id="medyaIcerik" class="collapse">
                     <div class="d-flex justify-content-end">
+                            @if(count($allVideosUrls))
                             <div id="slideVideo" role="button" style="margin-right: 1rem;"><img src="/img/video.svg" style="width: 2rem;"/></div>
+                            @endif
                             <div id="slideDoc" role="button" style="margin-right: 1rem;"><img src="/img/document.svg" style="width: 2rem;"/></div>
                             <div id="slideFoto" role="button" style="margin-right: 1rem;" data-toggle="modal" data-target="#slidePhoto"><img src="/img/photo_gallery.svg" style="width: 2rem;"/></div>
                     </div>
