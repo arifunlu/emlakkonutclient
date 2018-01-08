@@ -3,7 +3,6 @@
     @parent
     <link rel="stylesheet" href="/css/image-map-pro.min.css">
 @endsection
-@php $numbering = null; @endphp
 @section('content')
     <div class="container-fluid">
         <div class="row">
