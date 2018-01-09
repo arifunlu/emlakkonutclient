@@ -28,7 +28,7 @@
             <div style="display: inherit; position: absolute; left: 60%; top: 3px; z-index: 999;">
                 <div id="medyaIcerik" class="collapse">
                     <div class="d-flex justify-content-end">
-                            @if(count($allVideosUrls))
+                            @if(isset($allVideosUrls))
                             <div id="slideVideo" role="button" style="margin-right: 1rem;"><img src="/img/video.svg" style="width: 2rem;"/></div>
                             @endif
                             <div id="slideDoc" role="button" style="margin-right: 1rem;"><img src="/img/document.svg" style="width: 2rem;"/></div>
@@ -45,7 +45,7 @@
                     <span>Giriş Holü:</span>
                     <span>Koridor:</span>
                     <span>Salon:</span>
-                    <span>Mutfak:</span>
+                    <span>Mutfak:</span>p
                     <span>Banyo:</span>
                     <span>Ebeveyn Yatak Odası:</span>
                     <span>Oda 1:</span>
