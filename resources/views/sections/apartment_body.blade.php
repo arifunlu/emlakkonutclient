@@ -122,7 +122,7 @@
         <div class="card">
             <div class="card-header" role="tab" id="headingOne">
                 <img id="img-up" src="/img/down.png" class="up" role="button" onclick="upIconChange()"
-                     data-toggle="collapse" data-parent="#plan-table" data-target="#collapseOne"/>
+                     data-toggle="collapse" data-parent="#plan-table" data-target="#collapseOne" style="width: 30px"/>
             </div>
             <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
                 <div class="card-block" id="apartmentList">
