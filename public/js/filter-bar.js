@@ -8,6 +8,19 @@ var data = {
     blok: []
 };
 
+function hideToolTipInRedBox(){
+    $('.imp-shape-rect').unbind()
+    $('.imp-shape-rect').hover(function(){
+        if($(this).css("backgroundColor") + "" === "rgb(255, 0, 0)"){
+            $('.imp-tooltip[data-index="'+ $(this).data("index") +'"]').addClass("HideToolTipInRed");
+        }
+    }, function(){
+        setTimeout(function(){
+            $('.imp-tooltip[data-index="'+ $(this).data("index") +'"]').removeClass("HideToolTipInRed");
+        }, 500);
+    });
+}
+
 function onChangeFilters(e) {
     debugger;
     var param = e.id;
@@ -79,6 +92,7 @@ function onChangeFilters(e) {
             }
 
             $('#image-map-pro-container').imageMapPro(objectJson);
+            hideToolTipInRedBox();
         }
     });
 }
@@ -123,6 +137,7 @@ function onClickTextFilters(s) {
             }
 
             $('#image-map-pro-container').imageMapPro(objectJson);
+            hideToolTipInRedBox();
         }
     });
 }

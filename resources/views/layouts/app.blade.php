@@ -80,6 +80,10 @@
         .ovalShapeTextStyle span a{
             color: white;
         }
+
+        .HideToolTipInRed{
+            display:none;
+        }
         </style>
     </head>
     <body>
