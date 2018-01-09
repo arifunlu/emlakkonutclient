@@ -28,7 +28,7 @@
             <div style="display: inherit; position: absolute; left: 60%; top: 3px; z-index: 999;">
                 <div id="medyaIcerik" class="collapse">
                     <div class="d-flex justify-content-end">
-                            @if(count($allVideosUrls))
+                            @if(isset($allVideosUrls))
                             <div id="slideVideo" role="button" style="margin-right: 1rem;"><img src="/img/video.svg" style="width: 2rem;"/></div>
                             @endif
                             <div id="slideDoc" role="button" style="margin-right: 1rem;"><img src="/img/document.svg" style="width: 2rem;"/></div>
@@ -38,14 +38,14 @@
             </div>
             <div></div>
             <div id="image-map-pro-container"></div>
-            <div style="height: 91vh; padding-top: 12rem;">
+            <div style="height: 91vh; padding-top: 12rem; z-index: 99;">
                 @include('sections.right_bar')
                 <div id="rightIcerik" class="collapse">
                     <h5>B TİP BLOK - 3+1 DAİRE</h5>
                     <span>Giriş Holü:</span>
                     <span>Koridor:</span>
                     <span>Salon:</span>
-                    <span>Mutfak:</span>
+                    <span>Mutfak:</span>p
                     <span>Banyo:</span>
                     <span>Ebeveyn Yatak Odası:</span>
                     <span>Oda 1:</span>
@@ -67,7 +67,7 @@
         <div class="card">
             <div class="card-header" role="tab" id="headingOne">
                 <img id="img-up" src="/img/down.png" class="up" role="button" onclick="upIconChange()"
-                    data-toggle="collapse" data-parent="#plan-table" data-target="#collapseOne"/>
+                    data-toggle="collapse" data-parent="#plan-table" data-target="#collapseOne" style="width: 30px"/>
             </div>
             <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
                 <div class="card-block" id="apartmentList">

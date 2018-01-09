@@ -10108,7 +10108,6 @@ h1 {
 .up {
   float: right;
   margin-right: 3rem;
-  margin-top: -2.2rem;
 }
 
 #rightIcerik {
@@ -10165,7 +10164,7 @@ h1 {
 }
 
 .btn-success:disabled {
-  opacity: 1;
+  opacity: .8;
   color: #e2e2e2;
 }
 

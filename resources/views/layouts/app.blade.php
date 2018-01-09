@@ -111,7 +111,7 @@
                     }
                 });
 
-                @if(count($allVideosUrls))
+                @if(isset($allVideosUrls))
                     $('#slideVideo').popover({
                         trigger: 'click',
                         html: true,
