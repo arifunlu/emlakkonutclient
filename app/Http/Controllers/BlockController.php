@@ -16,36 +16,35 @@ class BlockController extends Controller
         $island = Island::getFromApartment($apartment);
         $parcel = Parcel::getFromApartment($apartment, $island);
         $block = Block::getFromApartment($apartment, $island, $parcel);
+        $data = compact('island', 'parcel', 'block');
         $apartments = $block->getApartments();
 
-        $kullanilisSekli = $apartmentRepository->getBlockGroup($island, $parcel, $block,
-            ApartmentRepository::columnKullanilisSekli);
-        $bulunduguKat = $apartmentRepository->getBlockGroup($island, $parcel, $block,
-            ApartmentRepository::columnBulunduguKat);
-        $odaSayisi = $apartmentRepository->getBlockGroup($island, $parcel, $block,
-            ApartmentRepository::columnOdaSayisi);
-        $yon = $apartmentRepository->getBlockGroup($island, $parcel, $block,
-            ApartmentRepository::columnYon);
-        $islands = $apartmentRepository->getBlockGroup($island, $parcel, $block,
-            ApartmentRepository::columnIsland);
-        $parcels = $apartmentRepository->getBlockGroup($island, $parcel, $block,
-            ApartmentRepository::columnParcelNo);
-        $blocks = $apartmentRepository->getBlockGroup($island, $parcel, $block,
-            ApartmentRepository::columnBlockNo);
+        $kullanilisSekli = $apartmentRepository->getBlockGroup($data, ApartmentRepository::columnKullanilisSekli);
+        $bulunduguKat = $apartmentRepository->getBlockGroup($data, ApartmentRepository::columnBulunduguKat);
+        $odaSayisi = $apartmentRepository->getBlockGroup($data, ApartmentRepository::columnOdaSayisi);
+        $yon = $apartmentRepository->getBlockGroup($data, ApartmentRepository::columnYon);
+        $islands = $apartmentRepository->getBlockGroup($data, ApartmentRepository::columnIsland);
+        $parcels = $apartmentRepository->getBlockGroup($data, ApartmentRepository::columnParcelNo);
+        $blocks = $apartmentRepository->getBlockGroup($data, ApartmentRepository::columnBlockNo);
+        $numbering = $apartment->numbering;
         $project = $parcel->estateProject;
 
-        return view('block.detail',
+        return view(
+            'block.detail',
             compact(
                 'project',
                 'parcel',
+                'numbering',
                 'kullanilisSekli',
                 'bulunduguKat',
                 'odaSayisi',
                 'yon',
+                'apartment',
                 'apartments',
                 'islands',
                 'parcels',
-                'blocks'
+                'blocks',
+                'numbering'
             )
         );
     }
@@ -55,25 +54,20 @@ class BlockController extends Controller
         $island = Island::getFromApartment($apartment);
         $parcel = Parcel::getFromApartment($apartment, $island);
         $block = Block::getFromApartment($apartment, $island, $parcel);
+        $data = compact('island', 'parcel', 'block');
         $apartments = $block->getApartments();
 
-        $kullanilisSekli = $apartmentRepository->getBlockGroup($island, $parcel, $block,
-            ApartmentRepository::columnKullanilisSekli);
-        $bulunduguKat = $apartmentRepository->getBlockGroup($island, $parcel, $block,
-            ApartmentRepository::columnBulunduguKat);
-        $odaSayisi = $apartmentRepository->getBlockGroup($island, $parcel, $block,
-            ApartmentRepository::columnOdaSayisi);
-        $yon = $apartmentRepository->getBlockGroup($island, $parcel, $block,
-            ApartmentRepository::columnYon);
-        $islands = $apartmentRepository->getBlockGroup($island, $parcel, $block,
-            ApartmentRepository::columnIsland);
-        $parcels = $apartmentRepository->getBlockGroup($island, $parcel, $block,
-            ApartmentRepository::columnParcelNo);
-        $blocks = $apartmentRepository->getBlockGroup($island, $parcel, $block,
-            ApartmentRepository::columnBlockNo);
+        $kullanilisSekli = $apartmentRepository->getBlockGroup($data, ApartmentRepository::columnKullanilisSekli);
+        $bulunduguKat = $apartmentRepository->getBlockGroup($data, ApartmentRepository::columnBulunduguKat);
+        $odaSayisi = $apartmentRepository->getBlockGroup($data, ApartmentRepository::columnOdaSayisi);
+        $yon = $apartmentRepository->getBlockGroup($data, ApartmentRepository::columnYon);
+        $islands = $apartmentRepository->getBlockGroup($data, ApartmentRepository::columnIsland);
+        $parcels = $apartmentRepository->getBlockGroup($data, ApartmentRepository::columnParcelNo);
+        $blocks = $apartmentRepository->getBlockGroup($data, ApartmentRepository::columnBlockNo);
         $project = $parcel->estateProject;
 
-        return view('block360.detail',
+        return view(
+            'block360.detail',
             compact(
                 'project',
                 'parcel',

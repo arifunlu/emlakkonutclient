@@ -434,7 +434,10 @@
                         style += 'opacity: ' + s.default_style.opacity + ';';
                     }
 
-                    html += '<div class="imp-shape imp-shape-rect" id="'+ s.id +'" data-shape-title="'+ s.title +'" style="'+ style +'" data-index='+ i +'></div>';
+                    var emlakKonutSpan = (typeof s.title != 'undefined' && s.title.length) ? '<div class="ShapeTextStyle"><span>'+s.title+'</span></div>' : '';
+                    html += '<div class="imp-shape imp-shape-rect" id="'+ s.id +'" data-shape-title="'+ s.title +'" style="'+ style +'" data-index='+ i +'>'+
+                        emlakKonutSpan +
+                        '</div>';
                 }
                 if (s.type == 'oval') {
                     var style = '';
@@ -463,7 +466,9 @@
                         style += 'opacity: ' + s.default_style.opacity + ';';
                     }
 
-                    html += '<div class="imp-shape imp-shape-oval" id="'+ s.id +'" data-shape-title="'+ s.title +'" style="'+ style +'" data-index='+ i +'></div>';
+                    html += '<div class="imp-shape imp-shape-oval" id="'+ s.id +'" data-shape-title="'+ s.title +'" style="'+ style +'" data-index='+ i +'>' +
+                        (s.contentHtml ? s.contentHtml : '') +
+                        '</div>';
                 }
                 if (s.type == 'poly') {
                     hasPolygons = true;

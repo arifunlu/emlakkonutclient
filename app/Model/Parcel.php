@@ -31,6 +31,8 @@ use Illuminate\Http\UploadedFile;
  * @property-read \App\Model\Island $island
  * @property int|null $status
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Parcel whereStatus($value)
+ * @property int $manual_add
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Parcel whereManualAdd($value)
  */
 class Parcel extends Model {
 

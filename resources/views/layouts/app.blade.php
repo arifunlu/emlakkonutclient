@@ -16,6 +16,75 @@
         <!-- Styles -->
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @show
+
+        <style>
+        .modal{
+            z-index: 1070 !important;
+        }
+        .popover .arrow {
+            display: none;
+        }
+
+        .DocsListItems{
+            color: #fff !important;
+            cursor: pointer;
+            text-decoration: none !important;
+            text-transform: capitalize;
+        }
+        </style>
+
+        <style>
+        .ShapeTextStyle {
+            color: white;
+            font-weight: bold;
+            height: 100%;
+            width: 100%;
+            display: table;
+        }
+
+        .ShapeTextStyle span{
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .imp-shape:hover .ShapeTextStyle {
+            color:grey;
+        }
+
+        .StyleOtherApartment {
+            margin-right: 10px !important;
+            margin-left: 10px !important;
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+        }
+
+        .HideRedApartment{
+            display: none !important;
+        }
+
+        .ovalShapeTextStyle {
+            color: white;
+            font-weight: bold;
+            height: 100%;
+            width: 100%;
+            display: table;
+            font-size: small;
+        }
+
+        .ovalShapeTextStyle span{
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .ovalShapeTextStyle span a{
+            color: white;
+        }
+
+        .HideToolTipInRed{
+            display:none;
+        }
+        </style>
     </head>
     <body>
         <div id="app">
@@ -42,24 +111,27 @@
                     }
                 });
 
-                $('#slideVideo').popover({
-                    trigger: 'click',
-                    html: true,
-                    placement: 'top',
-                    content: '<ul class="list-group-flush"><li class="list-group-item" data-toggle="modal" data-target="#slideModal">Cras justo odio</li><li class="list-group-item">Dapibus ac facilisis in</li><li class="list-group-item">Morbi leo risus</li><li class="list-group-item">Porta ac consectetur ac</li><li class="list-group-item">Vestibulum at eros</li></ul>'
-                });
-
+                @if(isset($allVideosUrls))
+                    $('#slideVideo').popover({
+                        trigger: 'click',
+                        html: true,
+                        placement: 'top',
+                        content: '<ul class="list-group-flush"> @foreach($allVideosUrls as $videoUrl)<li onclick="changeActiveVideo(\'video{{$videoUrl->id}}\')" class="list-group-item" data-toggle="modal" data-target="#slideModal" style="cursor: pointer;">{{$videoUrl->name}}</li>@endforeach </ul>'
+                    });
+                @endif
+                
+                @php( $docsFileArray = $project->getFolderFilesUrl('docs'))
                 $('#slideDoc').popover({
                     html: true,
                     placement: 'top',
-                    content: '<ul class="list-group-flush"><li class="list-group-item">Cras justo odio</li><li class="list-group-item">Dapibus ac facilisis in</li><li class="list-group-item">Morbi leo risus</li><li class="list-group-item">Porta ac consectetur ac</li><li class="list-group-item">Vestibulum at eros</li></ul>'
+                    content: '<ul class="list-group-flush"> @foreach($docsFileArray as $doc) @php $ext = pathinfo($doc, PATHINFO_EXTENSION); $fileName = basename($doc, ".".$ext); @endphp <li class="list-group-item"><a href="{{ asset( $doc ) }}" target="_blank" class="DocsListItems"> {{$fileName}} </a></li> @endforeach </ul>'
                 });
 
-                $('#slideFoto').popover({
-                    html: true,
-                    placement: 'top',
-                    content: '<ul class="list-group-flush"><li class="list-group-item" data-toggle="modal" data-target="#slidePhoto">Cras justo odio</li><li class="list-group-item">Dapibus ac facilisis in</li><li class="list-group-item">Morbi leo risus</li><li class="list-group-item">Porta ac consectetur ac</li><li class="list-group-item">Vestibulum at eros</li></ul>'
-                });
+                // $('#slideFoto').popover({
+                //     html: true,
+                //     placement: 'top',
+                //     content: '<ul class="list-group-flush"><li class="list-group-item" data-toggle="modal" data-target="#slidePhoto">Cras justo odio</li><li class="list-group-item">Dapibus ac facilisis in</li><li class="list-group-item">Morbi leo risus</li><li class="list-group-item">Porta ac consectetur ac</li><li class="list-group-item">Vestibulum at eros</li></ul>'
+                // });
             </script>
         @show
     </body>

@@ -131,8 +131,11 @@ class ApartmentRepository
             ->pluck($columnName);
     }
 
-    public function getBlockGroup(Island $island, Parcel $parcel, Block $block, $columnName)
+    public function getBlockGroup($groupData, $columnName)
     {
+        $island = $groupData['island'];
+        $parcel = $groupData['parcel'];
+        $block = $groupData['block'];
         return $this->apartment
             ->where('project_id', EstateProject::getCurrentProjectIdFromSession())
             ->where('Ada', $island->island_kkys)

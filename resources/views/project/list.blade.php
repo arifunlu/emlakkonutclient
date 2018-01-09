@@ -31,6 +31,31 @@
                 border-color: #fff;
                 border-radius: 1.5rem;
             }
+
+            .panelContent {
+                padding: 0 0 0 35px;
+                z-index: 22;
+                background-color: #0c5ca9;
+                position: relative;
+                margin-left: 50px;
+                border-radius: 21px;
+            }
+
+            .panelContent img{
+                position: relative;
+                left: -43px;
+                top: 22px;
+            }
+
+            .pink {
+                width: 70px;
+                z-index: 1;
+            }
+
+            .rotate {
+                right: 10px;
+                position: relative;
+            }
         </style>
     </head>
     <body>
@@ -55,7 +80,7 @@
                                 <div class="rotate">{{$project->ProjeAdi}}</div>
                             </div>
                             <div class="panelContent" onclick="window.location='{{ URL::route('project.detail', $project->id) }}'">
-                                <img src="{{$project->get352x386Url()}}" />
+                                <img src="{{$project->getLogoUrl()}}" />
                             </div>
                         </div>
                         @endforeach

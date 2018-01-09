@@ -66,6 +66,9 @@ class Block extends Model
         return $result;
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Collection|static[]
+     */
     public function getApartments()
     {
         $parcel = Parcel::find($this->parcel_id);
