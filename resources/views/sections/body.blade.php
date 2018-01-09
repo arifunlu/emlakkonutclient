@@ -118,7 +118,7 @@
                                 @php($i = 0)
                                 @foreach($project->getFolderFilesUrl('gallery') as $photo)
                                 <div class="carousel-item {{ $i++ == 0 ? 'active' : ''}}" >    
-                                    <img class="d-block w-100" width="720" height="480" src="{{$photo}}">
+                                    <img class="d-block w-100 full-image" data-image="{{$photo}}" data-title="{{ $project->ProjeAdi }}" data-caption="" width="720" height="480" src="{{$photo}}">
                                 </div>
                                 @endforeach
                             </div>

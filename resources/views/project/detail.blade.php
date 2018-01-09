@@ -2,6 +2,7 @@
 @section('css')
     @parent
     <link rel="stylesheet" href="/css/image-map-pro.min.css">
+    <link href='/css/fullscreen-style.css' rel='stylesheet' type='text/css'>
 @endsection
 
 @section('content')
@@ -20,6 +21,8 @@
 @section('javascript')
     @parent
     <script src="/js/image-map-pro.min.js"></script>
+    <script src="/js/fullscreen.js"></script>
+	
     <script>
         var objectJson = {!! $project->EstateProjectInteractivity ? $project->EstateProjectInteractivity->interactiveJson     : json_encode(false) !!};
         ;(function ($, window, document, undefined) {
@@ -27,6 +30,11 @@
                 $('#image-map-pro-container').imageMapPro(objectJson);
 
                 $("#image-map-pro-container").panzoom();
+
+                var elements = document.querySelectorAll( '.full-image' );
+                if(elements){
+                    Intense( elements );
+                }
             });
         })(jQuery, window, document);
 
@@ -124,4 +132,6 @@
             $('#' + id).addClass('active');
         }
     </script>
+
+    
 @endsection
