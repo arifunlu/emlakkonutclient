@@ -11,8 +11,9 @@ class MapController extends Controller
 
     public function index()
     {
-        $projectId = EstateProject::getCurrentProjectIdFromSession();
-        $location = ProjectLocation::getByProjectID($projectId);
-        return view('map.index', compact('location'));
+        $project = EstateProject::getCurrentProjectFromSession();
+        $location = ProjectLocation::getByProjectID($project);
+
+        return view('map.index', compact('location', 'project'));
     }
 }
