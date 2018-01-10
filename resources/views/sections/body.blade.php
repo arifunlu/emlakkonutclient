@@ -87,7 +87,11 @@
                             @php($i = 0)
                             @foreach($allVideosUrls as $videoUrl)
                             <div class="carousel-item {{ $i++ == 0 ? 'active' : ''}}" id="video{{$videoUrl->id}}">
-                                <iframe class="d-block w-100" width="720" height="480" src="{{$videoUrl->url}}?controls=0&showinfo=0" frameborder="0"></iframe>
+                                <iframe class="d-block w-100" width="720" height="480" src="{{$videoUrl->url}}" frameborder="0" allowfullscreen="allowfullscreen"
+                                        mozallowfullscreen="mozallowfullscreen" 
+                                        msallowfullscreen="msallowfullscreen" 
+                                        oallowfullscreen="oallowfullscreen" 
+                                        webkitallowfullscreen="webkitallowfullscreen"></iframe>
                             </div>
                             @endforeach
                         </div>
