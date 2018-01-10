@@ -1,3 +1,6 @@
+var SlidePhotoBtnNext = $('.SlidePhotoBtnNext');
+var SlidePhotoBtnPrev = $('.SlidePhotoBtnPrev');
+
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame       ||
           window.webkitRequestAnimationFrame ||
@@ -90,7 +93,7 @@ var Intense = (function() {
     /* -------------------------*/
 
     function startTracking( passedElements ) {
-
+      
       var i;
 
       // If passed an array of elements, assign tracking to all.
@@ -238,10 +241,14 @@ var Intense = (function() {
     }
 
     function removeViewer() {
-
+      
       unlockBody();
       unbindEvents();
       document.body.removeChild( container );
+
+      SlidePhotoBtnNext.hide();
+      SlidePhotoBtnPrev.hide(); 
+      cleanOpenFullScreenImages(0);
     }
 
     function setDimensions() {
@@ -259,7 +266,6 @@ var Intense = (function() {
     }
 
     function init( element ) {
-
       var imageSource = element.getAttribute( 'data-image') || element.src;
       var title = element.getAttribute( 'data-title');
       var caption = element.getAttribute( 'data-caption');
@@ -276,6 +282,7 @@ var Intense = (function() {
       }
 
       img.src = imageSource;
+      img.className += " CurrentImageFullScreen";
     }
 
     function bindEvents() {
@@ -368,3 +375,46 @@ var Intense = (function() {
     });
 
 })();
+
+
+var allImageFullScreen = $('.full-image');
+var currentFSindex = 0;
+
+
+$('.full-image').click(function(){
+    var index = $('.full-image').index( $(this) );
+    currentFSindex = index;
+    SlidePhotoBtnNext.show();
+    SlidePhotoBtnPrev.show();
+});
+
+
+function sliderFullScreenNext(){
+  SlidePhotoBtnNext.show();
+  SlidePhotoBtnPrev.show();
+  currentFSindex = currentFSindex + 1;
+  if(currentFSindex >= allImageFullScreen.length){
+    currentFSindex = 0;
+  }
+  $($('.full-image')[currentFSindex]).click();
+  cleanOpenFullScreenImages();
+}
+
+function sliderFullScreenPrev(){
+  SlidePhotoBtnNext.show();
+  SlidePhotoBtnPrev.show();
+  currentFSindex = currentFSindex - 1;
+  if(currentFSindex <= 0){
+    currentFSindex = allImageFullScreen.length - 1;   
+  }
+  $($('.full-image')[currentFSindex]).click();
+  cleanOpenFullScreenImages();
+}
+
+function cleanOpenFullScreenImages(max = 1){
+  if($('.CurrentImageFullScreen').length > max){
+    for(var i=0; i <= $('.CurrentImageFullScreen').length - max; i++ ){
+      $($('.CurrentImageFullScreen')[i]).parent().remove();
+    }
+  }
+}

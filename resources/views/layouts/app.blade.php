@@ -87,6 +87,8 @@
         </style>
     </head>
     <body>
+        <button class="SlidePhotoBtnNext" onclick="sliderFullScreenNext()"></button>
+        <button class="SlidePhotoBtnPrev" onclick="sliderFullScreenPrev()"></button>
         <div id="app">
             <nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-custom">
                 <img class="btn-back" src="/img/back.svg" onclick="window.history.back()" role="button"/>
