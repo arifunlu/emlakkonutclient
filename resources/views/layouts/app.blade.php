@@ -95,8 +95,8 @@
                 <a class="navbar-brand">
                     <img src="/img/logo.png"/>
                 </a>
-                <!--<img class="btn-print" src="/img/print.svg" onclick="window.print();" role="button"/>
-                <p style="font-size: .88rem; position: absolute; top: 3.4rem; right: 1.75rem;">Yazdır</p>-->
+                <img class="btn-print" src="/img/print.svg" onclick="window.print();" role="button"/>
+                <p style="font-size: .88rem; position: absolute; top: 3.4rem; right: 1.75rem;">Yazdır</p>
             </nav>
             @yield('content')
         </div>
