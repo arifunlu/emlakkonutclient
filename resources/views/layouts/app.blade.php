@@ -86,7 +86,7 @@
         }
         </style>
     </head>
-    <body>
+    <body oncontextmenu="return false">
         <button class="SlidePhotoBtnNext" onclick="sliderFullScreenNext()"></button>
         <button class="SlidePhotoBtnPrev" onclick="sliderFullScreenPrev()"></button>
         <div id="app">
